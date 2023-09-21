@@ -1,0 +1,10 @@
+{
+  "kr": {
+    "hello": "안녕",
+    "house": "집"
+  },
+  "en": {
+    "hello": "Hi",
+    "house": "Home"
+  }
+}
