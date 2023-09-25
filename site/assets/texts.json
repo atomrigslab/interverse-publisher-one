@@ -1,0 +1,18 @@
+{
+  "kr": {
+    "lang": "kr",
+    "hello": "안녕",
+    "house": "집",
+    "kansong": "간송",
+    "pinzle": "핀즐",
+    "skt": "SKT"
+  },
+  "en": {
+    "lang": "en",
+    "hello": "Hi",
+    "house": "Home",
+    "kansong": "Kansong",
+    "pinzle": "Pinzel",
+    "skt": "SKT"
+  }
+}

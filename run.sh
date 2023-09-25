@@ -1,2 +1,3 @@
 #!/bin/bash
-./http-server -i
+# npm 'http-server' 사용
+http-server -c0 ./
