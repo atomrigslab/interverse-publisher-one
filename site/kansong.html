@@ -11,18 +11,28 @@
   
     <link href="assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="css/ji.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css"> -->
     <script src="assets/jquery-3.7.1.slim.min.js"></script>
     <script src="common.js"></script>
     <script src="modal.js"></script>
+    <script src="js/webgl-player.js"></script>
 
     <script>
       function init() {
         $('#nft1-3d-view').on('click', () => {
-          document.getElementById('modal1').open();
+          const player = document.getElementById('webglPlayer1');
+          document.getElementById('modal1').open(() => {
+            player.close();
+          });
+          player.startView('kansong', 0);
         })
         $('#nft1-extra').on('click', () => {
-          document.getElementById('modal2').open();
+          const player = document.getElementById('webglPlayer2');
+          document.getElementById('modal2').open(() => {
+            player.close();
+          });
+          player.startView('kansong', 1);
         })
       }
     </script>
@@ -50,8 +60,8 @@
           <atomrigs-span class="title" textKey="kansongNftTitle1"></atomrigs-span>
           <atomrigs-span class="subTitle" textKey="kansongNftSubTitle1"></atomrigs-span>
           <atomrigs-span class="content" textKey="kansongNftContent1"></atomrigs-span>
-          <span id="nft1-3d-view">View 3D</span>
-          <span id="nft1-extra">적용 예시</span>
+          <span id="nft1-3d-view">View 3D (1) - Sample</span>
+          <span id="nft1-extra">View 3D (2) - Sample</span>
         </div>
       </div>
 
@@ -105,12 +115,18 @@
         </div>
       </div>
     </main>
-    <atomrigs-modal id="modal1">
-      <p>test1</p>
+    <atomrigs-modal id="modal1" width="60%" height="60%">
+      <atomrigs-webgl-player
+        id="webglPlayer1"
+        class="webglPlayer"
+      ></atomrigs-webgl-player>
     </atomrigs-modal>
 
-    <atomrigs-modal id="modal2">
-      <p>test2</p>
+    <atomrigs-modal id="modal2" width="60%" height="60%">
+      <atomrigs-webgl-player
+        id="webglPlayer2"
+        class="webglPlayer"
+      ></atomrigs-webgl-player>
     </atomrigs-modal>
 
     <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
