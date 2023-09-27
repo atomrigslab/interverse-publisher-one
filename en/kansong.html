@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+    <title>Interverse</title>
+  
+    <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/main.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/ji.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css"> -->
+    <script src="../assets/jquery-3.7.1.slim.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/webgl-player.js"></script>
+
+    <script>
+      function init() {
+        $('#nft1-3d-view').on('click', () => {
+          const player = document.getElementById('webglPlayer1');
+          document.getElementById('modal1').open(() => {
+            player.close();
+          });
+          player.startView('kansong', 0);
+        })
+        $('#nft1-extra').on('click', () => {
+          const player = document.getElementById('webglPlayer2');
+          document.getElementById('modal2').open(() => {
+            player.close();
+          });
+          player.startView('kansong', 1);
+        })
+      }
+    </script>
+  </head>
+
+  <body onload="init()" style="margin: 0px; overflow: hidden;">
+    <div class="pg-wrapper pg-vertical" style="overflow-y: scroll; height: 600px; width: 800px; padding-right: 0px;"><main id="container" class="pg-container" style="display: inline-block; height: 1800px;">
+      <navigation-bar-element>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position:fixed; z-index:10; width:100%">
+        <div class="container-fluid">s
+          <a class="navbar-brand" href="#">
+            Interverse
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/pages/kansong.html">Kansong</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/pinzle.html">Pinzel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/skt.html">SKT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/kr/kansong.html">Korean</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </navigation-bar-element>
+      <div data-anchor="Page 1" class="itemContainer pg-page pg-active" id="page-1" style="height: 600px; width: 800px;">
+    
+        <div class="bgGradient"></div>
+        
+        <div class="bgText">
+          <atomrigs-span>NO_KEY</atomrigs-span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="../assets/kansongLogo.svg" alt="">
+          <div class="nft">
+            <img src="../assets/img-kan-1.png" alt="">
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <atomrigs-span class="title" textkey="kansongNftTitle1">en국보</atomrigs-span>
+          <atomrigs-span class="subTitle" textkey="kansongNftSubTitle1">en청자모자원숭이형연적</atomrigs-span>
+          <atomrigs-span class="content" textkey="kansongNftContent1">en살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</atomrigs-span>
+          <span id="nft1-3d-view">View 3D (1) - Sample</span>
+          <span id="nft1-extra">View 3D (2) - Sample</span>
+        </div>
+      </div>
+
+      <div id="page2Text" class="textOutContainer">
+        <atomrigs-span class="title" textkey="kansongNftTitle1">en국보</atomrigs-span>
+        <atomrigs-span class="subTitle" textkey="kansongNftSubTitle1">en청자모자원숭이형연적</atomrigs-span>
+        <atomrigs-span class="content" textkey="kansongNftContent1">en살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</atomrigs-span>
+      </div>
+
+      <div id="page-2" data-anchor="Page 2" class="itemContainer pg-page" style="height: 600px; width: 800px;">
+        <div class="bgGradient"></div>
+        
+        <div class="bgText ">
+          <atomrigs-span>NO_KEY</atomrigs-span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="../assets/kansongLogo.svg" alt="">
+          <div class="nft">
+            <img src="../assets/img-kan-2.png" alt="">
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <atomrigs-span class="title" textkey="kansongNftTitle2">en국보</atomrigs-span><br>
+          <atomrigs-span class="subTitle" textkey="kansongNftSubTitle2">en백자청화철채동채초충난국문병</atomrigs-span><br>
+          <atomrigs-span class="content" textkey="kansongNftContent2"></atomrigs-span>
+        </div>
+      </div>
+
+      <div id="page-3" data-anchor="Page 3" class="itemContainer pg-page" style="height: 600px; width: 800px;">
+    
+        <div class="bgGradient"></div>
+        
+        <div class="bgText ">
+     
+          <atomrigs-span>kansong art museum</atomrigs-span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="../assets/kansongLogo.svg" alt="">
+          <div class="nft">
+            <img src="../assets/img-kan-3.png" alt="">
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <atomrigs-span class="title" textkey="kansongNftTitle3"></atomrigs-span><br>
+          <atomrigs-span class="subTitle" textkey="kansongNftSubTitle3"></atomrigs-span><br>
+          <atomrigs-span class="content" textkey="kansongNftContent3"></atomrigs-span>
+        </div>
+      </div>
+    </main><nav class="pg-pips"><ul><li><a href="#page-1" class="active"><span></span></a></li><li><a href="#page-2"><span></span></a></li><li><a href="#page-3"><span></span></a></li></ul></nav></div>
+    <atomrigs-modal id="modal1" width="60%" height="60%">
+      <atomrigs-webgl-player id="webglPlayer1" class="webglPlayer"></atomrigs-webgl-player>
+    </atomrigs-modal>
+
+    <atomrigs-modal id="modal2" width="60%" height="60%">
+      <atomrigs-webgl-player id="webglPlayer2" class="webglPlayer"></atomrigs-webgl-player>
+    </atomrigs-modal>
+
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+    
+     <script>
+      // if (matchMedia("screen and (max-width: 1024px)").matches) {
+      //   document.getElementById("page2Text").setAttribute("data-anchor","Page 2");
+      //   document.getElementById("tt").setAttribute("data-anchor","Page 3");
+      //   document.getElementById("zz").setAttribute("data-anchor","Page 4");
+      // }
+      // else {
+      //   document.getElementById("page2Text").style.display = "none";
+      // }
+    </script>
+
+    <script>
+      new Pageable("#container", {
+        animation: 500,
+      });
+    </script>
+  
+
+</body></html>
