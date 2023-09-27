@@ -55,7 +55,13 @@
         </div>
       </div>
 
-      <div data-anchor="Page 2" class="itemContainer">
+      <div id="page2Text" class="textOutContainer">
+        <atomrigs-span class="title" textKey="kansongNftTitle1"></atomrigs-span>
+        <atomrigs-span class="subTitle" textKey="kansongNftSubTitle1"></atomrigs-span>
+        <atomrigs-span class="content" textKey="kansongNftContent1"></atomrigs-span>
+      </div>
+
+      <div id="tt" data-anchor="Page 2" class="itemContainer">
         <div class="bgGradient"></div>
         
         <div class="bgText ">
@@ -76,7 +82,7 @@
         </div>
       </div>
 
-      <div data-anchor="Page 3" class="itemContainer">
+      <div id="zz" data-anchor="Page 3" class="itemContainer">
     
         <div class="bgGradient"></div>
         
@@ -106,9 +112,21 @@
     <atomrigs-modal id="modal2">
       <p>test2</p>
     </atomrigs-modal>
- 
+
     <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
     <script src="assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+    
+     <script>
+      // if (matchMedia("screen and (max-width: 1024px)").matches) {
+      //   document.getElementById("page2Text").setAttribute("data-anchor","Page 2");
+      //   document.getElementById("tt").setAttribute("data-anchor","Page 3");
+      //   document.getElementById("zz").setAttribute("data-anchor","Page 4");
+      // }
+      // else {
+      //   document.getElementById("page2Text").style.display = "none";
+      // }
+    </script>
+
     <script>
       new Pageable("#container", {
         animation: 500,
