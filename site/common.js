@@ -87,8 +87,8 @@ class NavigationBarElement extends AtomrigsElement {
     }
 
     this.innerHTML = `
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position:fixed; z-index:10; width:100%">
+        <div class="container-fluid">s
           <a class="navbar-brand" href="#">
             Interverse
           </a>
