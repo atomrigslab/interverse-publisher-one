@@ -12,10 +12,23 @@
     <link href="assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css"> -->
+    <script src="assets/jquery-3.7.1.slim.min.js"></script>
     <script src="common.js"></script>
+    <script src="modal.js"></script>
+
+    <script>
+      function init() {
+        $('#nft1-3d-view').on('click', () => {
+          document.getElementById('modal1').open();
+        })
+        $('#nft1-extra').on('click', () => {
+          document.getElementById('modal2').open();
+        })
+      }
+    </script>
   </head>
 
-  <body>
+  <body onLoad="init()">
     <main id="container">
       <navigation-bar-element></navigation-bar-element>
       <div data-anchor="Page 1" class="itemContainer">
@@ -37,6 +50,8 @@
           <atomrigs-span class="title" textKey="kansongNftTitle1"></atomrigs-span>
           <atomrigs-span class="subTitle" textKey="kansongNftSubTitle1"></atomrigs-span>
           <atomrigs-span class="content" textKey="kansongNftContent1"></atomrigs-span>
+          <span id="nft1-3d-view">View 3D</span>
+          <span id="nft1-extra">적용 예시</span>
         </div>
       </div>
 
@@ -84,9 +99,15 @@
         </div>
       </div>
     </main>
+    <atomrigs-modal id="modal1">
+      <p>test1</p>
+    </atomrigs-modal>
+
+    <atomrigs-modal id="modal2">
+      <p>test2</p>
+    </atomrigs-modal>
  
     <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
-    <script src="assets/jquery-3.7.1.slim.min.js"></script>
     <script src="assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
     <script>
       new Pageable("#container", {
