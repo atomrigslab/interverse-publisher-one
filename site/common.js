@@ -28,6 +28,10 @@ class AtomrigsElement extends HTMLElement {
         this.json = json;
       });
   }
+
+  connectedCallback() {
+    return this.loadTexts();
+  }
 }
 
 class SpanElement extends AtomrigsElement {
@@ -47,7 +51,7 @@ class SpanElement extends AtomrigsElement {
   }
 
   connectedCallback() {
-    this.loadTexts()
+    super.connectedCallback()
     .then(() => {
       this.render();
     });
@@ -74,16 +78,15 @@ class NavigationBarElement extends AtomrigsElement {
       skt: mode === 'dev' ? `skt.html?lang=${lang}` : `${lang}/skt.html`
     };
     
-    let koreanSwitchURL = mode === 'dev' ? `${window.location.pathname}?lang=kr` : `kr/${window.location.pathname}`;
-    let englishSwitchURL = mode === 'dev' ? `${window.location.pathname}?lang=en` : `en/${window.location.pathname}`;
+    const otherLang = lang === 'kr' ? 'en' : 'kr';
+    let langSwitchURL = mode === 'dev' ? `${window.location.pathname}?lang=${otherLang}` : `/${otherLang}${window.location.pathname}`;
 
     if (mode === 'dev') {
       pageURL.kansong += '&mode=dev';
       pageURL.pinzle += '&mode=dev';
       pageURL.skt += '&mode=dev';
 
-      koreanSwitchURL += '&mode=dev';
-      englishSwitchURL += '&mode=dev';
+      langSwitchURL += '&mode=dev';
     }
 
     this.innerHTML = `
@@ -107,10 +110,7 @@ class NavigationBarElement extends AtomrigsElement {
                 <a class="nav-link" href="${pageURL.skt}">${langObj.skt}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="${koreanSwitchURL}">${lang === 'kr' ? '한국어' : 'Korean'}</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="${englishSwitchURL}">${lang === 'en' ? 'English' : '영어'}</a>
+                <a class="nav-link" href="${langSwitchURL}">${lang === 'kr' ? '영어' : 'Korean'}</a>
               </li>
             </ul>
           </div>
@@ -120,7 +120,7 @@ class NavigationBarElement extends AtomrigsElement {
   }
 
   connectedCallback() {
-    this.loadTexts()
+    super.connectedCallback()
     .then(() => {
       this.render();
     });
