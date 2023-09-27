@@ -28,6 +28,10 @@ class AtomrigsElement extends HTMLElement {
         this.json = json;
       });
   }
+
+  connectedCallback() {
+    return this.loadTexts();
+  }
 }
 
 class SpanElement extends AtomrigsElement {
@@ -47,7 +51,7 @@ class SpanElement extends AtomrigsElement {
   }
 
   connectedCallback() {
-    this.loadTexts()
+    super.connectedCallback()
     .then(() => {
       this.render();
     });
@@ -120,7 +124,7 @@ class NavigationBarElement extends AtomrigsElement {
   }
 
   connectedCallback() {
-    this.loadTexts()
+    super.connectedCallback()
     .then(() => {
       this.render();
     });
