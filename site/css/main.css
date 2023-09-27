@@ -1,3 +1,35 @@
+@import url('reset.css');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+  /* color */
+  --black: #121212;
+  --white: #FFFFFF;
+  --gray_100: #E1E4E9;
+  --gray_200: #B8BDC3;
+  --gray_300: #878F9B;
+  --gray_400: #4A586D;
+  --gray_500: #162947;
+  --gray_600: #0C1B32;
+  --gray_700: #07101E;
+
+  /* text size */
+  --title: 1.125rem;
+  --subTitle: 2rem;
+  --content: 0.875rem;
+  --background: 12.5rem;
+}
+
+* {
+  font-family: "Pretendard", sans-serif
+}
+
 main {
   width: 100vw;
   padding: 0px 5rem;
@@ -8,11 +40,71 @@ main {
 }
 
 .itemContainer {
-  width: 100%;
-  min-height: 200px;
-  border: 3px solid black;
-  padding: 50px;
   display: flex;
   justify-content: center;
+  gap:69px;
   align-items: center;
+  position:relative;
+  background-image: url(assets/background.svg);
+  width:100%;
+  min-height: 700px;
+  height:100vh;
+}
+
+.backgroundGradient {
+  position:absolute;
+  background: linear-gradient(116.82deg, #786B5C 0%, #321846 100%);
+  width:100%;
+  min-height: 700px;
+  height:100vh;
+  opacity: 0.9;
+}
+
+.backgroundText {
+  position:absolute;  width:100%;
+}
+
+.backgroundText > atomrigs-span {
+  color: rgba(255, 255, 255, 0.20);
+  font-size: 12.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.imgContainer {
+  position:relative;
+  z-index: 0; width:508px;
+}
+
+.nft {
+  position: absolute;
+  top:48px;
+  left: 156px;
+  z-index: 0;
+}
+
+.textContainer {
+  background-color:white;
+  width: 553px;
+  z-index: 0;
+}
+
+.title {
+  font-size: var(--title);
+  font-weight: 600;
+  line-height: 25.2px;
+}
+
+.subTitle {
+  font-size: var(--subTitle);
+  font-weight: 700;
+  line-height: 38.4px;
+}
+
+.content {
+  font-size: var(--content);
+  font-weight : 400;
+  line-height: 19.6px;
 }

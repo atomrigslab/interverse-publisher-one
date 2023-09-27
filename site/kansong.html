@@ -8,15 +8,39 @@
     <meta HTTP-equiv="Expires" content="-1">
 
     <title>Interverse</title>
+  
     <link href="assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" crossorigin="anonymous">
     <script src="common.js"></script>
 
   </head>
   <body>
+    <!-- <main> -->
     <navigation-bar-element></navigation-bar-element>
+    <div class="itemContainer">
+      <div class="backgroundGradient"></div>
+      
+      <div class="backgroundText">
+        <!-- 백그라운드에서 글자 계속해서 움직임 -->
+        <atomrigs-span>kansong art museum</atomrigs-span>
+      </div>
 
-    <main>
+      <!-- 이미지 누르면 모달, 게임내에서 보이는 이미지 -->
+      <div class="imgContainer">
+        <img src="assets/kansongLogo.svg" alt="" />
+        <div class="nft">
+          <img src="assets/img-kan-1.png" alt="" />
+        </div>
+      </div>
+
+      <div class="textContainer">
+        <atomrigs-span class="title" textKey="kansongNftTitle1"></atomrigs-span><br>
+        <atomrigs-span class="subTitle" textKey="kansongNftSubTitle1"></atomrigs-span><br>
+        <atomrigs-span class="content" textKey="kansongNftContent1"></atomrigs-span>
+      </div>
+    </div>
+  <!-- </main> -->
+    <!-- <main>
       <div class="itemContainer">
         1st
       </div>
@@ -29,7 +53,7 @@
       <div class="itemContainer">
         4th
       </div>
-    </main>
+    </main> -->
 
     <script src="assets/jquery-3.7.1.slim.min.js"></script>
     <script src="assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
