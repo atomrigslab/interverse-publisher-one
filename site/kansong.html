@@ -11,51 +11,87 @@
   
     <link href="assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css"> -->
     <script src="common.js"></script>
-
   </head>
-  <body>
-    <!-- <main> -->
-    <navigation-bar-element></navigation-bar-element>
-    <div class="itemContainer">
-      <div class="backgroundGradient"></div>
-      
-      <div class="backgroundText">
-        <!-- 백그라운드에서 글자 계속해서 움직임 -->
-        <atomrigs-span>kansong art museum</atomrigs-span>
-      </div>
 
-      <!-- 이미지 누르면 모달, 게임내에서 보이는 이미지 -->
-      <div class="imgContainer">
-        <img src="assets/kansongLogo.svg" alt="" />
-        <div class="nft">
-          <img src="assets/img-kan-1.png" alt="" />
+  <body>
+    <main id="container">
+      <navigation-bar-element></navigation-bar-element>
+      <div data-anchor="Page 1" class="itemContainer">
+    
+        <div class="bgGradient"></div>
+        
+        <div class="bgText">
+          <atomrigs-span>kansong art museum</atomrigs-span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="assets/kansongLogo.svg" alt="" />
+          <div class="nft">
+            <img src="assets/img-kan-1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <atomrigs-span class="title" textKey="kansongNftTitle1"></atomrigs-span>
+          <atomrigs-span class="subTitle" textKey="kansongNftSubTitle1"></atomrigs-span>
+          <atomrigs-span class="content" textKey="kansongNftContent1"></atomrigs-span>
         </div>
       </div>
 
-      <div class="textContainer">
-        <atomrigs-span class="title" textKey="kansongNftTitle1"></atomrigs-span><br>
-        <atomrigs-span class="subTitle" textKey="kansongNftSubTitle1"></atomrigs-span><br>
-        <atomrigs-span class="content" textKey="kansongNftContent1"></atomrigs-span>
-      </div>
-    </div>
-  <!-- </main> -->
-    <!-- <main>
-      <div class="itemContainer">
-        1st
-      </div>
-      <div class="itemContainer">
-        2nd
-      </div>
-      <div class="itemContainer">
-        3rd
-      </div>
-      <div class="itemContainer">
-        4th
-      </div>
-    </main> -->
+      <div data-anchor="Page 2" class="itemContainer">
+        <div class="bgGradient"></div>
+        
+        <div class="bgText ">
+          <atomrigs-span>kansong art museum</atomrigs-span>
+        </div>
 
+        <div class="imgContainer">
+          <img src="assets/kansongLogo.svg" alt="" />
+          <div class="nft">
+            <img src="assets/img-kan-2.png" alt="" />
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <atomrigs-span class="title" textKey="kansongNftTitle2"></atomrigs-span><br>
+          <atomrigs-span class="subTitle" textKey="kansongNftSubTitle2"></atomrigs-span><br>
+          <atomrigs-span class="content" textKey="kansongNftContent2"></atomrigs-span>
+        </div>
+      </div>
+
+      <div data-anchor="Page 3" class="itemContainer">
+    
+        <div class="bgGradient"></div>
+        
+        <div class="bgText ">
+     
+          <atomrigs-span>kansong art museum</atomrigs-span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="assets/kansongLogo.svg" alt="" />
+          <div class="nft">
+            <img src="assets/img-kan-3.png" alt="" />
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <atomrigs-span class="title" textKey="kansongNftTitle3"></atomrigs-span><br>
+          <atomrigs-span class="subTitle" textKey="kansongNftSubTitle3"></atomrigs-span><br>
+          <atomrigs-span class="content" textKey="kansongNftContent3"></atomrigs-span>
+        </div>
+      </div>
+    </main>
+ 
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
     <script src="assets/jquery-3.7.1.slim.min.js"></script>
     <script src="assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+    <script>
+      new Pageable("#container", {
+        animation: 500,
+      });
+    </script>
   </body>
 </html>
