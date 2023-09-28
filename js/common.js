@@ -21,7 +21,7 @@ class AtomrigsElement extends HTMLElement {
   loadTexts() {
     // Ref: https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/
     // 브라우저의 디스크 캐시를 활용
-    return fetch('../assets/texts.json')
+    return fetch('assets/texts.json')
       .then((response) => response.json())
       .then((json) => {
         // (window as any).atomrigs.texts = json
