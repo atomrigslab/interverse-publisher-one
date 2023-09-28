@@ -77,11 +77,19 @@ class NavigationBarElement extends AtomrigsElement {
       lang = searchParams.has('lang') ? searchParams.get('lang') : 'kr';
     } else {
       const tokens = window.location.pathname.split('/');
+      console.log({tokens})
       lang = tokens[1];
+      if (lang !== undefined && lang.length === 0) {
+        lang = 'kr';
+      }
       filename = tokens.slice(-1);
-      console.log({tokens, lang, filename})
+      if (filename !== undefined && filename.length === 0) {
+        filename = 'index.html';
+      }
     }
   
+    console.log({lang, filename})
+
     let pageURL = {
       kansong: mode === 'dev' ? `kansong.html?lang=${lang}` : `/${lang}/kansong.html`,
       pinzle: mode === 'dev' ? `pinzle.html?lang=${lang}` : `/${lang}/pinzle.html`,
