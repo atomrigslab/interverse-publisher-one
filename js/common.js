@@ -30,8 +30,7 @@ class NavigationBarElement extends AtomrigsElement {
 
   render() {
     const tokens = window.location.pathname.split('/');
-  
-    let lang = tokens[1];
+    let [lang] = tokens.slice(-2, -1);
     if (lang === undefined
         || this.json[lang] === undefined
         || (lang !== undefined && lang.length === 0)) {
@@ -42,13 +41,15 @@ class NavigationBarElement extends AtomrigsElement {
     if (filename !== undefined && filename.length === 0) {
       filename = 'index.html';
     }
+
+    const urlPrefix = tokens.slice(0, -2).join('/');
   
     const langObj = this.json[lang] ?? this.json['kr'];
     
     let pageURL = {
-      kansong: `/${lang}/kansong.html`,
-      pinzle:  `/${lang}/pinzle.html`,
-      skt: `/${lang}/skt.html`
+      kansong: `${urlPrefix}/${lang}/kansong.html`,
+      pinzle:  `${urlPrefix}/${lang}/pinzle.html`,
+      skt: `${urlPrefix}/${lang}/skt.html`
     };
 
     const menuButtons = Object.entries(pageURL).map(([pageKey, pageUrl]) => (
@@ -66,7 +67,7 @@ class NavigationBarElement extends AtomrigsElement {
     )).join('');
     
     const otherLang = lang === 'kr' ? 'en' : 'kr';
-    let langSwitchURL = `/${otherLang}/${filename}`;
+    let langSwitchURL = `${urlPrefix}/${otherLang}/${filename}`;
 
     this.innerHTML = `
       <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position:fixed; z-index:10; width:100%">
