@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta HTTP-equiv="Expires" content="-1">
+
+    <title>Interverse</title>
+ 
+    <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
+    <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/main.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/ji.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css"> -->
+    <script src="../assets/jquery-3.7.1.slim.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/webgl-player.js"></script>
+
+    <script>
+      function init() {
+        $('#nft1-3d-view').on('click', () => {
+          const player = document.getElementById('webglPlayer1');
+          document.getElementById('modal1').open(() => {
+            player.close();
+          });
+          player.startView('kansong', 0);
+        })
+        $('#nft1-extra').on('click', () => {
+          const player = document.getElementById('webglPlayer2');
+          document.getElementById('modal2').open(() => {
+            player.close();
+          });
+          player.startView('kansong', 1);
+        })
+      }
+    </script>
+  </head>
+
+  <!-- <body onLoad="init()" style="width: 100vw; height: 100vh;">
+    <main id="container" style="width: 100%; height: 100%;"> -->
+  <body onLoad="init()" style="width: 100vw; height: 100vh;">
+    <main id="container">
+      <navigation-bar-element></navigation-bar-element>
+      <div data-anchor="Page 1" class="itemContainer">
+    
+        <div class="bgGradient"></div>
+        
+        <div class="bgText">
+          <span>kansong art museum</span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="../assets/kansongLogo.svg" alt="" />
+          <div class="nft">
+            <img src="../assets/img-kan-1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <span class="title"><%= kansongNFT.title1 %></span>
+          <span class="subTitle"><%= kansongNFT.subtitle1 %></span>
+          <span class="content"><%= kansongNFT.content1 %></span>
+          <span id="nft1-3d-view">View 3D (1) - Sample</span>
+          <span id="nft1-extra">View 3D (2) - Sample</span>
+        </div>
+      </div>
+
+      <div id="page2Text" class="textOutContainer">
+        <span class="title"><%= kansongNFT.title1 %></span><br />
+        <span class="subTitle"><%= kansongNFT.subtitle1 %></span>
+        <span class="content"><%= kansongNFT.content1 %></span>
+      </div>
+
+      <div id="tt" data-anchor="Page 2" class="itemContainer">
+        <div class="bgGradient"></div>
+        
+        <div class="bgText ">
+          <span>kansong art museum</span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="../assets/kansongLogo.svg" alt="" />
+          <div class="nft">
+            <img src="../assets/img-kan-2.png" alt="" />
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <span class="title"><%= kansongNFT.title2 %></span><br />
+          <span class="subTitle"><%= kansongNFT.subtitle2 %></span>
+          <span class="content"><%= kansongNFT.content2 %></span>
+        </div>
+      </div>
+
+      <div id="zz" data-anchor="Page 3" class="itemContainer">
+    
+        <div class="bgGradient"></div>
+        
+        <div class="bgText ">
+     
+          <span>kansong art museum</span>
+        </div>
+
+        <div class="imgContainer">
+          <img src="../assets/kansongLogo.svg" alt="" />
+          <div class="nft">
+            <img src="../assets/img-kan-3.png" alt="" />
+          </div>
+        </div>
+
+        <div class="textContainer">
+          <span class="title"><%= kansongNFT.title3 %></span><br />
+          <span class="subTitle"><%= kansongNFT.subtitle3 %></span>
+          <span class="content"><%= kansongNFT.content3 %></span>
+        </div>
+      </div>
+    </main>
+    <atomrigs-modal id="modal1" width="60%" height="60%">
+      <atomrigs-webgl-player
+        id="webglPlayer1"
+        class="webglPlayer"
+      ></atomrigs-webgl-player>
+    </atomrigs-modal>
+
+    <atomrigs-modal id="modal2" width="60%" height="60%">
+      <atomrigs-webgl-player
+        id="webglPlayer2"
+        class="webglPlayer"
+      ></atomrigs-webgl-player>
+    </atomrigs-modal>
+
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+    
+     <script>
+      // if (matchMedia("screen and (max-width: 1024px)").matches) {
+      //   document.getElementById("page2Text").setAttribute("data-anchor","Page 2");
+      //   document.getElementById("tt").setAttribute("data-anchor","Page 3");
+      //   document.getElementById("zz").setAttribute("data-anchor","Page 4");
+      // }
+      // else {
+      //   document.getElementById("page2Text").style.display = "none";
+      // }
+    </script>
+
+    <script>
+      new Pageable("#container", {
+        animation: 500,
+      });
+    </script>
+  </body>
+</html>

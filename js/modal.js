@@ -1,4 +1,4 @@
-class AtomrigsModal extends AtomrigsElement {
+class AtomrigsModal extends HTMLElement {
   isOpen = false;
   onHideCallback = null
 
@@ -117,10 +117,7 @@ class AtomrigsModal extends AtomrigsElement {
   }
 
   connectedCallback() {
-    super.connectedCallback()
-    .then(() => {
-      this.render();
-    })
+    this.render();
   }
 };
 

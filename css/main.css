@@ -84,7 +84,7 @@ main {
   position:absolute;  width:100%;
 }
 
-.bgText > atomrigs-span {
+.bgText > span {
   color: rgba(255, 255, 255, 0.20);
   font-size: 12.5rem;
   font-style: normal;
