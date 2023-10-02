@@ -67,12 +67,14 @@ class NavigationBarElement extends AtomrigsElement {
     )).join('');
     
     const otherLang = lang === 'kr' ? 'en' : 'kr';
-    let langSwitchURL = `${urlPrefix}/${otherLang}/${filename}`;
+    let langSwitchUrl = `${urlPrefix}/${otherLang}/${filename}`;
+
+    const homeUrl = `${urlPrefix}/${lang}`;
 
     this.innerHTML = `
       <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position:fixed; z-index:10; width:100%">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/${lang}">
+          <a class="navbar-brand" href="${homeUrl}">
             Interverse
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +84,7 @@ class NavigationBarElement extends AtomrigsElement {
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               ${menuButtons}
               <li class="nav-item">
-                <a class="nav-link" href="${langSwitchURL}">${otherLang === 'kr' ? '한글' : 'English'}</a>
+                <a class="nav-link" href="${langSwitchUrl}">${otherLang === 'kr' ? '한글' : 'English'}</a>
               </li>
             </ul>
           </div>
