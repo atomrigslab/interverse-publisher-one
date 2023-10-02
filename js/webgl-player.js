@@ -61,6 +61,7 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
 
   // index는 0부터 시작
   getConfig(pathPrefix, collectionId, index) {
+    // https://docs.unity3d.com/Manual/webgl-building.html
     // https://docs.unity3d.com/Manual/webgl-templates.html
 
     const basePath = `${pathPrefix}/webgl/${collectionId}/${index}`;
@@ -77,7 +78,7 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
       showBanner: false
       // showBanner: unityShowBanner,
     };
-    console.log({config});
+    // console.log({config});
 
     // By default Unity keeps WebGL canvas render target size matched with
     // the DOM size of the canvas element (scaled by window.devicePixelRatio)
