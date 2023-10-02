@@ -32,17 +32,19 @@ class NavigationBarElement extends AtomrigsElement {
     const tokens = window.location.pathname.split('/');
   
     let lang = tokens[1];
-    if (lang !== undefined && lang.length === 0) {
+    if (lang === undefined
+        || this.json[lang] === undefined
+        || (lang !== undefined && lang.length === 0)) {
       lang = 'kr';
     }
-
+    
     let [filename] = tokens.slice(-1);
     if (filename !== undefined && filename.length === 0) {
       filename = 'index.html';
     }
   
     const langObj = this.json[lang] ?? this.json['kr'];
-
+    
     let pageURL = {
       kansong: `/${lang}/kansong.html`,
       pinzle:  `/${lang}/pinzle.html`,
