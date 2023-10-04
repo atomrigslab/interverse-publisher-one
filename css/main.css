@@ -36,8 +36,8 @@
   overflow: auto;
   overflow-x: hidden;
   overflow-y: scroll;
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
+  /* -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; */
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */
 }
@@ -46,21 +46,13 @@
 display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
-.bg-intro {
-  position: fixed;
-  background: linear-gradient(116.82deg, #222635 100%, #060A1c 100%);
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-}
-
- .page {
+.page {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   width: 100vw;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
   font-size: calc(var(--font-size) * 1px);
   font-weight: bold;  
   position: relative;
@@ -82,6 +74,66 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   .page {
     font-size: 3rem;
   }
+}
+
+.bg-intro {
+  position: fixed;
+  background: linear-gradient(116.82deg, #222635 0%, #060A1c 100%);
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg-kansong {
+  position: fixed;
+  background: linear-gradient(116.82deg, #786B5C 0%, #321846 100%);
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg-text {
+  width: 1000vw;
+  position: fixed;
+  color: var(--white);
+  opacity: 0.2;
+  font-size: 200px;
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.item-nft {
+  z-index:3;
+  position: relative;
+}
+
+.item-nft > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.item-text > .title {
+  color: red;
+}
+
+.item-text > .subtitle {
+  color: red;
+}
+
+.item-text > .content {
+  color: red;
+}
+
+.item-text > .button {
+  color: red;
 }
 
 picture {
@@ -127,4 +179,48 @@ picture {
         align-items: center;
         justify-content: center;
      }
+
+     /* .mobile .page { 
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      display: flex;
+      width: fit-content;
+      transition: 0.6s ease-out;
+     } */
+     
+     .mobile > .item-text > span {
+      color: black;
+     }
+
+    .item-nft {
+    }
+
+  
+  #carousel-list {
+    display: flex;
+    width: fit-content;
+    /* 글자 드래그 막기 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
   }
+  
+  .carousel-list-transition {
+    transition: 0.6s ease-out;
+  }
+  
+  .carousel-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .test {
+    pointer-events: auto  ;
+  }
+}
