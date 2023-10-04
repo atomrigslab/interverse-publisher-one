@@ -10,28 +10,47 @@
     <title>Interverse</title>
     <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="../css/main.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/ji.css" rel="stylesheet">
+    <link href="../css/ji.css?dt=<%= Date.now() %>" rel="stylesheet">
 
     <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/modal.js"></script>
-    <script src="../js/webgl-player.js"></script>
+    <script src="../js/common.js?dt=<%= Date.now() %>"></script>
+    <script src="../js/modal.js?dt=<%= Date.now() %>"></script>
+    <script src="../js/webgl-player.js?dt=<%= Date.now() %>"></script>
   </head>
   <body>
     <navigation-bar-element></navigation-bar-element>
 
-    <main>
-      <div class="itemContainer">
-        <span textKey="pinzle"></span>
+    <main class="main-container">
+      <!-- 데스크탑 -->
+      <div class="desktop-panel">
+        <div class="new-page">
+          <div class="desktop-page-container">
+            핀즐 데스크탑 페이지1
+          </div>
+        </div>
+        <div class="new-page">
+          <div class="desktop-page-container">
+            핀즐 데스크탑 페이지2
+          </div>
+        </div>
+        <div class="new-page">
+          <div class="desktop-page-container">
+            핀즐 데스크탑 페이지3
+          </div>
+        </div>
       </div>
-      <div class="itemContainer">
-        <span textKey="pinzle"></span>
-      </div>
-      <div class="itemContainer">
-        <span textKey="pinzle"></span>
-      </div>
-      <div class="itemContainer">
-        <span textKey="pinzle"></span>
+
+      <!-- mobile -->
+      <div class="mobile-panel">
+        <div class="nft-page" style="display: flex; justify-content: center; align-items: center;">
+          <h3>핀즐 모바일 페이지1</h3>
+        </div>
+        <div class="empty-page">&nbsp;</div>
+        <div class="new-page">
+          <div class="desc-container">
+            설명 이거
+          </div>
+        </div>
       </div>
     </main>
 

@@ -32,11 +32,16 @@ function render(targetFilePath) {
 
 function startWebServer() {
   const port = 5555;
-  webServer = createServer({
-    root: currentPath
-  });
+  const serverOptions = {
+    root: currentPath,
+    cache: -1
+  };
+  webServer = createServer(serverOptions);
 
   webServer.listen(port, '0.0.0.0');
+
+  console.log(`Web server started on ${port}`);
+  console.log(serverOptions);
 }
 
 function createTargetDirectories() {
