@@ -177,7 +177,7 @@ picture {
     .mobile {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
      }
 
      /* .mobile .page { 
@@ -194,18 +194,9 @@ picture {
       color: black;
      }
 
-    .item-nft {
-    }
-
-  
   #carousel-list {
     display: flex;
     width: fit-content;
-    /* 글자 드래그 막기 */
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
   }
   
   .carousel-list-transition {
@@ -218,9 +209,5 @@ picture {
     align-items: center;
     width: 100vw;
     height: 100vh;
-  }
-
-  .test {
-    pointer-events: auto  ;
   }
 }
