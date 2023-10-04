@@ -9,18 +9,33 @@
     <script src="../js/common.js"></script>
   </head>
   <body>
-    <main>
-      <navigation-bar-element></navigation-bar-element>
-      <div class="itemContainer">
-        <div class="bgIntro"></div>
-        <picture style="z-index: 10;">
-          <source srcset="../assets/interverse.webp" type="image/webp" />
-          <img src="../assets/bg.jpg" alt="" />
-        </picture>
-    </div>
+    <main class="intro-container">
+        <navigation-bar-element></navigation-bar-element>
+
+        <div class="page page-main">
+          <div class="bg-intro"></div>
+          <picture>
+            <source srcset="../assets/interverse.webp" type="image/webp" />
+            <img src="../assets/bg.jpg" alt="" />
+          </picture>
+        </div>
+        
+        <div class="page"></div>
+        <div class="page page-cover">
+          <span class="text text--random" data-scroll="out" data-splitting="">청자모자원숭</span>&nbsp;
+          <span class="text text--random" data-scroll="out" data-splitting="">이형연</span>&nbsp;
+          <span class="text text--random" data-scroll="out" data-splitting="">적청자</span>&nbsp;
+          <span class="text text--random" data-scroll="out" data-splitting="">모청자모자</span>&nbsp;
+        </div>
     </main>
 
-    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
-    <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script>
+      Splitting();
+      ScrollOut({
+      targets: ".word",
+      scrollingElement: ".intro-container" });
+    </script>
   </body>
-</html>
+  </html>

@@ -30,149 +30,101 @@
   font-family: "Pretendard", sans-serif
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* gap: 0.5rem; */
-
-  /* 반응형 작업중 */
-  /* padding: 0 40px;
+.intro-container {
   width: 100vw;
-  height: 100vh; */
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
 }
 
-.itemContainer {
-  display: flex;
-  justify-content: center;
-
-  /* 반응형 작업중 */
-  /* gap: 4.4rem; */
-
-  /* gap:69px; */
-  align-items: center;
-  position:relative;
-  /* background-image: url(../assets/bg.jpg); */
-  background-color: black;
-  width: 100%;
-  min-height: 700px;
-  height: 100%;
+.intro-container::-webkit-scrollbar {
+display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
-.bgIntro {
-  position:absolute;
+.bg-intro {
+  position: fixed;
   background: linear-gradient(116.82deg, #222635 100%, #060A1c 100%);
+  z-index: 1;
   width: 100%;
-  min-height: 700px;
-  height: 100%;
-  opacity: 0.98;
+  height: 100vh;
 }
 
-.bgGradient {
-  position:absolute;
-  background: linear-gradient(116.82deg, #786B5C 0%, #321846 100%);
-  min-height: 700px;
-
-  /* 반응형 작업중 */
-  /* width: 100%;
-  min-height: 700px;
-  height: 100%;
-  opacity: 0.98; */
-}
-
-.bgText {
-  position:absolute;  width:100%;
-}
-
-.bgText > span {
-  color: rgba(255, 255, 255, 0.20);
-  font-size: 12.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 140%;
-  text-transform: uppercase;
-}
-
-.imgContainer {
-  position:relative;
-  z-index: 0;
-  width:508px;
-
-  /* 반응형 작업중 */
-  /* width: 31.75rem;
-  min-width:22.75rem;
-  min-height: 42.5rem; */
-}
-
-.nft {
-  position: absolute;
-
-  /* 반응형 작업중 */
-  /* top: 3rem;
-  left: 9.75rem; */
-
-  z-index: 0;
-}
-
-/* 반응형 작업중 */
-/* .nft > img {
-  width: 22rem;
-  height: 33rem;
-} */
-
-.textContainer {
+ .page {
   display: flex;
-  flex-direction: column;
-  gap: 28px;
-  color: var(--white);
-  background-color:transparent;
-  max-width: 558px;
-  z-index: 0;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  font-size: calc(var(--font-size) * 1px);
+  font-weight: bold;  
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
-  color: var(--gray_200);
-  font-size: var(--title);
-  font-weight: 600;
-  line-height: 25.2px;
+.page-main {
+  position: fixed;
+}
+.page-cover {
+  background-color: rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(5px);
 }
 
-.subTitle {
-  color: var(--white);
-  font-size: var(--subTitle);
-  font-weight: 700;
-  line-height: 38.4px;
-}
-
-.content {
-  color: var(--gray_100);
-  font-size: var(--content);
-  font-weight : 400;
-  line-height: 19.6px;
-}
-
-/* 모바일 */ 
-
-/* 반응형 작업중 */
-/* @media all and (max-width:1024px) {
-  .imgContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+@media (min-width: 1023px) {
+  .page {
+    font-size: 3rem;
   }
+}
 
-  .imgContainer > img{
+picture {
+  z-index: 2;
+}
+
+.page .char {
+  display: inline-block;
+  -webkit-animation-delay: calc(0.25s + var(--char-index) * 0.1s);
+          animation-delay: calc(0.25s + var(--char-index) * 0.1s);
+  transition: all 0.25s calc(0.25s + var(--char-index) * 0.1s);
+}
+
+.text--random [data-scroll='out'] .char:nth-of-type(1) {
+  transform: translateX(212%) translateY(210%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(2) {
+  transform: translateX(-33%) translateY(-127%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(3) {
+  transform: translateX(26%) translateY(118%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(4) {
+  transform: translateX(-173%) translateY(216%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(5) {
+  transform: translateX(-131%) translateY(-119%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(6) {
+  transform: translateX(232%) translateY(86%);
+}
+
+.mobile {
     display: none;
-  }
+}
 
-  .nft {
-    position: static;
+@media (max-width: 1024px) {
+    .web {
+      display: none;
+    }
+    .mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
   }
-  
-  .textContainer {
-    display: none;
-  }
-}  */
