@@ -36,12 +36,43 @@
   }
 }
 
-.desktop-page-container {
+/* 모바일 */
+.mobile-page-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background: linear-gradient(56.82deg, #967957 0%, #a246e8 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 16px 40px 16px;
+  gap: 18px;
+}
+
+.mobile-page-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.mobile-button-group {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+}
+
+.tool-button {
+  height: 36px;
+  border: 1px solid white;
+  border-radius: 1.5rem;
+  padding: 0rem 1.2rem;
+  color: white;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .nft-page {
