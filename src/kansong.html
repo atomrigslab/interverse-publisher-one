@@ -121,12 +121,43 @@
       </div> <!-- end of web -->
 
       <!-- MOBILE -->
-      <div id="carousel-list1" class="page page-main mobile bg">
+      <div class="mobile-panel">
+        <div class="swiper mobile-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-1.png"
+                title="<%= nft.kansong[0].subtitle %>"
+                subtitle="<%= nft.kansong[0].title %>"
+                content="<%= nft.kansong[0].content %>"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-2.png"
+                title="<%= nft.kansong[1].subtitle %>"
+                subtitle="<%= nft.kansong[1].title %>"
+                content="<%= nft.kansong[1].content %>"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-3.png"
+                title="<%= nft.kansong[2].subtitle %>"
+                subtitle="<%= nft.kansong[2].title %>"
+                content="<%= nft.kansong[2].content %>"
+              ></atomrigs-nft-container>
+            </div>
+          </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper -->
+      </div>
+
+      <!-- <div id="carousel-list1" class="page page-main mobile bg">
         <div class="carousel-content">
           <div class="bg-kansong"></div>
           <div class="item-nft">
             <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/kansong/img-kan-1.png" alt="" />
+            <img src="" alt="" />
             <img src="../assets/mobile/icon-To-Right.svg" alt="" />
           </div>
           <div class="button-area">
@@ -189,7 +220,7 @@
             <span class="content"><%= nft.kansong[2].content %></span>
           </div>
       </div>
-      </div>
+      </div> -->
     </main>
 
     <atomrigs-modal id="modal1" width="60%" height="60%">

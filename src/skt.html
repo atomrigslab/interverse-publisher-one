@@ -273,7 +273,46 @@
 
 
       <!-- MOBILE -->
-      <div id="carousel-list1" class="page page-main mobile bg">
+      <div class="mobile-panel">
+        <div class="swiper mobile-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
+                title="<%= nft.ifland[0].subtitle %>"
+                subtitle="<%= nft.ifland[0].title %>"
+                content="<%= nft.ifland[0].content %>"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
+                title="<%= nft.ifland[1].subtitle %>"
+                subtitle="<%= nft.ifland[1].title %>"
+                content="<%= nft.ifland[1].content %>"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
+                title="<%= nft.ifland[2].subtitle %>"
+                subtitle="<%= nft.ifland[2].title %>"
+                content="<%= nft.ifland[2].content %>"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-metaverse-man.png"
+                oneTimeImage2="../assets/ifland/img-ifland-metaverse-woman.png"
+                title="<%= nft.ifland[3].subtitle %>"
+                subtitle="<%= nft.ifland[3].title %>"
+                content="<%= nft.ifland[3].content %>"
+              ></atomrigs-nft-container>
+            </div>
+          </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper -->
+      </div>
+      <!-- <div id="carousel-list1" class="page page-main mobile bg">
         <div class="carousel-content">
           <div class="bg-ifland"></div>
           <div class="item-nft">
@@ -364,7 +403,7 @@
             <span class="content"><%= nft.ifland[3].content %></span>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
 
     <atomrigs-modal id="modal1" width="60%" height="60%">
