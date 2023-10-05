@@ -9,32 +9,20 @@
 
     <title>Interverse</title>
     <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/main.css?dt=1696490819760" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/ji.css?dt=1696490819760" rel="stylesheet">
+    <link href="../css/main.css?dt=1696498582654" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/ji.css?dt=1696498582654" rel="stylesheet">
 
     <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <script src="../js/common.js?dt=1696490819760"></script>
-    <script src="../js/components.js?dt=1696490819760"></script>
-    <script src="../js/modal.js?dt=1696490819760"></script>
-    <script src="../js/webgl-player.js?dt=1696490819760"></script>
+    <script src="../js/common.js?dt=1696498582654"></script>
+    <script src="../js/components.js?dt=1696498582654"></script>
+    <script src="../js/modal.js?dt=1696498582654"></script>
+    <script src="../js/webgl-player.js?dt=1696498582654"></script>
 
-    <link
-      rel="stylesheet"
-      href="../assets/swiperjs-10.3.1/swiper-bundle.min.css"
-    />
-    
+    <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
     <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
-
+    
+    <script src="../js/funcs.js"></script>
     <script>
-      function init() {
-        const swiper = new Swiper('.swiper', {
-          // Optional parameters
-          direction: 'vertical',
-          mousewheel: true,
-          loop: false,
-        });
-      }
-
       function clickFirst() {
         const player = document.getElementById('webglPlayer1');
         document.getElementById('modal1').open(() => {
@@ -42,7 +30,6 @@
         });
         player.startView('pinzle', 0);
       }
-
     </script>
   </head>
   <body onLoad="init()">
@@ -89,13 +76,27 @@
             </div> <!-- end of swiper-slide -->
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
-      </div> end of desktop-panel
+      </div> <!-- end of desktop-panel -->
 
       <!-- 모바일 -->
-      <div>
-
+      <div class="mobile-panel">
+        <div class="swiper mobile-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-1-1_1x.png"
+                desc="이건 핀즐1-1 설명"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-1-2_1x.png"
+                desc="이건 핀즐1-2 설명"
+              ></atomrigs-nft-container>
+            </div>
+          </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper -->
       </div>
-
     </main>
 
     <atomrigs-modal id="modal1" width="60%" height="60%">

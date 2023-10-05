@@ -18,40 +18,11 @@
     <script src="../js/modal.js?dt=<%= Date.now() %>"></script>
     <script src="../js/webgl-player.js?dt=<%= Date.now() %>"></script>
 
-    <link
-      rel="stylesheet"
-      href="../assets/swiperjs-10.3.1/swiper-bundle.min.css"
-    />
-    
+    <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
     <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
-
+    
+    <script src="../js/funcs.js"></script>
     <script>
-      let verticalMobileSwipers;
-      function init() {
-        const swiper = new Swiper('.desktop-fullpage', {
-          // Optional parameters
-          direction: 'vertical',
-          mousewheel: true,
-          loop: false,
-        });
-
-        new Swiper('.mobile-swiper', {
-          // Optional parameters
-          direction: 'horizontal',
-          loop: false,
-        });
-        verticalMobileSwipers = new Swiper('.mobile-swiper-v', {
-          // https://open-code.tech/en/post-1109/
-          effect: 'fade',
-          fadeEffect: {           // added
-              crossFade: true     // added(resolve the overlapping of the slides)
-          },
-          // Optional parameters
-          direction: 'vertical',
-          loop: false,
-        });
-      }
-
       function clickFirst() {
         const player = document.getElementById('webglPlayer1');
         document.getElementById('modal1').open(() => {
@@ -59,13 +30,6 @@
         });
         player.startView('pinzle', 0);
       }
-
-      function closeDesc() {
-        verticalMobileSwipers.forEach((swiper) => {
-          swiper.slidePrev(200, () => {})
-        });
-      }
-
     </script>
   </head>
   <body onLoad="init()">

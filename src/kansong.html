@@ -11,31 +11,19 @@
  
     <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
     <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/main.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/ji.css" rel="stylesheet">
-    <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/modal.js"></script>
-    <script src="../js/webgl-player.js"></script>
+    <link href="../css/main.css?dt=<%= Date.now() %>" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/ji.css?dt=<%= Date.now() %>" rel="stylesheet">
 
-    <script>
-      function init() {
-        $('#nft1-3d-view').on('click', () => {
-          const player = document.getElementById('webglPlayer1');
-          document.getElementById('modal1').open(() => {
-            player.close();
-          });
-          player.startView('kansong', 0);
-        })
-        $('#nft1-extra').on('click', () => {
-          const player = document.getElementById('webglPlayer2');
-          document.getElementById('modal2').open(() => {
-            player.close();
-          });
-          player.startView('kansong', 1);
-        })
-      }
-  </script>
+    <script src="../assets/jquery-3.7.1.slim.min.js"></script>
+    <script src="../js/common.js?dt=<%= Date.now() %>"></script>
+    <script src="../js/components.js?dt=<%= Date.now() %>"></script>
+    <script src="../js/modal.js?dt=<%= Date.now() %>"></script>
+    <script src="../js/webgl-player.js?dt=<%= Date.now() %>"></script>
+
+    <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
+    <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
+
+    <script src="../js/funcs.js"></script>
 
   </head>
 
@@ -44,80 +32,93 @@
       <navigation-bar-element></navigation-bar-element>
 
       <!-- WEB -->
-      <div class="page web">
-        <div class="bg-kansong"></div>
+      <div class="web" style="width: 100%; height: 100%;">
+        <div class="swiper desktop-fullpage">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide desktop-fullpage-slide">
+              <div class="desktop-fullpage-slide-container">
+                <div class="bg-kansong"></div>
         
-        <div class="bg-text">
-          <span>kansong art museum</span>
-        </div>
+                <div class="bg-text">
+                  <span>kansong art museum</span>
+                </div>
 
-        <div class="item-nft">
-          <img src="../assets/kansong/logo-kan.svg" alt="" />
-          <div>
-            <img src="../assets/kansong/img-kan-1.png" alt="" />
-          </div>
-        </div>
+                <div class="item-nft">
+                  <img src="../assets/kansong/logo-kan.svg" alt="" />
+                  <div>
+                    <img src="../assets/kansong/img-kan-1.png" alt="" />
+                  </div>
+                </div>
 
-        <div class="item-text">
-          <span class="subtitle"><%= nft.kansong[0].subtitle %></span>
-          <span class="title"><%= nft.kansong[0].title %></span>
-          <span class="content"><%= nft.kansong[0].content %></span>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-            <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
-        </div>
-        </div>
-      </div>
+                <div class="item-text">
+                  <span class="subtitle"><%= nft.kansong[0].subtitle %></span>
+                  <span class="title"><%= nft.kansong[0].title %></span>
+                  <span class="content"><%= nft.kansong[0].content %></span>
+                  <div class="button-area">
+                    <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
+                    <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- end of swiper-slide -->
 
-      <div class="page web">
-        <div class="bg-kansong"></div>
+            <div class="swiper-slide desktop-fullpage-slide">
+              <div class="desktop-fullpage-slide-container">
+                <div class="bg-kansong"></div>
         
-        <div class="bg-text">
-          <span>kansong art museum</span>
-        </div>
+                <div class="bg-text">
+                  <span>kansong art museum</span>
+                </div>
 
-        <div class="item-nft">
-          <img src="../assets/kansong/logo-kan.svg" alt="" />
-          <div>
-            <img src="../assets/kansong/img-kan-2.png" alt="" />
-          </div>
-        </div>
+                <div class="item-nft">
+                  <img src="../assets/kansong/logo-kan.svg" alt="" />
+                  <div>
+                    <img src="../assets/kansong/img-kan-2.png" alt="" />
+                  </div>
+                </div>
 
-        <div class="item-text">
-          <span class="subtitle"><%= nft.kansong[1].subtitle %></span>
-          <span class="title"><%= nft.kansong[1].title %></span>
-          <span class="content"><%= nft.kansong[1].content %></span>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-            <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
-          </div>
-        </div>
-      </div>
+                <div class="item-text">
+                  <span class="subtitle"><%= nft.kansong[1].subtitle %></span>
+                  <span class="title"><%= nft.kansong[1].title %></span>
+                  <span class="content"><%= nft.kansong[1].content %></span>
+                  <div class="button-area">
+                    <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
+                    <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- end of swiper-slide -->
 
-      <div class="page web">
-        <div class="bg-kansong"></div>
+            <div class="swiper-slide desktop-fullpage-slide">
+              <div class="desktop-fullpage-slide-container">
+                <div class="bg-kansong"></div>
         
-        <div class="bg-text">
-          <span>kansong art museum</span>
-        </div>
+                <div class="bg-text">
+                  <span>kansong art museum</span>
+                </div>
 
-        <div class="item-nft">
-          <img src="../assets/kansong/logo-kan.svg" alt="" />
-          <div>
-            <img src="../assets/kansong/img-kan-3.png" alt="" />
-          </div>
-        </div>
+                <div class="item-nft">
+                  <img src="../assets/kansong/logo-kan.svg" alt="" />
+                  <div>
+                    <img src="../assets/kansong/img-kan-3.png" alt="" />
+                  </div>
+                </div>
 
-        <div class="item-text">
-          <span class="title"><%= nft.kansong[2].title %></span>
-          <span class="content"><%= nft.kansong[2].content %></span>
-          <div class="button-area">
-              <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-              <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
-          </div>
-        </div>
+                <div class="item-text">
+                  <span class="title"><%= nft.kansong[2].title %></span>
+                  <span class="content"><%= nft.kansong[2].content %></span>
+                  <div class="button-area">
+                      <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
+                      <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- end of swiper-slide -->
+
+          </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper -->
       </div>
-
 
       <!-- MOBILE -->
       <div id="carousel-list1" class="page page-main mobile bg">
