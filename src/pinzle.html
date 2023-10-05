@@ -26,11 +26,28 @@
     <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
     <script>
+      let verticalMobileSwipers;
       function init() {
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.desktop-fullpage', {
           // Optional parameters
           direction: 'vertical',
           mousewheel: true,
+          loop: false,
+        });
+
+        new Swiper('.mobile-swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: false,
+        });
+        verticalMobileSwipers = new Swiper('.mobile-swiper-v', {
+          // https://open-code.tech/en/post-1109/
+          effect: 'fade',
+          fadeEffect: {           // added
+              crossFade: true     // added(resolve the overlapping of the slides)
+          },
+          // Optional parameters
+          direction: 'vertical',
           loop: false,
         });
       }
@@ -41,6 +58,12 @@
           player.close();
         });
         player.startView('pinzle', 0);
+      }
+
+      function closeDesc() {
+        verticalMobileSwipers.forEach((swiper) => {
+          swiper.slidePrev(200, () => {})
+        });
       }
 
     </script>
@@ -92,10 +115,24 @@
       </div> end of desktop-panel
 
       <!-- 모바일 -->
-      <div>
-
+      <div class="mobile-panel">
+        <div class="swiper mobile-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-1-1_1x.png"
+                desc="이건 핀즐1-1 설명"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-1-2_1x.png"
+                desc="이건 핀즐1-2 설명"
+              ></atomrigs-nft-container>
+            </div>
+          </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper -->
       </div>
-
     </main>
 
     <atomrigs-modal id="modal1" width="60%" height="60%">

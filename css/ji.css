@@ -35,7 +35,8 @@ html, body {
 
   .mobile-panel {
     display: block;
-    /* flex-direction: column; */
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -79,7 +80,7 @@ html, body {
 }
 
 .nft-page {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100vw;
   position: fixed;
 }
@@ -120,4 +121,40 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mobile-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-slide {
+  width: 100%;
+}
+
+.mobile-slide-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-swiper-v {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeDescptionButton {
+  width: 80px;
+  height: 2rem;
+  display: block;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 5px;
 }
