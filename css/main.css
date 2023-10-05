@@ -20,6 +20,7 @@
   --gray_700: #07101E;
 
   /* bg color */
+  --bg-intro: linear-gradient(116.82deg, #222635 0%, #060A1c 100%);
   --bg-kan: linear-gradient(117deg, #786B5C 0%, #321846 100%);
 
   /* text size */
@@ -28,6 +29,7 @@
   --content: 0.875rem;
   --button: 1rem;
   --background: 12.5rem;
+  --main: 3.125rem;
 
 }
 
@@ -51,6 +53,7 @@
 display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
+/* common */
 .page {
   display: flex;
   align-items: center;
@@ -62,18 +65,10 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   font-weight: bold;  
   position: relative;
   color: #fff;
-  background-image: url(../assets/bg.jpg);
+  /* background-image: url(../assets/bg.jpg); */
   margin: 0;
   padding: 0;
   gap: 56px;
-}
-
-.page-main {
-  position: fixed;
-}
-.page-cover {
-  background-color: rgba(0, 0, 0, 0.70);
-  backdrop-filter: blur(5px);
 }
 
 @media (max-width: 1024px) {
@@ -84,13 +79,36 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   }
 }
 
+/* intro */
+.page-main {
+  position: fixed;
+}
+
+.page-cover {
+  background-color: rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(5px);
+}
+
+.page-cover > span {
+  color: var(--white);
+  /* text-align: center;
+  font-family: Pretendard; */
+  font-size: var(--main);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
 .bg-intro {
   position: fixed;
-  background: linear-gradient(116.82deg, #222635 0%, #060A1c 100%);
+  background: var(--bg-intro);
   z-index: 1;
   width: 100%;
   height: 100vh;
+  opacity: 0.98;
 }
+
 
 
 .bg-kansong {
