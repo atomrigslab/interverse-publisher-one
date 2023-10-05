@@ -5,7 +5,9 @@ class NFTContainer extends HTMLElement {
 
   connectedCallback() {
     const oneTimeImage = this.getAttribute('oneTimeImage');
-    const desc = this.getAttribute('desc');
+    const title = this.getAttribute('title');
+    const subtitle = this.getAttribute('subtitle');
+    const content = this.getAttribute('content');
     this.innerHTML = `
       <div class="swiper mobile-swiper-v">
         <div class="swiper-wrapper">
@@ -25,9 +27,13 @@ class NFTContainer extends HTMLElement {
                 ></atomrigs-nft-view>
               
                 <div class="desc-container flex-center">
-                  <h3>${desc}</h3>
+                  <div class="item-text">
+                    <span class="subtitle">${subtitle}</span>
+                    <span class="title">${title}</span>
+                    <span class="content">${content}</span>
+                  </div>
                   <button type="button" class="closeDescptionButton" onClick="closeDesc()">
-                    닫기
+                    <img src="../assets/mobile/icon-close.svg" alt="" />
                   </button>
                 </div>
               </div>
