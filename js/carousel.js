@@ -88,14 +88,14 @@ const dragEnd = () => {
 
 // PC
 carouselList1.addEventListener('mousedown', (e) => dragStart(e.clientX));
-// carouselList2.addEventListener('mousedown', (e) => dragStart(e.clientX));
-carouselList3.addEventListener('mousedown', (e) => dragStart(e.clientX));
+carouselList2.addEventListener('mousedown', (e) => dragStart(e.clientX));
+// carouselList3.addEventListener('mousedown', (e) => dragStart(e.clientX));
 window.addEventListener('mousemove', (e) => dragging(e.clientX));
 window.addEventListener('mouseup', dragEnd);
 
 // Mobile
 carouselList1.addEventListener('touchstart', (e) => dragStart(e.targetTouches[0].clientX));
-// carouselList2.addEventListener('touchstart', (e) => dragStart(e.targetTouches[0].clientX));
-carouselList3.addEventListener('touchstart', (e) => dragStart(e.targetTouches[0].clientX));
+carouselList2.addEventListener('touchstart', (e) => dragStart(e.targetTouches[0].clientX));
+// carouselList3.addEventListener('touchstart', (e) => dragStart(e.targetTouches[0].clientX));
 window.addEventListener('touchmove', (e) => dragging(e.targetTouches[0].clientX));
 window.addEventListener('touchend', dragEnd);
