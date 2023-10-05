@@ -14,10 +14,34 @@
 
     <script src="../assets/jquery-3.7.1.slim.min.js"></script>
     <script src="../js/common.js?dt=<%= Date.now() %>"></script>
+    <script src="../js/components.js?dt=<%= Date.now() %>"></script>
     <script src="../js/modal.js?dt=<%= Date.now() %>"></script>
     <script src="../js/webgl-player.js?dt=<%= Date.now() %>"></script>
+
+    <link
+      rel="stylesheet"
+      href="../assets/swiperjs-10.3.1/swiper-bundle.min.css"
+    />
+    
+    <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
+
+    <script>
+      function init() {
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: false,
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      }
+    </script>
   </head>
-  <body>
+  <body onLoad="init()">
     <navigation-bar-element></navigation-bar-element>
 
     <main class="main-container">
@@ -42,37 +66,46 @@
 
       <!-- mobile -->
       <div class="mobile-panel">
-        <div class="nft-page">
-
-          <!-- 모바일 NFT 보여주기 - 여기서부터 -->
-          <div class="mobile-page-container">
-            <div class="mobile-page-content">
-              <button type="button">
-                <img src="../assets/mobile/icon-To-Left.svg" />
-              </button>
-              <img src="../assets/pinzle/img-sk-cathelmet.png" />
-              <button type="button">
-                <img src="../assets/mobile/icon-To-Right.svg" />
-              </button>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <atomrigs-nft-view
+                oneTimeImage="../assets/pinzle/img-pin-1-1_1x.png"
+                desc="핀즐 설명 1-1"
+              ></atomrigs-nft-view>
             </div>
-            <div class="mobile-button-group">
-              <button type="button" class="tool-button" onClick="alert('3d 보기')">
-                <img src="../assets/mobile/icon-3d_2.svg" style="display: inline-block" />3D 보기
-              </button>
-              <button type="button" class="tool-button" onClick="alert('적용 예')">
-                <img src="../assets/mobile/icon-3d_2.svg" style="display: inline-block" />적용 예
-              </button>
+            <div class="swiper-slide">
+              <atomrigs-nft-view
+                oneTimeImage="../assets/pinzle/img-pin-1-2_1x.png"
+                desc="핀즐 설명 1-2"
+              ></atomrigs-nft-view>
             </div>
-          </div>
-          <!-- 모바일 NFT 보여주기 - 여기까지 -->
-
-        </div>
-        <div class="empty-page">&nbsp;</div>
-        <div class="new-page">
-          <div class="desc-container">
-            설명 이거
-          </div>
-        </div>
+            <div class="swiper-slide">
+              <atomrigs-nft-view
+                oneTimeImage="../assets/pinzle/img-pin-1-3_1x.png"
+                desc="핀즐 설명 1-3"
+              ></atomrigs-nft-view>
+            </div>
+            <div class="swiper-slide">
+              <atomrigs-nft-view
+                oneTimeImage="../assets/pinzle/img-pin-2-1_1x.png"
+                desc="핀즐 설명 2-1"
+              ></atomrigs-nft-view>
+            </div>
+            <div class="swiper-slide">
+              <atomrigs-nft-view
+                oneTimeImage="../assets/pinzle/img-pin-2-2_1x.png"
+                desc="핀즐 설명 2-2"
+              ></atomrigs-nft-view>
+            </div>
+            <div class="swiper-slide">
+              <atomrigs-nft-view
+                oneTimeImage="../assets/pinzle/img-pin-2-3_1x.png"
+                desc="핀즐 설명 2-3"
+              ></atomrigs-nft-view>
+            </div>
+          </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper -->
       </div>
     </main>
 
