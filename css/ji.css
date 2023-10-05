@@ -91,6 +91,10 @@
   align-items: center;
 }
 
+.empty-page {
+  pointer-events: none;
+}
+
 .desc-container {
   width: 100%;
   height: 100vh;
