@@ -25,9 +25,15 @@
 
     <script src="../js/funcs.js"></script>
 
+    <script>
+      function onLoaded() {
+        init();
+      }
+    </script>
+
   </head>
 
-  <body onLoad="init()">
+  <body onLoad="onLoaded()">
     <main id="container" class="intro-container">
       <navigation-bar-element></navigation-bar-element>
 
@@ -56,8 +62,15 @@
                   <span class="title"><%= nft.kansong[0].title %></span>
                   <span class="content"><%= nft.kansong[0].content %></span>
                   <div class="button-area">
-                    <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-                    <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                    <button type="button"
+                      class="button"
+                      onClick="onViewIn3DClicked('kansong', 0)"
+                    >
+                      <span><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -83,8 +96,15 @@
                   <span class="title"><%= nft.kansong[1].title %></span>
                   <span class="content"><%= nft.kansong[1].content %></span>
                   <div class="button-area">
-                    <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-                    <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                    <button type="button"
+                      class="button"
+                      onClick="onViewIn3DClicked('kansong', 1)"
+                    >
+                      <span><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -109,8 +129,15 @@
                   <span class="title"><%= nft.kansong[2].title %></span>
                   <span class="content"><%= nft.kansong[2].content %></span>
                   <div class="button-area">
-                      <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-                      <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                    <button type="button"
+                      class="button"
+                      onClick="onViewIn3DClicked('kansong', 2)"
+                    >
+                      <span><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -151,93 +178,15 @@
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
       </div>
-
-      <!-- <div id="carousel-list1" class="page page-main mobile bg">
-        <div class="carousel-content">
-          <div class="bg-kansong"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-            <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-kansong"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/kansong/img-kan-2.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-              <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-              <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
-          </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-kansong"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/kansong/img-kan-3.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= view %></span>
-            <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" /><%= example %></span>
-        </div>
-        </div>
-      </div>
-      
-      <div id="carousel-list2" class="page mobile test">
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-      </div>
-
-      <div id="carousel-list3" class="page mobile text">
-            <div class="carousel-content page-cover">
-              <div class="item-text">
-                <span class="subtitle"><%= nft.kansong[0].subtitle %></span>
-                <span class="title"><%= nft.kansong[0].title %></span>
-                <span class="content"><%= nft.kansong[0].content %></span>
-              </div>
-          </div>
-          <div class="carousel-content page-cover">
-            <div class="item-text">
-              <span class="subtitle"><%= nft.kansong[1].subtitle %></span>
-              <span class="title"><%= nft.kansong[1].title %></span>
-              <span class="content"><%= nft.kansong[1].content %></span>
-            </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="title"><%= nft.kansong[2].title %></span>
-            <span class="content"><%= nft.kansong[2].content %></span>
-          </div>
-      </div>
-      </div> -->
     </main>
 
-    <atomrigs-modal id="modal1" width="60%" height="60%">
+    <atomrigs-modal id="webgl-modal" width="60%" height="60%">
       <atomrigs-webgl-player
-        id="webglPlayer1"
+        id="webglPlayer"
         class="webglPlayer"
       ></atomrigs-webgl-player>
     </atomrigs-modal>
 
-    <atomrigs-modal id="modal2" width="60%" height="60%">
-      <atomrigs-webgl-player
-        id="webglPlayer2"
-        class="webglPlayer"
-      ></atomrigs-webgl-player>
-    </atomrigs-modal>
-
-    <script src="../js/carousel.js"></script>
     <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>

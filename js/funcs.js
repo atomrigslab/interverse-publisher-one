@@ -30,3 +30,14 @@ function closeDesc() {
     swiper.slidePrev(200, () => {})
   });
 }
+
+const WEBGL_MODAL_ID = 'webgl-modal';
+const WEBGL_PLAYER_ID = 'webglPlayer';
+
+function onViewIn3DClicked(collection, webglIndex) {
+  const player = document.getElementById(WEBGL_PLAYER_ID);
+  document.getElementById(WEBGL_MODAL_ID).open(() => {
+    player.close();
+  });
+  player.startView(collection, webglIndex);
+}

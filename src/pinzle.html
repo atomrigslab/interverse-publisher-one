@@ -23,16 +23,12 @@
     
     <script src="../js/funcs.js"></script>
     <script>
-      function clickFirst() {
-        const player = document.getElementById('webglPlayer1');
-        document.getElementById('modal1').open(() => {
-          player.close();
-        });
-        player.startView('pinzle', 0);
+      function onLoaded() {
+        init();
       }
     </script>
   </head>
-  <body onLoad="init()">
+  <body onLoad="onLoaded()">
     <navigation-bar-element></navigation-bar-element>
     <main class="intro-container">
       <!-- 데스크탑 -->
@@ -99,9 +95,9 @@
       </div>
     </main>
 
-    <atomrigs-modal id="modal1" width="60%" height="60%">
+    <atomrigs-modal id="webgl-modal" width="60%" height="60%">
       <atomrigs-webgl-player
-        id="webglPlayer1"
+        id="webglPlayer"
         class="webglPlayer"
       ></atomrigs-webgl-player>
     </atomrigs-modal>
