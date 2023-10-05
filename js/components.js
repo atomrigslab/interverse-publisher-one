@@ -8,12 +8,16 @@ class NFTContainer extends HTMLElement {
     const title = this.getAttribute('title');
     const subtitle = this.getAttribute('subtitle');
     const content = this.getAttribute('content');
+    const collection = this.getAttribute('collection');
+    const webglIndex = this.getAttribute('webglIndex');
     this.innerHTML = `
       <div class="swiper mobile-swiper-v">
         <div class="swiper-wrapper">
           <div class="swiper-slide mobile-slide">
             <atomrigs-nft-view
               oneTimeImage="${oneTimeImage}"
+              collection="${collection}"
+              webglIndex="${webglIndex}"
             ></atomrigs-nft-view>
           </div>
           <div class="swiper-slide mobile-slide">
@@ -54,6 +58,11 @@ class NFTView extends HTMLElement {
 
   connectedCallback() {
     const oneTimeImage = this.getAttribute('oneTimeImage');
+    const collection = this.getAttribute('collection');
+    const webglIndex = this.getAttribute('webglIndex');
+
+    const onViewIn3DClicked = collection ? `onClick="onViewIn3DClicked('${collection}', ${webglIndex})"` : '';
+
     this.innerHTML = `
       <div class="mobile-page-container">
         <div class="mobile-page-content">
@@ -66,7 +75,11 @@ class NFTView extends HTMLElement {
           </button>
         </div>
         <div class="mobile-button-group">
-          <button type="button" class="tool-button" onClick="clickFirst()">
+          <button
+            type="button"
+            class="tool-button"
+            ${onViewIn3DClicked}
+          >
             <img src="../assets/mobile/icon-3d_2.svg" style="display: inline-block" />3D 보기
           </button>
           <button type="button" class="tool-button" onClick="alert('적용 예')">
