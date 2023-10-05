@@ -29,6 +29,7 @@
   --subTitle: 1.125rem;
   --content: 0.875rem;
   --button: 1rem;
+  --nav: 1.25rem;
   --background: 12.5rem;
   --main: 3.125rem;
 
@@ -131,6 +132,41 @@ img.icon-arrow {
 	}
 }
 
+.navbar {
+  position:fixed;
+  z-index:10;
+  width:100%;
+  background-color: transparent !important;
+  padding: 0 28px;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar-brand > img{
+  height: 80px;
+}
+
+.nav-link {
+  color: var(--gray_200);
+  font-size: var(--nav);
+  font-weight: 600;
+  padding: 0 16px !important;
+}
+
+.nav-link:hover {
+  color: var(--white) !important;
+}
+
+.nav-link.active {
+  color: var(--white) !important;
+}
+
+.container-fluid{ 
+background-color: transparent;
+}
+
 .bg-kansong {
   position: fixed;
   background: var(--bg-kan);
@@ -211,6 +247,8 @@ img.icon-arrow {
   font-weight : 400;
   line-height: 19.6px;
   margin-top: 24px;
+  text-align: left;
+  
 }
 
 @media (max-width: 1024px) {
