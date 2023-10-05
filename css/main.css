@@ -20,7 +20,9 @@
   --gray_700: #07101E;
 
   /* bg color */
+  --bg-intro: linear-gradient(117deg, #222635 0%, #060A1c 100%);
   --bg-kan: linear-gradient(117deg, #786B5C 0%, #321846 100%);
+  --bg-ifland: linear-gradient(117deg, #5E43E3 0%, #321846 100%);
 
   /* text size */
   --title: 2rem;
@@ -28,6 +30,7 @@
   --content: 0.875rem;
   --button: 1rem;
   --background: 12.5rem;
+  --main: 3.125rem;
 
 }
 
@@ -51,6 +54,7 @@
 display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
+/* common */
 .page {
   display: flex;
   align-items: center;
@@ -62,18 +66,10 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   font-weight: bold;  
   position: relative;
   color: #fff;
-  background-image: url(../assets/bg.jpg);
+  /* background-image: url(../assets/bg.jpg); */
   margin: 0;
   padding: 0;
   gap: 56px;
-}
-
-.page-main {
-  position: fixed;
-}
-.page-cover {
-  background-color: rgba(0, 0, 0, 0.70);
-  backdrop-filter: blur(5px);
 }
 
 @media (max-width: 1024px) {
@@ -84,18 +80,69 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   }
 }
 
+/* intro */
+.page-main {
+  position: fixed;
+}
+
+.page-cover {
+  background-color: rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(5px);
+}
+
+.page-cover > span {
+  color: var(--white);
+  /* text-align: center;
+  font-family: Pretendard; */
+  font-size: var(--main);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
 .bg-intro {
   position: fixed;
-  background: linear-gradient(116.82deg, #222635 0%, #060A1c 100%);
+  background: var(--bg-intro);
   z-index: 1;
   width: 100%;
   height: 100vh;
+  opacity: 0.98;
 }
 
+picture {
+  z-index: 2;
+}
+
+img.icon-arrow {
+  z-index: 2;
+  position: fixed;
+  bottom: 40px;
+  animation: arrow-down 2s 2s infinite;
+}
+
+@keyframes arrow-down {
+	0% {
+		transform: translateY(0);
+	}
+	40%,
+	100% {
+		transform: translateY(80%);
+	}
+}
 
 .bg-kansong {
   position: fixed;
   background: var(--bg-kan);
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.98;
+}
+
+.bg-ifland {
+  position: fixed;
+  background: var(--bg-ifland);
   z-index: 1;
   width: 100%;
   height: 100vh;
@@ -122,7 +169,9 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
 @media (max-width: 1024px) {
   .item-nft {
     display:flex;
-    justify-content: center;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0 16px;
   }
 }
 .item-nft > div {
@@ -195,35 +244,16 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   gap: 4px;
 }
 
-picture {
-  z-index: 2;
+@media (max-width: 1024px) {
+  .button-area {
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+  }
 }
 
-.page .char {
-  display: inline-block;
-  -webkit-animation-delay: calc(0.25s + var(--char-index) * 0.1s);
-          animation-delay: calc(0.25s + var(--char-index) * 0.1s);
-  transition: all 0.25s calc(0.25s + var(--char-index) * 0.1s);
-}
 
-.text--random [data-scroll='out'] .char:nth-of-type(1) {
-  transform: translateX(212%) translateY(210%);
-}
-.text--random [data-scroll='out'] .char:nth-of-type(2) {
-  transform: translateX(-33%) translateY(-127%);
-}
-.text--random [data-scroll='out'] .char:nth-of-type(3) {
-  transform: translateX(26%) translateY(118%);
-}
-.text--random [data-scroll='out'] .char:nth-of-type(4) {
-  transform: translateX(-173%) translateY(216%);
-}
-.text--random [data-scroll='out'] .char:nth-of-type(5) {
-  transform: translateX(-131%) translateY(-119%);
-}
-.text--random [data-scroll='out'] .char:nth-of-type(6) {
-  transform: translateX(232%) translateY(86%);
-}
+
 
 .mobile {
     display: none;
@@ -270,4 +300,30 @@ picture {
     width: 100vw;
     height: 100vh;
   }
+}
+
+.page .char {
+  display: inline-block;
+  -webkit-animation-delay: calc(0.25s + var(--char-index) * 0.1s);
+          animation-delay: calc(0.25s + var(--char-index) * 0.1s);
+  transition: all 0.25s calc(0.25s + var(--char-index) * 0.1s);
+}
+
+.text--random [data-scroll='out'] .char:nth-of-type(1) {
+  transform: translateX(212%) translateY(210%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(2) {
+  transform: translateX(-33%) translateY(-127%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(3) {
+  transform: translateX(26%) translateY(118%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(4) {
+  transform: translateX(-173%) translateY(216%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(5) {
+  transform: translateX(-131%) translateY(-119%);
+}
+.text--random [data-scroll='out'] .char:nth-of-type(6) {
+  transform: translateX(232%) translateY(86%);
 }
