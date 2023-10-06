@@ -24,7 +24,7 @@ class AtomrigsElement extends HTMLElement {
 }
 
 
-class AtomrigsCloseElement extends AtomrigsElement {
+class AtomrigsCloseElement extends HTMLElement {
   onClick = null;
   constructor() {
     super();
@@ -122,16 +122,18 @@ class NavigationBarElement extends AtomrigsElement {
 
     this.innerHTML = `
       <nav class="navbar">
-        <a class="navbar-brand" href="${homeUrl}">
-          <img src="../assets/logo.png" />
-        </a>
-        <button class="mobile" type="button" id="top-hamberger-button">
-          <img src="../assets/mobile/icon-menu.svg" />
-        </button>
-        <div class="web">
-          <div class="menu-button-group">
-            ${menuButtons}
-            ${langSwitchButton('', 'margin-left: 0.5rem')}
+        <div class="navbar-container">
+          <a class="navbar-brand" href="${homeUrl}">
+            <img src="../assets/logo.svg" />
+          </a>
+          <button class="mobile" type="button" id="top-hamberger-button">
+            <img src="../assets/mobile/icon-menu.svg" />
+          </button>
+          <div class="web">
+            <div class="menu-button-group">
+              ${menuButtons}
+              ${langSwitchButton('', 'margin-left: 0.5rem')}
+            </div>
           </div>
         </div>
       </nav>

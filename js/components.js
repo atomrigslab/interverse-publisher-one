@@ -80,10 +80,10 @@ class NFTView extends HTMLElement {
             class="tool-button"
             ${onViewIn3DClicked}
           >
-            <img src="../assets/mobile/icon-3d_2.svg" style="display: inline-block" />3D 보기
+            <img src="../assets/icon-3d_2.svg" style="display: inline-block" />3D 보기
           </button>
           <button type="button" class="tool-button" onClick="alert('적용 예')">
-            <img src="../assets/mobile/icon-3d_2.svg" style="display: inline-block" />적용 예
+            <img src="../assets/icon-3d_2.svg" style="display: inline-block" />적용 예
           </button>
         </div>
       </div>
