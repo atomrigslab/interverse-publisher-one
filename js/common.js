@@ -23,9 +23,53 @@ class AtomrigsElement extends HTMLElement {
   }
 }
 
-class NavigationBarElement extends AtomrigsElement {
+
+class AtomrigsCloseElement extends AtomrigsElement {
+  onClick = null;
   constructor() {
     super();
+  }
+
+  render() {
+    const style = `
+      .atomrigs-btn-close {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .atomrigs-btn-close-icon {
+        width: 100%;
+        height: 100%;
+      }
+    `;
+    this.innerHTML = `
+      <style>
+        ${style}
+      </style>
+      <button type="button" class="atomrigs-btn-close">
+        <img src="../assets/mobile/icon-close.svg" alt="" class="atomrigs-btn-close-icon" />
+      </button>
+    `;
+  }
+
+  connectedCallback() {
+    super.connectedCallback()
+    .then(() => {
+      this.render();
+
+      document.querySelector('.atomrigs-btn-close').onclick = this.onClick;
+    });
+  }
+};
+
+customElements.define('atomrigs-close-button', AtomrigsCloseElement);
+
+class NavigationBarElement extends AtomrigsElement {
+  self = null;
+  constructor() {
+    super();
+    self = this;
   }
 
   render() {
@@ -49,20 +93,17 @@ class NavigationBarElement extends AtomrigsElement {
     let pageURL = {
       kansong: `${urlPrefix}/${lang}/kansong.html`,
       pinzle:  `${urlPrefix}/${lang}/pinzle.html`,
-      skt: `${urlPrefix}/${lang}/skt.html`
+      skt: `${urlPrefix}/${lang}/skt.html`,
+      benefits: `${urlPrefix}/${lang}/benefits.html`
     };
 
     const menuButtons = Object.entries(pageURL).map(([pageKey, pageUrl]) => (
       `
-        <li class="nav-item">
-          <a
-            class="nav-link ${filename.indexOf(pageKey) >= 0 ? 'active' : ''}"
-            aria-current="page"
-            href="${pageUrl}"
-          >
-            ${langObj[pageKey]}
-          </a>
-        </li>
+        <a
+          href="${pageUrl}"
+        >
+          ${langObj[pageKey]}
+        </a>
       `
     )).join('');
     
@@ -71,25 +112,43 @@ class NavigationBarElement extends AtomrigsElement {
 
     const homeUrl = `${urlPrefix}/${lang}`;
 
+    function langSwitchButton(className, style) {
+      return `
+        <a href="${langSwitchUrl}" class=${className} style="${style}">
+          ${otherLang === 'kr' ? '한글' : 'EN'}
+        </a>
+      `;
+    }
+
     this.innerHTML = `
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="${homeUrl}">
-            <img src="../assets/logo.png" />
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              ${menuButtons}
-              <li class="nav-item">
-                <a class="nav-link" href="${langSwitchUrl}">${otherLang === 'kr' ? '한글' : 'English'}</a>
-              </li>
-            </ul>
+      <nav class="navbar">
+        <a class="navbar-brand" href="${homeUrl}">
+          <img src="../assets/logo.png" />
+        </a>
+        <button class="mobile" type="button" id="top-hamberger-button">
+          <img src="../assets/mobile/icon-menu.svg" />
+        </button>
+        <div class="web">
+          <div class="menu-button-group">
+            ${menuButtons}
+            ${langSwitchButton('', 'margin-left: 0.5rem')}
           </div>
         </div>
       </nav>
+      <div id="menu-modal" class="menu-modal">
+        <div class="menu-modal-container">
+          <div class="menu-modal-header">
+            ${langSwitchButton('', '')}
+            <atomrigs-close-button id="menu-modal-close-button"></atomrigs-close-button>
+          </div>
+          <div class="menu-button-group">
+            ${menuButtons}
+          </div>
+          <div class="menu-modal-footer">
+            © Atomrigs Lab Inc.
+          </div>
+        </div>
+      </div>
     `;
   }
 
@@ -97,7 +156,23 @@ class NavigationBarElement extends AtomrigsElement {
     super.connectedCallback()
     .then(() => {
       this.render();
+
+      document.getElementById('top-hamberger-button').onclick = function() {
+        self.showMenuModal();
+      }
+
+      document.getElementById('menu-modal-close-button').onClick = function() {
+        self.hideMenuModal();
+      }
     });
+  }
+
+  showMenuModal() {
+    document.getElementById('menu-modal').style.display = 'block';
+  }
+
+  hideMenuModal() {
+    document.getElementById('menu-modal').style.display = 'none';
   }
 };
 
