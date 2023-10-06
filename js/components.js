@@ -10,6 +10,7 @@ class NFTContainer extends HTMLElement {
     const content = this.getAttribute('content');
     const collection = this.getAttribute('collection');
     const webglIndex = this.getAttribute('webglIndex');
+
     this.innerHTML = `
       <div class="swiper mobile-swiper-v">
         <div class="swiper-wrapper">
@@ -21,8 +22,8 @@ class NFTContainer extends HTMLElement {
             ></atomrigs-nft-view>
           </div>
           <div class="swiper-slide mobile-slide">
-            <div style="width: 100%; height: 100%;" class="flex-center">
-              <div style="width: 100%; height: 100%;">
+            <div class="--a-full-view --a-flex-center">
+              <div class="--a-full-view">
 
                 <!-- 중요: 일부러 atomrigs-nft-view를 배경으로 깔아서 오버레이 된것 같은 효과를 줌 -->
                 <atomrigs-nft-view
@@ -30,7 +31,7 @@ class NFTContainer extends HTMLElement {
                   oneTimeImage="${oneTimeImage}"
                 ></atomrigs-nft-view>
               
-                <div class="desc-container flex-center">
+                <div class="desc-container --a-flex-center">
                   <div class="item-text">
                     <span class="subtitle">${subtitle}</span>
                     <span class="title">${title}</span>

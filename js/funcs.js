@@ -14,17 +14,19 @@ function init() {
     loop: false
   });
 
-  verticalMobileSwipers = new Swiper('.mobile-swiper-v', {
-    nested: true,
-    // https://open-code.tech/en/post-1109/
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    // Optional parameters
-    direction: 'vertical',
-    loop: false
-  });
+  if (document.querySelector('.mobile-swiper-v')) {
+    verticalMobileSwipers = new Swiper('.mobile-swiper-v', {
+      nested: true,
+      // https://open-code.tech/en/post-1109/
+      effect: 'fade',
+      fadeEffect: {
+          crossFade: true
+      },
+      // Optional parameters
+      direction: 'vertical',
+      loop: false
+    });
+  }
 }
 
 function closeDesc() {

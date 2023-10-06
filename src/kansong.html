@@ -13,6 +13,7 @@
     <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="../css/main.css?dt=<%= Date.now() %>" rel="stylesheet" crossorigin="anonymous">
     <link href="../css/ji.css?dt=<%= Date.now() %>" rel="stylesheet">
+    <link href="../css/atomrigs.css?dt=<%= Date.now() %>" rel="stylesheet">
 
     <script src="../assets/jquery-3.7.1.slim.min.js"></script>
     <script src="../js/common.js?dt=<%= Date.now() %>"></script>
@@ -23,7 +24,7 @@
     <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
     <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-    <script src="../js/funcs.js"></script>
+    <script src="../js/funcs.js?dt=<%= Date.now() %>"></script>
 
     <script>
       function onLoaded() {
@@ -34,7 +35,7 @@
   </head>
 
   <body onLoad="onLoaded()">
-    <main id="container" class="intro-container">
+    <main id="container" class="page-background" style="background-image: var(--bg-kansong)">
       <navigation-bar-element></navigation-bar-element>
 
       <!-- WEB -->

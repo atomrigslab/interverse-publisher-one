@@ -9,37 +9,46 @@
 
     <title>Interverse</title>
 
-    <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/main.css" rel="stylesheet" crossorigin="anonymous">
     <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <script src="../js/common.js"></script>
-  </head>
-  <body>
-    <main class="intro-container">
-      <navigation-bar-element></navigation-bar-element>
+    <link href="../css/main.css?dt=1696609591169" rel="stylesheet">
+    <link href="../css/ji.css?dt=1696609591169" rel="stylesheet">
+    <script src="../js/common.js?dt=1696609591169"></script>
+    <script src="../js/components.js?dt=1696609591169"></script>
+    <script src="../js/funcs.js?dt=1696609591169"></script>
 
-      <div class="page page-main">
-        <div class="bg-intro"></div>
-        <picture style="width: 100%; max-width: 100%;">
-          <source srcset="../assets/interverse.webp" type="image/webp""/>
-          <img src="../assets/bg.jpg" alt="" />
-        </picture>
-        <img class="icon-arrow" src="../assets/icon-arrow.svg" alt=""/>
-      </div>
-      
-      <div class="page"></div>
-      <div class="page page-cover">
-        <span class="text text--random" data-scroll="out" data-splitting="">카피라이트</span>
-        <span class="text text--random" data-scroll="out" data-splitting="">가</span>
-        <span class="text text--random" data-scroll="out" data-splitting="">나올거</span>
-        <span class="text text--random" data-scroll="out" data-splitting="">예요</span>
-        <p>
-          여기에는 설명이 나옵니다.
-        </p>        
-      </div>
+    <script>
+      function onLoaded() {
+        init();
+      }
+    </script>
+  </head>
+  <body onLoad="onLoaded">
+    <div class="page-background" style="background-image: var(--bg-intro)">
+      <navigation-bar-element></navigation-bar-element>
+      <main class="intro-slider">
+        <div class="intro-webp-page">
+          <div class="page-content">
+            <picture>
+              <source srcset="../assets/interverse.webp" type="image/webp""/>
+              <img src="../assets/bg.jpg" alt="" />
+            </picture>
+            <img class="icon-arrow" src="../assets/icon-arrow.svg" alt=""/>
+          </div>
+        </div>
         
-    </main>
-    
+        <div class="page"></div>
+        <div id="about-page" class="page page-cover">
+          <span class="text text--random" data-scroll="out" data-splitting="">카피라이트</span>
+          <span class="text text--random" data-scroll="out" data-splitting="">가</span>
+          <span class="text text--random" data-scroll="out" data-splitting="">나올거</span>
+          <span class="text text--random" data-scroll="out" data-splitting="">예요</span>
+          <p>
+            여기에는 설명이 나옵니다.
+          </p>        
+        </div>
+          
+      </main>
+    </div> <!-- end of home-background -->
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script>

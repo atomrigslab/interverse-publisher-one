@@ -1,0 +1,10 @@
+.--a-full-view {
+  width: 100%;
+  height: 100%;
+}
+
+.--a-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

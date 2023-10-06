@@ -21,7 +21,7 @@
 
   /* bg color */
   --bg-intro: linear-gradient(117deg, #222635 0%, #060A1c 100%);
-  --bg-kan: linear-gradient(117deg, #786B5C 0%, #321846 100%);
+  --bg-kansong: linear-gradient(117deg, #786B5C 0%, #321846 100%);
   --bg-ifland: linear-gradient(117deg, #5E43E3 0%, #321846 100%);
 
   /* text size */
@@ -33,6 +33,9 @@
   --background: 12.5rem;
   --main: 3.125rem;
 
+  /* nav bar */
+  --nav-bar-height: 5rem;
+
   /* modal */
   /** mobile menu **/
   --mobile-menu-modal-z-index: 9999;
@@ -42,9 +45,22 @@
   font-family: "Pretendard", sans-serif
 }
 
-.intro-container {
-  width: 100vw;
+html, body {
+  width: 100%;
   height: 100vh;
+  max-height: 100vh;
+  background-image: url('../assets/bg.jpg');
+}
+
+.page-background {
+  width: 100%;
+  height: 100%;
+  opacity: 0.96;
+}
+
+.intro-slider {
+  width: 100%;
+  height: 100%;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -54,8 +70,23 @@
   scrollbar-width: none; /* 파이어폭스 */
 }
 
-.intro-container::-webkit-scrollbar {
-display: none; /* 크롬, 사파리, 오페라, 엣지 */
+.intro-slider::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.full-page-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.intro-webp-page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  scroll-snap-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* common */
@@ -63,17 +94,23 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 100vw;
-  scroll-snap-align: center;
+  min-height: 100%;
+  width: 100%;
   font-size: calc(var(--font-size) * 1px);
   font-weight: bold;  
   position: relative;
   color: #fff;
-  /* background-image: url(../assets/bg.jpg); */
   margin: 0;
   padding: 0;
   gap: 56px;
+}
+
+/* navigation 높이 만큼 내림 */
+.page-content {
+  width: 100%;
+  margin-top: var(--nav-bar-height);
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
@@ -92,6 +129,7 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
 .page-cover {
   background-color: rgba(0, 0, 0, 0.70);
   backdrop-filter: blur(5px);
+  z-index: 8000;
 }
 
 .page-cover > span {
@@ -103,15 +141,6 @@ display: none; /* 크롬, 사파리, 오페라, 엣지 */
   line-height: 120%;
   letter-spacing: -1px;
   text-transform: uppercase;
-}
-
-.bg-intro {
-  position: fixed;
-  background: var(--bg-intro);
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.98;
 }
 
 picture {
@@ -138,11 +167,20 @@ img.icon-arrow {
 .navbar {
   width: 100%;
   height: 5rem;
-  position: fixed;
+  position: absolute;
   padding: 0rem 1.75rem 0rem 2.5rem;
   z-index: 10;
   background-color: transparent !important;
   color: white;
+}
+
+.navbar-pad {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: red;
 }
 
 .navbar-brand > img {

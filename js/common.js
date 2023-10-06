@@ -25,9 +25,12 @@ class AtomrigsElement extends HTMLElement {
 
 
 class AtomrigsCloseElement extends HTMLElement {
-  onClick = null;
   constructor() {
     super();
+  }
+
+  setOnClick(handler) {
+    document.querySelector('.atomrigs-btn-close').onclick = handler;
   }
 
   render() {
@@ -54,12 +57,7 @@ class AtomrigsCloseElement extends HTMLElement {
   }
 
   connectedCallback() {
-    super.connectedCallback()
-    .then(() => {
-      this.render();
-
-      document.querySelector('.atomrigs-btn-close').onclick = this.onClick;
-    });
+    this.render();
   }
 };
 
@@ -90,7 +88,9 @@ class NavigationBarElement extends AtomrigsElement {
   
     const langObj = this.json[lang] ?? this.json['kr'];
     
+
     let pageURL = {
+      about: `${urlPrefix}/${lang}#about-page`,
       kansong: `${urlPrefix}/${lang}/kansong.html`,
       pinzle:  `${urlPrefix}/${lang}/pinzle.html`,
       skt: `${urlPrefix}/${lang}/skt.html`,
@@ -163,9 +163,9 @@ class NavigationBarElement extends AtomrigsElement {
         self.showMenuModal();
       }
 
-      document.getElementById('menu-modal-close-button').onClick = function() {
+      document.getElementById('menu-modal-close-button').setOnClick(function() {
         self.hideMenuModal();
-      }
+      });
     });
   }
 
