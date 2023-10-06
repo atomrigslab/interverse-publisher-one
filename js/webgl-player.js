@@ -122,7 +122,7 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
   startView(collectionId, nftIndex) {
     this.render();
 
-    this.config = this.getConfig('/..', collectionId, nftIndex);
+    this.config = this.getConfig('../', collectionId, nftIndex);
 
     if (this.config === null) {
       return false;
