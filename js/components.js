@@ -1,3 +1,69 @@
+
+// class MarqueeBackgroundText extends HTMLElement {
+//   constructor() {
+//     super();
+//   }
+
+//   render() {
+//     const speed = this.getAttribute('speed') ? this.getAttribute('speed') : 20;
+//     const opacity = this.getAttribute('opacity') ? this.getAttribute('opacity') : 0.2;
+//     const style = `
+//       .bg-text {
+//         width: 100%;
+//         max-width: 100%;
+//         overflow-x: hidden;
+//         position: fixed;
+//         color: var(--white);
+//         opacity: ${opacity};
+//         font-size: var(--background);
+//         font-weight: 900;
+//         text-transform: uppercase;
+//         z-index: -2;
+//       }
+      
+//       .bg-text .track {
+//         position: relative;
+//         white-space: nowrap;
+//         will-change: transform;
+//         animation: marquee ${speed}s linear infinite;
+//       }
+      
+//       @keyframes marquee {
+//         from {
+//           transform: translateX(0); 
+//         }
+//         to {
+//           transform: translateX(-50%);
+//         }
+//       }
+      
+//       @media (hover: hover) {
+//         .bg-text.content {
+//           -webkit-transform: translateY(calc(100% - 8rem));
+//           transform: translateY(calc(100% - 8rem));
+//         }
+//       }
+//     `;
+//     this.innerHTML = `
+//       <style>
+//         ${style}
+//       </style>
+//       <div class="bg-text">
+//         <div class="track">
+//           <div class="content">
+//             <slot />
+//           </div>
+//         </div>
+//       </div>
+//     `;
+//   }
+
+//   connectedCallback() {
+//     this.render();
+//   }
+// }
+// customElements.define('atomrigs-bg-text', MarqueeBackgroundText);
+
 class NFTContainer extends HTMLElement {
   constructor() {
     super();

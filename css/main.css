@@ -22,6 +22,8 @@
   /* bg color */
   --bg-intro: linear-gradient(117deg, #222635 0%, #060A1c 100%);
   --bg-kansong: linear-gradient(117deg, #786B5C 0%, #321846 100%);
+  /* TODO: pinzle 색깔 적용 필요 */
+  --bg-pinzle: linear-gradient(117deg, #786B5C 0%, #321846 100%);
   --bg-ifland: linear-gradient(117deg, #5E43E3 0%, #321846 100%);
 
   /* text size */
@@ -106,7 +108,7 @@ html, body {
 }
 
 /* navigation 높이 만큼 내림 */
-.page-content {
+.intro-page-content {
   width: 100%;
   margin-top: var(--nav-bar-height);
   display: flex;
@@ -316,15 +318,6 @@ background-color: transparent;
   line-height: 150%; /* 1.3125rem */
 }
 
-.bg-kansong {
-  position: fixed;
-  background: var(--bg-kan);
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.98;
-}
-
 .bg-ifland {
   position: fixed;
   background: var(--bg-ifland);
@@ -335,14 +328,43 @@ background-color: transparent;
 }
 
 .bg-text {
-  width: 1000vw;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   position: fixed;
   color: var(--white);
   opacity: 0.2;
   font-size: var(--background);
   font-weight: 900;
   text-transform: uppercase;
-  z-index: 2;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-text .track {
+  position: relative;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0); 
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (hover: hover) {
+  .bg-text.content {
+    -webkit-transform: translateY(calc(100% - 8rem));
+    transform: translateY(calc(100% - 8rem));
+  }
 }
 
 .item-nft {

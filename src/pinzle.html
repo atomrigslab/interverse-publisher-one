@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
     <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
     
-    <script src="../js/funcs.js"></script>
+    <script src="../js/funcs.js?dt=<%= Date.now() %>"></script>
     <script>
       function onLoaded() {
         init();
@@ -30,119 +30,124 @@
     </script>
   </head>
   <body onLoad="onLoaded()">
-    <navigation-bar-element></navigation-bar-element>
-    <main class="intro-container">
-      <!-- 데스크탑 -->
-      <div class="desktop-panel">
-        <div class="swiper desktop-fullpage">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide desktop-fullpage-slide">
-              <div class="desktop-fullpage-slide-container">
-                <div style="width: 100%; height: 100%; background: linear-gradient(56.82deg, #967957 0%, #a246e8 100%); position: fixed;">
-                  &nbsp;
-                </div>
-                <div style="position: relative; width: 100%; height: 100%; text-align: center; padding-top: 20px;">
-                  <span><%= nft.pinzle[0].subtitle %></span>
-                  <h2><%= nft.pinzle[0].title %></h2>
-                  <p><%= nft.pinzle[0].content %></p>
-                  <div style="display: flex; justify-content: center;">
-                    <img src="../assets/pinzle/img-pin-1-1_1x.png" />
-                    <img src="../assets/pinzle/img-pin-1-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
-                    <img src="../assets/pinzle/img-pin-1-3_1x.png" />
-                  </div>
-                </div>
-              </div>  
-            </div> <!-- end of swiper-slide -->
+    <div class="page-background" style="background-image: var(--bg-pinzle)">
+      <navigation-bar-element></navigation-bar-element>
+      <main class="--a-full-view">
+        <!-- 데스크탑 -->
+        <div class="desktop-panel">
+          <div class="bg-text">
+            <div class="track">
+              <div class="content">
+                pinzle
+              </div>
+            </div>
+          </div>
+        
+          <div class="swiper desktop-fullpage">
+            <div class="swiper-wrapper">
 
-            <div class="swiper-slide desktop-fullpage-slide">
-              <div class="desktop-fullpage-slide-container">
-                <div style="width: 100%; height: 100%; background: linear-gradient(56.82deg, #967957 0%, #a246e8 100%); position: fixed;">
-                  &nbsp;
-                </div>
-                <div style="position: relative; width: 100%; height: 100%; text-align: center; padding-top: 20px;">
-                  <span><%= nft.pinzle[1].subtitle %></span>
-                  <h2><%= nft.pinzle[1].title %></h2>
-                  <p><%= nft.pinzle[1].content %></p>
-                  <div style="display: flex; justify-content: center;">
-                    <img src="../assets/pinzle/img-pin-2-1_1x.png" />
-                    <img src="../assets/pinzle/img-pin-2-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
-                    <img src="../assets/pinzle/img-pin-2-3_1x.png" />
+              <div class="swiper-slide --a-full-width">
+                <div class="desktop-fullpage-slide-container">
+                  <div class="--a-full-view">
+                    <span><%= nft.pinzle[0].subtitle %></span>
+                    <h2><%= nft.pinzle[0].title %></h2>
+                    <p><%= nft.pinzle[0].content %></p>
+                    <div style="display: flex; justify-content: center;">
+                      <img src="../assets/pinzle/img-pin-1-1_1x.png" />
+                      <img src="../assets/pinzle/img-pin-1-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
+                      <img src="../assets/pinzle/img-pin-1-3_1x.png" />
+                    </div>
                   </div>
-                </div>
-              </div>  
-            </div> <!-- end of swiper-slide -->
-          </div> <!-- end of swiper-wrapper -->
-        </div> <!-- end of swiper -->
-      </div> <!-- end of desktop-panel -->
+                </div>  
+              </div> <!-- end of swiper-slide -->
 
-      <!-- 모바일 -->
-      <div class="mobile-panel">
-        <div class="swiper mobile-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/pinzle/img-pin-1-1_1x.png"
-                title="<%= nft.pinzle[0].title %>"
-                subtitle="<%= nft.pinzle[0].subtitle %>"
-                content="<%= nft.pinzle[0].content %>"
-                collection="pinzle"
-                webglIndex="0"
-              ></atomrigs-nft-container>
-            </div>
-            <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/pinzle/img-pin-1-2_1x.png"
-                title="<%= nft.pinzle[1].title %>"
-                subtitle="<%= nft.pinzle[1].subtitle %>"
-                content="<%= nft.pinzle[1].content %>"
-                collection="pinzle"
-                webglIndex="1"
-              ></atomrigs-nft-container>
-            </div>
-            <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/pinzle/img-pin-1-3_1x.png"
-                title="<%= nft.pinzle[1].title %>"
-                subtitle="<%= nft.pinzle[1].subtitle %>"
-                content="<%= nft.pinzle[1].content %>"
-                collection="pinzle"
-                webglIndex="1"
-              ></atomrigs-nft-container>
-            </div>
-            <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/pinzle/img-pin-2-1_1x.png"
-                title="<%= nft.pinzle[1].title %>"
-                subtitle="<%= nft.pinzle[1].subtitle %>"
-                content="<%= nft.pinzle[1].content %>"
-                collection="pinzle"
-                webglIndex="1"
-              ></atomrigs-nft-container>
-            </div>
-            <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/pinzle/img-pin-2-2_1x.png"
-                title="<%= nft.pinzle[1].title %>"
-                subtitle="<%= nft.pinzle[1].subtitle %>"
-                content="<%= nft.pinzle[1].content %>"
-                collection="pinzle"
-                webglIndex="1"
-              ></atomrigs-nft-container>
-            </div>
-            <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/pinzle/img-pin-2-3_1x.png"
-                title="<%= nft.pinzle[1].title %>"
-                subtitle="<%= nft.pinzle[1].subtitle %>"
-                content="<%= nft.pinzle[1].content %>"
-                collection="pinzle"
-                webglIndex="1"
-              ></atomrigs-nft-container>
-            </div>
-          </div> <!-- end of swiper-wrapper -->
-        </div> <!-- end of swiper -->
-      </div>
-    </main>
+              <div class="swiper-slide --a-full-width">
+                <div class="desktop-fullpage-slide-container">
+                  <div class="--a-full-view">
+                    <span><%= nft.pinzle[1].subtitle %></span>
+                    <h2><%= nft.pinzle[1].title %></h2>
+                    <p><%= nft.pinzle[1].content %></p>
+                    <div style="display: flex; justify-content: center;">
+                      <img src="../assets/pinzle/img-pin-2-1_1x.png" />
+                      <img src="../assets/pinzle/img-pin-2-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
+                      <img src="../assets/pinzle/img-pin-2-3_1x.png" />
+                    </div>
+                  </div>
+                </div>  
+              </div> <!-- end of swiper-slide -->
+            </div> <!-- end of swiper-wrapper -->
+          </div> <!-- end of swiper -->
+        </div> <!-- end of desktop-panel -->
+
+        <!-- 모바일 -->
+        <div class="mobile-panel">
+          <div class="swiper mobile-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mobile-slide">
+                <atomrigs-nft-container
+                  oneTimeImage="../assets/pinzle/img-pin-1-1_1x.png"
+                  title="<%= nft.pinzle[0].title %>"
+                  subtitle="<%= nft.pinzle[0].subtitle %>"
+                  content="<%= nft.pinzle[0].content %>"
+                  collection="pinzle"
+                  webglIndex="0"
+                ></atomrigs-nft-container>
+              </div>
+              <div class="swiper-slide mobile-slide">
+                <atomrigs-nft-container
+                  oneTimeImage="../assets/pinzle/img-pin-1-2_1x.png"
+                  title="<%= nft.pinzle[1].title %>"
+                  subtitle="<%= nft.pinzle[1].subtitle %>"
+                  content="<%= nft.pinzle[1].content %>"
+                  collection="pinzle"
+                  webglIndex="1"
+                ></atomrigs-nft-container>
+              </div>
+              <div class="swiper-slide mobile-slide">
+                <atomrigs-nft-container
+                  oneTimeImage="../assets/pinzle/img-pin-1-3_1x.png"
+                  title="<%= nft.pinzle[1].title %>"
+                  subtitle="<%= nft.pinzle[1].subtitle %>"
+                  content="<%= nft.pinzle[1].content %>"
+                  collection="pinzle"
+                  webglIndex="1"
+                ></atomrigs-nft-container>
+              </div>
+              <div class="swiper-slide mobile-slide">
+                <atomrigs-nft-container
+                  oneTimeImage="../assets/pinzle/img-pin-2-1_1x.png"
+                  title="<%= nft.pinzle[1].title %>"
+                  subtitle="<%= nft.pinzle[1].subtitle %>"
+                  content="<%= nft.pinzle[1].content %>"
+                  collection="pinzle"
+                  webglIndex="1"
+                ></atomrigs-nft-container>
+              </div>
+              <div class="swiper-slide mobile-slide">
+                <atomrigs-nft-container
+                  oneTimeImage="../assets/pinzle/img-pin-2-2_1x.png"
+                  title="<%= nft.pinzle[1].title %>"
+                  subtitle="<%= nft.pinzle[1].subtitle %>"
+                  content="<%= nft.pinzle[1].content %>"
+                  collection="pinzle"
+                  webglIndex="1"
+                ></atomrigs-nft-container>
+              </div>
+              <div class="swiper-slide mobile-slide">
+                <atomrigs-nft-container
+                  oneTimeImage="../assets/pinzle/img-pin-2-3_1x.png"
+                  title="<%= nft.pinzle[1].title %>"
+                  subtitle="<%= nft.pinzle[1].subtitle %>"
+                  content="<%= nft.pinzle[1].content %>"
+                  collection="pinzle"
+                  webglIndex="1"
+                ></atomrigs-nft-container>
+              </div>
+            </div> <!-- end of swiper-wrapper -->
+          </div> <!-- end of swiper -->
+        </div>
+      </main>
+    </div>
 
     <atomrigs-modal id="webgl-modal" width="60%" height="60%">
       <atomrigs-webgl-player
