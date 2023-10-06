@@ -11,23 +11,29 @@
  
     <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
     <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/main.css?dt=1696498792374" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/ji.css?dt=1696498792374" rel="stylesheet">
+    <link href="../css/main.css?dt=1696554271851" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/ji.css?dt=1696554271851" rel="stylesheet">
 
     <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <script src="../js/common.js?dt=1696498792374"></script>
-    <script src="../js/components.js?dt=1696498792374"></script>
-    <script src="../js/modal.js?dt=1696498792374"></script>
-    <script src="../js/webgl-player.js?dt=1696498792374"></script>
+    <script src="../js/common.js?dt=1696554271851"></script>
+    <script src="../js/components.js?dt=1696554271851"></script>
+    <script src="../js/modal.js?dt=1696554271851"></script>
+    <script src="../js/webgl-player.js?dt=1696554271851"></script>
 
     <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
     <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
     <script src="../js/funcs.js"></script>
 
+    <script>
+      function onLoaded() {
+        init();
+      }
+    </script>
+
   </head>
 
-  <body onLoad="init()">
+  <body onLoad="onLoaded()">
     <main id="container" class="intro-container">
       <navigation-bar-element></navigation-bar-element>
 
@@ -56,8 +62,15 @@
                   <span class="title">청자모자원숭이형연적</span>
                   <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
                   <div class="button-area">
-                    <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
-                    <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
+                    <button type="button"
+                      class="button"
+                      onClick="onViewIn3DClicked('kansong', 0)"
+                    >
+                      <span><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -81,10 +94,17 @@
                 <div class="item-text">
                   <span class="subtitle">국보</span>
                   <span class="title">백자청화철채동채초충난국문병</span>
-                  <span class="content">깨끗한 순백색과 다양한 색감의 절제된 장식으로 빚어낸 조선백자입니다. 우아한곡선으로 이어지는 가늘고 긴 목과 풍만한 몸체, 그 위에 청화 안료를 덧입힌 난,  철화와 동화 안료로 칠한 국화와 곤충 장식이 조화를 이루고 있습니다. 조선 후기조선백자 중에서도 특유의 소박한 멋과 맛을 갖춘 18세기 조선백자의 최고봉이라 할 수 있습니다. 1936년, 경성미술구락부 경매에서 간송 전형필이 일본의 거상 야마나카 상회[山中商會]를 물리치고 당시 백자 최고기록인 14,580원에 낙찰받은 이야기가 있습니다.</span>
+                  <span class="content">깨끗한 순백색과 다양한 색감의 절제된 장식으로 빚어낸 조선백자입니다. 우아한 곡선으로 이어지는 가늘고 긴 목과 풍만한 몸체, 그 위에 청화 안료를 덧 입힌 난, 철화와 동화 안료로 칠한 국화와 곤충 장식이 조화를 이루고 있습니다. 조선 후기 조선백자 중에서도 특유의 소박한 멋과 맛을 갖춘 18세기 조선백자의 최고봉이라 할 수 있습니다. 1936년, 경성미술구락부 경매에서 간송 전형필이 일본의 거상 야마나카 상회[山中商會]를 물리치고 당시 백자 최고기록인 14,580원에 낙찰받은 이야기가 있습니다.</span>
                   <div class="button-area">
-                    <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
-                    <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
+                    <button type="button"
+                      class="button"
+                      onClick="onViewIn3DClicked('kansong', 1)"
+                    >
+                      <span><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -106,11 +126,18 @@
                 </div>
 
                 <div class="item-text">
-                  <span class="title">석호상</span>
-                  <span class="content">전체적으로 모난 데 없이 원만한 형상을 갖춘 한 쌍의 호랑이 석상입니다. 우리 민화에 나오는 호랑이들처럼 둥글둥글한 얼굴과 동글게 부릅뜬 눈, 화난 듯하면서도  웃는 듯한 아리송한 표정은 솔직하면서도 익살스러운 분위기를 전달합니다. 호랑이가 예부터 잡귀를 물리치는 영물로 믿어왔던 만큼 이 석상은 지금까지 간송미술관 정원을 지키고 있습니다. 1935년 3월 3일, 간송 전형필이 경성미술구락부 경매에서 구입한 기록이 있습니다.</span>
+                  <span class="title">국보</span>
+                  <span class="content">전체적으로 모난 데 없이 원만한 형상을 갖춘 한 쌍의 호랑이 석상입니다. 우리 민화에 나오는 호랑이들처럼 둥글둥글한 얼굴과 동글게 부릅뜬 눈, 화난 듯하면서도 웃는 듯한 아리송한 표정은 솔직하면서도 익살스러운 분위기를 전달합니다. 호랑이가 예부터 잡귀를 물리치는 영물로 믿어왔던 만큼 이 석상은 지금까지 간송미술관 정원을 지키고 있습니다. 1935년 3월 3일, 간송 전형필이 경성미술구락부 경매에서 구입한 기록이 있습니다.</span>
                   <div class="button-area">
-                      <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
-                      <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
+                    <button type="button"
+                      class="button"
+                      onClick="onViewIn3DClicked('kansong', 2)"
+                    >
+                      <span><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -121,92 +148,51 @@
       </div> <!-- end of web -->
 
       <!-- MOBILE -->
-      <div id="carousel-list1" class="page page-main mobile bg">
-        <div class="carousel-content">
-          <div class="bg-kansong"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/kansong/img-kan-1.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-kansong"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/kansong/img-kan-2.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-              <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
-              <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
-          </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-kansong"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/kansong/img-kan-3.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/mobile/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/mobile/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-      </div>
-      
-      <div id="carousel-list2" class="page mobile test">
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-      </div>
-
-      <div id="carousel-list3" class="page mobile text">
-            <div class="carousel-content page-cover">
-              <div class="item-text">
-                <span class="subtitle">국보</span>
-                <span class="title">청자모자원숭이형연적</span>
-                <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
-              </div>
-          </div>
-          <div class="carousel-content page-cover">
-            <div class="item-text">
-              <span class="subtitle">국보</span>
-              <span class="title">백자청화철채동채초충난국문병</span>
-              <span class="content">깨끗한 순백색과 다양한 색감의 절제된 장식으로 빚어낸 조선백자입니다. 우아한곡선으로 이어지는 가늘고 긴 목과 풍만한 몸체, 그 위에 청화 안료를 덧입힌 난,  철화와 동화 안료로 칠한 국화와 곤충 장식이 조화를 이루고 있습니다. 조선 후기조선백자 중에서도 특유의 소박한 멋과 맛을 갖춘 18세기 조선백자의 최고봉이라 할 수 있습니다. 1936년, 경성미술구락부 경매에서 간송 전형필이 일본의 거상 야마나카 상회[山中商會]를 물리치고 당시 백자 최고기록인 14,580원에 낙찰받은 이야기가 있습니다.</span>
+      <div class="mobile-panel">
+        <div class="swiper mobile-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-1.png"
+                title="국보"
+                subtitle="청자모자원숭이형연적"
+                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다."
+                collection="kansong"
+                webglIndex="0"
+              ></atomrigs-nft-container>
             </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="title">석호상</span>
-            <span class="content">전체적으로 모난 데 없이 원만한 형상을 갖춘 한 쌍의 호랑이 석상입니다. 우리 민화에 나오는 호랑이들처럼 둥글둥글한 얼굴과 동글게 부릅뜬 눈, 화난 듯하면서도  웃는 듯한 아리송한 표정은 솔직하면서도 익살스러운 분위기를 전달합니다. 호랑이가 예부터 잡귀를 물리치는 영물로 믿어왔던 만큼 이 석상은 지금까지 간송미술관 정원을 지키고 있습니다. 1935년 3월 3일, 간송 전형필이 경성미술구락부 경매에서 구입한 기록이 있습니다.</span>
-          </div>
-      </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-2.png"
+                title="국보"
+                subtitle="백자청화철채동채초충난국문병"
+                content="깨끗한 순백색과 다양한 색감의 절제된 장식으로 빚어낸 조선백자입니다. 우아한 곡선으로 이어지는 가늘고 긴 목과 풍만한 몸체, 그 위에 청화 안료를 덧 입힌 난, 철화와 동화 안료로 칠한 국화와 곤충 장식이 조화를 이루고 있습니다. 조선 후기 조선백자 중에서도 특유의 소박한 멋과 맛을 갖춘 18세기 조선백자의 최고봉이라 할 수 있습니다. 1936년, 경성미술구락부 경매에서 간송 전형필이 일본의 거상 야마나카 상회[山中商會]를 물리치고 당시 백자 최고기록인 14,580원에 낙찰받은 이야기가 있습니다."
+                collection="kansong"
+                webglIndex="1"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-3.png"
+                title="석호상"
+                subtitle="국보"
+                content="전체적으로 모난 데 없이 원만한 형상을 갖춘 한 쌍의 호랑이 석상입니다. 우리 민화에 나오는 호랑이들처럼 둥글둥글한 얼굴과 동글게 부릅뜬 눈, 화난 듯하면서도 웃는 듯한 아리송한 표정은 솔직하면서도 익살스러운 분위기를 전달합니다. 호랑이가 예부터 잡귀를 물리치는 영물로 믿어왔던 만큼 이 석상은 지금까지 간송미술관 정원을 지키고 있습니다. 1935년 3월 3일, 간송 전형필이 경성미술구락부 경매에서 구입한 기록이 있습니다."
+                collection="kansong"
+                webglIndex="2"
+              ></atomrigs-nft-container>
+            </div>
+          </div> <!-- end of swiper-wrapper -->
+        </div> <!-- end of swiper -->
       </div>
     </main>
 
-    <atomrigs-modal id="modal1" width="60%" height="60%">
+    <atomrigs-modal id="webgl-modal" width="60%" height="60%">
       <atomrigs-webgl-player
-        id="webglPlayer1"
+        id="webglPlayer"
         class="webglPlayer"
       ></atomrigs-webgl-player>
     </atomrigs-modal>
 
-    <atomrigs-modal id="modal2" width="60%" height="60%">
-      <atomrigs-webgl-player
-        id="webglPlayer2"
-        class="webglPlayer"
-      ></atomrigs-webgl-player>
-    </atomrigs-modal>
-
-    <script src="../js/carousel.js"></script>
     <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>

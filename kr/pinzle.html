@@ -9,30 +9,26 @@
 
     <title>Interverse</title>
     <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/main.css?dt=1696498582653" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/ji.css?dt=1696498582653" rel="stylesheet">
+    <link href="../css/main.css?dt=1696554271859" rel="stylesheet" crossorigin="anonymous">
+    <link href="../css/ji.css?dt=1696554271859" rel="stylesheet">
 
     <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <script src="../js/common.js?dt=1696498582653"></script>
-    <script src="../js/components.js?dt=1696498582653"></script>
-    <script src="../js/modal.js?dt=1696498582653"></script>
-    <script src="../js/webgl-player.js?dt=1696498582653"></script>
+    <script src="../js/common.js?dt=1696554271859"></script>
+    <script src="../js/components.js?dt=1696554271859"></script>
+    <script src="../js/modal.js?dt=1696554271859"></script>
+    <script src="../js/webgl-player.js?dt=1696554271859"></script>
 
     <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
     <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
     
     <script src="../js/funcs.js"></script>
     <script>
-      function clickFirst() {
-        const player = document.getElementById('webglPlayer1');
-        document.getElementById('modal1').open(() => {
-          player.close();
-        });
-        player.startView('pinzle', 0);
+      function onLoaded() {
+        init();
       }
     </script>
   </head>
-  <body onLoad="init()">
+  <body onLoad="onLoaded()">
     <navigation-bar-element></navigation-bar-element>
     <main class="intro-container">
       <!-- 데스크탑 -->
@@ -85,13 +81,61 @@
             <div class="swiper-slide mobile-slide">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-1-1_1x.png"
-                desc="이건 핀즐1-1 설명"
+                title="Fabian Lavater"
+                subtitle="Basel, Switzerland / Illustrator"
+                content="파비안 라바터는 바젤에서 활동하고 있는 일러스트레이터입니다. 파비안은 자연에서 경험하는 삶의 순간들을 감각적인 컬러로 표현합니다. 해변의 풍경과 파도, 서핑 등 아티스트 삶의 일부가 되어버린 자연과의 관계를독특한 컬러와 메시지에 녹여 표현합니다. 편안하면서도 시선을 사로잡는 그의 화풍을 바탕으로, 아티스트는 친환경 의류 브랜드 및 인테리어, 아웃도어 브랜드 등과 협업을 이어가고 있습니다."
+                collection="pinzle"
+                webglIndex="0"
               ></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-1-2_1x.png"
-                desc="이건 핀즐1-2 설명"
+                title="Merona"
+                subtitle="Illustrator"
+                content="메로나"
+                collection="pinzle"
+                webglIndex="1"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-1-3_1x.png"
+                title="Merona"
+                subtitle="Illustrator"
+                content="메로나"
+                collection="pinzle"
+                webglIndex="1"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-2-1_1x.png"
+                title="Merona"
+                subtitle="Illustrator"
+                content="메로나"
+                collection="pinzle"
+                webglIndex="1"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-2-2_1x.png"
+                title="Merona"
+                subtitle="Illustrator"
+                content="메로나"
+                collection="pinzle"
+                webglIndex="1"
+              ></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/pinzle/img-pin-2-3_1x.png"
+                title="Merona"
+                subtitle="Illustrator"
+                content="메로나"
+                collection="pinzle"
+                webglIndex="1"
               ></atomrigs-nft-container>
             </div>
           </div> <!-- end of swiper-wrapper -->
@@ -99,9 +143,9 @@
       </div>
     </main>
 
-    <atomrigs-modal id="modal1" width="60%" height="60%">
+    <atomrigs-modal id="webgl-modal" width="60%" height="60%">
       <atomrigs-webgl-player
-        id="webglPlayer1"
+        id="webglPlayer"
         class="webglPlayer"
       ></atomrigs-webgl-player>
     </atomrigs-modal>
