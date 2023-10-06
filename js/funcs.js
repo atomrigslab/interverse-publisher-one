@@ -11,9 +11,11 @@ function init() {
   new Swiper('.mobile-swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: false,
+    loop: false
   });
+
   verticalMobileSwipers = new Swiper('.mobile-swiper-v', {
+    nested: true,
     // https://open-code.tech/en/post-1109/
     effect: 'fade',
     fadeEffect: {
@@ -21,7 +23,7 @@ function init() {
     },
     // Optional parameters
     direction: 'vertical',
-    loop: false,
+    loop: false
   });
 }
 
