@@ -1,61 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta HTTP-equiv="Expires" content="-1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Interverse</title>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta HTTP-equiv="Expires" content="-1">
 
-    <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <link href="../css/main.css?dt=1696658966066" rel="stylesheet">
-    <link href="../css/ji.css?dt=1696658966066" rel="stylesheet">
-    <script src="../js/common.js?dt=1696658966066"></script>
-    <script src="../js/components.js?dt=1696658966066"></script>
-    <script src="../js/funcs.js?dt=1696658966066"></script>
+  <title>Interverse</title>
 
-    <script>
-      function onLoaded() {
-        init();
-      }
-    </script>
-  </head>
-  <body onLoad="onLoaded">
-    <div class="page-background" style="background-image: var(--bg-intro)">
-      <navigation-bar-element></navigation-bar-element>
-      <main class="intro-slider">
-        <div class="intro-webp-page">
-          <div class="intro-page-content">
-            <picture>
-              <source srcset="../assets/interverse.webp" type="image/webp""/>
-              <img src="../assets/bg.jpg" alt="" />
-            </picture>
-            <img class="icon-arrow" src="../assets/icon-arrow.svg" alt=""/>
-          </div>
+  <script src="../assets/jquery-3.7.1.slim.min.js"></script>
+  <link href="../css/main.css?dt=1696666468646" rel="stylesheet">
+  <link href="../css/ji.css?dt=1696666468646" rel="stylesheet">
+  <script src="../js/common.js?dt=1696666468646"></script>
+  <script src="../js/components.js?dt=1696666468646"></script>
+  <script src="../js/funcs.js?dt=1696666468646"></script>
+
+  <script>
+    function onLoaded() {
+      init();
+    }
+  </script>
+</head>
+
+<body onLoad="onLoaded">
+  <div class="page-background" style="background-image: var(--bg-intro)">
+    <navigation-bar-element activekey="about"></navigation-bar-element>
+    <main class="intro-slider">
+      <div class="intro-webp-page">
+        <div class="intro-page-content">
+          <picture>
+            <source srcset="../assets/interverse.webp" type="image/webp""/>
+              <img src=" ../assets/bg.jpg" alt="" />
+          </picture>
+          <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
         </div>
-        
-        <div class="page"></div>
-        <div id="about-page" class="page page-cover">
-          <span class="text text--random" data-scroll="out" data-splitting="">카피라이트</span>
-          <span class="text text--random" data-scroll="out" data-splitting="">가</span>
-          <span class="text text--random" data-scroll="out" data-splitting="">나올거</span>
-          <span class="text text--random" data-scroll="out" data-splitting="">예요</span>
-          <p>
-            여기에는 설명이 나옵니다.
-          </p>        
-        </div>
-          
-      </main>
-    </div> <!-- end of home-background -->
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-    <script>
-      Splitting();
-      ScrollOut({
+      </div>
+
+      <div class="page"></div>
+      <div id="about-page" class="page page-cover">
+        <span class="text text--random" data-scroll="out" data-splitting="">카피라이트</span>
+        <span class="text text--random" data-scroll="out" data-splitting="">가</span>
+        <span class="text text--random" data-scroll="out" data-splitting="">나올거</span>
+        <span class="text text--random" data-scroll="out" data-splitting="">예요</span>
+        <p>
+          여기에는 설명이 나옵니다.
+        </p>
+      </div>
+
+    </main>
+  </div> <!-- end of home-background -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  <script>
+    Splitting();
+    ScrollOut({
       targets: ".word",
-      scrollingElement: ".intro-container" });
-    </script>
-  </body>
-  </html>
+      scrollingElement: ".intro-container"
+    });
+  </script>
+</body>
+
+</html>

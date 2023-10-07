@@ -187,7 +187,7 @@ img.icon-arrow {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .menu-button-group > a {
@@ -199,6 +199,9 @@ img.icon-arrow {
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 1.5rem */
+}
+.menu-button-group > a.active {
+  color: var(--white, #fff);
 }
 
 

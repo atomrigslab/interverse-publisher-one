@@ -1,44 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta HTTP-equiv="Expires" content="-1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Interverse</title>
- 
-    <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
-    <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/main.css?dt=1696658966072" rel="stylesheet" crossorigin="anonymous">
-    <link href="../css/ji.css?dt=1696658966072" rel="stylesheet">
-    <link href="../css/atomrigs.css?dt=1696658966072" rel="stylesheet">
-    
-    <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-    <script src="../js/common.js?dt=1696658966072"></script>
-    <script src="../js/components.js?dt=1696658966072"></script>
-    <script src="../js/modal.js?dt=1696658966072"></script>
-    <script src="../js/webgl-player.js?dt=1696658966072"></script>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta HTTP-equiv="Expires" content="-1">
 
-    <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
-    <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
+  <title>Interverse</title>
 
-    <script src="../js/funcs.js?dt=1696658966072"></script>
+  <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
+  <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/main.css?dt=1696666453298" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696666453298" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696666453298" rel="stylesheet">
 
-    <script>
-      function onLoaded() {
-        init();
-      }
-    </script>
+  <script src="../assets/jquery-3.7.1.slim.min.js"></script>
+  <script src="../js/common.js?dt=1696666453298"></script>
+  <script src="../js/components.js?dt=1696666453298"></script>
+  <script src="../js/modal.js?dt=1696666453298"></script>
+  <script src="../js/webgl-player.js?dt=1696666453298"></script>
 
-  </head>
+  <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
+  <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <body onLoad="onLoaded()">
-    <div class="page-background" style="background-image: var(--bg-ifland)">
-      <navigation-bar-element></navigation-bar-element>
-      <main class="--a-full-view">
-      
+  <script src="../js/funcs.js?dt=1696666453298"></script>
+
+  <script>
+    function onLoaded() {
+      init();
+    }
+  </script>
+
+</head>
+
+<body onLoad="onLoaded()">
+  <div class="page-background" style="background-image: var(--bg-ifland)">
+    <navigation-bar-element activekey="skt"></navigation-bar-element>
+    <main class="--a-full-view">
+
       <!-- WEB -->
       <div class="web --a-full-view">
         <div class="bg-text">
@@ -62,18 +63,25 @@
                 </div>
 
                 <div class="item-text">
-                  <span class="subtitle">Accessory</span>
-                  <span class="title">Cathelmet</span>
-                  <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
+                  <span class="subtitle">
+                    Accessory
+                  </span>
+                  <span class="title">
+                    Cathelmet
+                  </span>
+                  <span class="content">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </span>
                   <div class="button-area">
-                    <button type="button"
-                      class="button"
-                      onClick="onViewIn3DClicked('ifland', 0)"
-                    >
-                      <span><img src="../assets/icon-3d_2.svg" />3D 보기</span>
+                    <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 0)">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        3D 보기
+                      </span>
                     </button>
                     <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />적용 예</span>
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        적용 예
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -90,18 +98,25 @@
                 </div>
 
                 <div class="item-text">
-                  <span class="subtitle">Accessory</span>
-                  <span class="title">BagHelmet</span>
-                  <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
+                  <span class="subtitle">
+                    Accessory
+                  </span>
+                  <span class="title">
+                    BagHelmet
+                  </span>
+                  <span class="content">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </span>
                   <div class="button-area">
-                    <button type="button"
-                      class="button"
-                      onClick="onViewIn3DClicked('ifland', 1)"
-                    >
-                      <span><img src="../assets/icon-3d_2.svg" />3D 보기</span>
+                    <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 1)">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        3D 보기
+                      </span>
                     </button>
                     <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />적용 예</span>
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        적용 예
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -118,18 +133,25 @@
                 </div>
 
                 <div class="item-text">
-                  <span class="subtitle">Accessory</span>
-                  <span class="title">NeonGlasses</span>
-                  <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
+                  <span class="subtitle">
+                    Accessory
+                  </span>
+                  <span class="title">
+                    NeonGlasses
+                  </span>
+                  <span class="content">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </span>
                   <div class="button-area">
-                    <button type="button"
-                      class="button"
-                      onClick="onViewIn3DClicked('ifland', 2)"
-                    >
-                      <span><img src="../assets/icon-3d_2.svg" />3D 보기</span>
+                    <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 2)">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        3D 보기
+                      </span>
                     </button>
                     <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />적용 예</span>
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        적용 예
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -147,18 +169,25 @@
                 </div>
 
                 <div class="item-text">
-                  <span class="subtitle">Clothing</span>
-                  <span class="title">Metaverse</span>
-                  <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
+                  <span class="subtitle">
+                    Clothing
+                  </span>
+                  <span class="title">
+                    Metaverse
+                  </span>
+                  <span class="content">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </span>
                   <div class="button-area">
-                    <button type="button"
-                      class="button"
-                      onClick="onViewIn3DClicked('ifland', 3)"
-                    >
-                      <span><img src="../assets/icon-3d_2.svg" />3D 보기</span>
+                    <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 3)">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        3D 보기
+                      </span>
                     </button>
                     <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />적용 예</span>
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        적용 예
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -174,45 +203,25 @@
         <div class="swiper mobile-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
-                title="Accessory"
-                subtitle="Cathelmet"
-                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다."
-                collection="skt"
-                webglIndex="0"
-              ></atomrigs-nft-container>
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
+                title="Accessory" subtitle="Cathelmet"
+                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다." collection="skt" webglIndex="0"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
-                title="Accessory"
-                subtitle="BagHelmet"
-                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다."
-                collection="skt"
-                webglIndex="1"
-              ></atomrigs-nft-container>
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
+                title="Accessory" subtitle="BagHelmet"
+                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다." collection="skt" webglIndex="1"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
-                title="Accessory"
-                subtitle="NeonGlasses"
-                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다."
-                collection="skt"
-                webglIndex="2"
-              ></atomrigs-nft-container>
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
+                title="Accessory" subtitle="NeonGlasses"
+                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다." collection="skt" webglIndex="2"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/img-ifland-metaverse-man.png"
-                oneTimeImage2="../assets/ifland/img-ifland-metaverse-woman.png"
-                title="Clothing"
-                subtitle="Metaverse"
-                content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다."
-                collection="skt"
-                webglIndex="3"
-              ></atomrigs-nft-container>
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-metaverse-man.png"
+                oneTimeImage2="../assets/ifland/img-ifland-metaverse-woman.png" title="Clothing"
+                subtitle="Metaverse" content="살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다." collection="skt"
+                webglIndex="3"></atomrigs-nft-container>
             </div>
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
@@ -309,17 +318,15 @@
           </div>
         </div>
       </div> -->
-      </main>
-    </div>
+    </main>
+  </div>
 
-    <atomrigs-modal id="webgl-modal" width="60%" height="60%">
-      <atomrigs-webgl-player
-        id="webglPlayer"
-        class="webglPlayer"
-      ></atomrigs-webgl-player>
-    </atomrigs-modal>
+  <atomrigs-modal id="webgl-modal" width="60%" height="60%">
+    <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
+  </atomrigs-modal>
 
-    <script src="../js/carousel.js"></script>
-    <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
-  </body>
+  <script src="../js/carousel.js"></script>
+  <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+</body>
+
 </html>
