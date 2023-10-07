@@ -1,8 +1,28 @@
+const webglList = {
+  ifland: {
+    '0': '../webgl/webgl.data',
+    '1': '../webgl/webgl.data',
+    '2': '../webgl/webgl.data',
+    '3': '../webgl/webgl.data',
+    '4': '../webgl/webgl.data',
+  },
+  kansong: {
+    '0': '../webgl/webgl.data',
+    '1': '../webgl/webgl.data',
+    '2': '../webgl/webgl.data',
+  },
+  pinzle: {
+    '0': '../webgl/webgl.data',
+    '1': '../webgl/webgl.data',
+    '2': '../webgl/webgl.data',
+    '3': '../webgl/webgl.data',
+    '4': '../webgl/webgl.data',
+    '5': '../webgl/webgl.data',
+  }
+};
 class AtomrigsWebGLPlayer extends AtomrigsElement {
   status = 'idle';
   config = null;
-
-
 
   constructor() {
     super();
@@ -60,25 +80,24 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
   }
 
   // index는 0부터 시작
-  getConfig(pathPrefix, collectionId, index) {
+  getConfig(dataUrl) {
     // https://docs.unity3d.com/Manual/webgl-building.html
     // https://docs.unity3d.com/Manual/webgl-templates.html
 
-    const basePath = `${pathPrefix}/webgl/${collectionId}/${index}`;
-    const prefix = 'webgl';
+    const prefix = `/../webgl/webgl`;
     const config = {
-      loaderUrl: `${basePath}/${prefix}.loader.js`,
-      dataUrl: `${basePath}/${prefix}.data`,
-      frameworkUrl: `${basePath}/${prefix}.framework.js`,
-      codeUrl: `${basePath}/${prefix}.wasm`,
+      loaderUrl: `${prefix}.loader.js`,
+      dataUrl,
+      frameworkUrl: `${prefix}.framework.js`,
+      codeUrl: `${prefix}.wasm`,
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Atomrigs Lab Inc.",
-      productName: "IFLAND", // TODO: ?
+      productName: "Interverse",
       productVersion: "1.0",
       showBanner: false
       // showBanner: unityShowBanner,
     };
-    // console.log({config});
+    console.log({config});
 
     // By default Unity keeps WebGL canvas render target size matched with
     // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -119,10 +138,10 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
     );
   }
 
-  startView(collectionId, nftIndex) {
+  startView(collection, nftIndex) {
     this.render();
 
-    this.config = this.getConfig('../', collectionId, nftIndex);
+    this.config = this.getConfig(webglList[collection][nftIndex]);
 
     if (this.config === null) {
       return false;
