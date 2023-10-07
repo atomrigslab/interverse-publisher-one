@@ -12,20 +12,20 @@
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
   <link href="../assets/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/main.css?dt=1696666332162" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696666332162" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696666332162" rel="stylesheet">
+  <link href="../css/main.css?dt=1696692989630" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696692989630" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696692989630" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696666332162"></script>
-  <script src="../js/components.js?dt=1696666332163"></script>
-  <script src="../js/modal.js?dt=1696666332163"></script>
-  <script src="../js/webgl-player.js?dt=1696666332163"></script>
+  <script src="../js/common.js?dt=1696692989630"></script>
+  <script src="../js/components.js?dt=1696692989630"></script>
+  <script src="../js/modal.js?dt=1696692989630"></script>
+  <script src="../js/webgl-player.js?dt=1696692989630"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696666332163"></script>
+  <script src="../js/funcs.js?dt=1696692989630"></script>
 
   <script>
     function onLoaded() {
@@ -76,7 +76,7 @@
                         3D 보기
                       </span>
                     </button>
-                    <button type="button" class="button">
+                    <button type="button" class="button" onClick="onSampleClicked('kansong', '1')">
                       <span><img src="../assets/icon-3d_2.svg" />
                         적용 예
                       </span>
@@ -111,7 +111,7 @@
                         3D 보기
                       </span>
                     </button>
-                    <button type="button" class="button">
+                    <button type="button" class="button" onClick="onSampleClicked('kansong', '2')">
                       <span><img src="../assets/icon-3d_2.svg" />
                         적용 예
                       </span>
@@ -143,7 +143,7 @@
                         3D 보기
                       </span>
                     </button>
-                    <button type="button" class="button">
+                    <button type="button" class="button" onClick="onSampleClicked('kansong', '3')">
                       <span><img src="../assets/icon-3d_2.svg" />
                         적용 예
                       </span>
@@ -184,6 +184,10 @@
 
   <atomrigs-modal id="webgl-modal" width="60%" height="60%">
     <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
+  </atomrigs-modal>
+
+  <atomrigs-modal id="sample-modal" width="60%" height="60%">
+    <img src="fallback.jpg" />
   </atomrigs-modal>
 
   <script src="../assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
