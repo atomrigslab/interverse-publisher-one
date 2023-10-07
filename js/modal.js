@@ -1,15 +1,23 @@
 class AtomrigsModal extends HTMLElement {
   isOpen = false;
-  onHideCallback = null
-
+  onHideCallback = null;
+  
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
   }
 
-  open(onHideCallback = null) {
+  open(onShownCallback, onHideCallback = null) {
     this.isOpen = true;
+  
     this.render();
+  
+    const modalElm = this.shadowRoot.querySelector('.modal');
+    modalElm.addEventListener(
+      "animationend",
+      onShownCallback ? onShownCallback : () => {},
+      false
+    );
 
     this.onHideCallback = onHideCallback;
   }
@@ -23,11 +31,12 @@ class AtomrigsModal extends HTMLElement {
   }
 
   render() {
+    const height = this.getAttribute('height') || '300px';
     const style = `
       .modal-background {
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         position: fixed;
         top: 0;
         left: 0;
@@ -44,19 +53,26 @@ class AtomrigsModal extends HTMLElement {
         margin: auto;
         display: ${this.isOpen ? 'block' : 'none'};
         width: ${this.getAttribute('width') || '300px'};
-        height: ${this.getAttribute('height') || '300px'};
+        height: ${height};
         background-color: ${this.getAttribute('bgColor') || '#fff'};
         box-sizing: border-box;
         z-index: 9999;
+        animation-name: show-modal;
+        animation-duration: 0.2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
       }
 
-      .modal-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+      @keyframes show-modal {
+        0% {
+          opacity: 0;
+          transform: scale(0.80, 1) translateY(0);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
       }
 
       .modal-header {

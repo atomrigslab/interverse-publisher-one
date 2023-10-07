@@ -40,8 +40,15 @@ const WEBGL_PLAYER_ID = 'webglPlayer';
 
 function onViewIn3DClicked(collection, webglIndex) {
   const player = document.getElementById(WEBGL_PLAYER_ID);
-  document.getElementById(WEBGL_MODAL_ID).open(() => {
+
+  const onShownCallback = () => {
+    setTimeout(() => {
+      player.startView(collection, webglIndex);
+    }, 200);
+  };
+  const onHideCallback = () => {
     player.close();
-  });
-  player.startView(collection, webglIndex);
+  };
+
+  document.getElementById(WEBGL_MODAL_ID).open(onShownCallback, onHideCallback);
 }
