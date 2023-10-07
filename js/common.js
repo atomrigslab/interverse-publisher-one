@@ -90,11 +90,12 @@ class NavigationBarElement extends AtomrigsElement {
 
     const langObj = this.json[lang] ?? this.json['kr'];
 
+    // 여기 들어간 순서가 화면의 순서가 됨.
     let pageURL = {
       about: `${urlPrefix}/${lang}#about-page`,
+      ifland: `${urlPrefix}/${lang}/ifland.html`,
       kansong: `${urlPrefix}/${lang}/kansong.html`,
       pinzle: `${urlPrefix}/${lang}/pinzle.html`,
-      skt: `${urlPrefix}/${lang}/skt.html`,
       benefits: `${urlPrefix}/${lang}/benefits.html`
     };
 
