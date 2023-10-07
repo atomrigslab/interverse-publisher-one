@@ -1,6 +1,5 @@
 @import url('reset.css');
-
-@import "https://webfontworld.github.io/pretendard/Pretendard.css";
+@import url('font-pretendard.css');
 
 :root {
   /* color */
@@ -132,7 +131,7 @@ html, body {
 .page-cover > span {
   color: var(--white);
   /* text-align: center;
-  font-family: Pretendard; */
+  font-family: Pretendard, sans-serif; */
   font-size: var(--main);
   font-weight: 700;
   line-height: 120%;
@@ -194,13 +193,14 @@ img.icon-arrow {
 .menu-button-group > a {
   display: block;
   text-align: center;
-  font-family: Pretendard;
+  font-family: Pretendard, sans-serif;
   color: var(--gray-200, #B8BDC3);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 1.5rem */
 }
+
 
 .navbar-container {
   width: 100%;
@@ -295,7 +295,7 @@ background-color: transparent;
 
 .menu-modal-header > a {
   text-align: center;
-  font-family: Pretendard;
+  font-family: Pretendard, sans-serif;
   color: var(--White, #FFF);
   font-size: 1.25rem;
   font-style: normal;
@@ -306,7 +306,7 @@ background-color: transparent;
 .menu-modal-footer {
   color: rgba(255, 255, 255, 0.56);
   text-align: center;
-  font-family: Pretendard;
+  font-family: Pretendard, sans-serif;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
