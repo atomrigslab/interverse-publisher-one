@@ -71,28 +71,29 @@ class NavigationBarElement extends AtomrigsElement {
   }
 
   render() {
+    let activeKey = this.getAttribute('activekey') || '';
+
     const tokens = window.location.pathname.split('/');
     let [lang] = tokens.slice(-2, -1);
     if (lang === undefined
-        || this.json[lang] === undefined
-        || (lang !== undefined && lang.length === 0)) {
+      || this.json[lang] === undefined
+      || (lang !== undefined && lang.length === 0)) {
       lang = 'kr';
     }
-    
+
     let [filename] = tokens.slice(-1);
     if (filename !== undefined && filename.length === 0) {
       filename = 'index.html';
     }
 
     const urlPrefix = tokens.slice(0, -2).join('/');
-  
+
     const langObj = this.json[lang] ?? this.json['kr'];
-    
 
     let pageURL = {
       about: `${urlPrefix}/${lang}#about-page`,
       kansong: `${urlPrefix}/${lang}/kansong.html`,
-      pinzle:  `${urlPrefix}/${lang}/pinzle.html`,
+      pinzle: `${urlPrefix}/${lang}/pinzle.html`,
       skt: `${urlPrefix}/${lang}/skt.html`,
       benefits: `${urlPrefix}/${lang}/benefits.html`
     };
@@ -100,13 +101,13 @@ class NavigationBarElement extends AtomrigsElement {
     const menuButtons = Object.entries(pageURL).map(([pageKey, pageUrl]) => (
       `
         <a
-          href="${pageUrl}"
+          href="${pageUrl}" class="${pageKey === activeKey ? 'active' : ''}"
         >
           ${langObj[pageKey]}
         </a>
       `
     )).join('');
-    
+
     const otherLang = lang === 'kr' ? 'en' : 'kr';
     let langSwitchUrl = `${urlPrefix}/${otherLang}/${filename}`;
 
@@ -156,17 +157,17 @@ class NavigationBarElement extends AtomrigsElement {
 
   connectedCallback() {
     super.connectedCallback()
-    .then(() => {
-      this.render();
+      .then(() => {
+        this.render();
 
-      document.getElementById('top-hamberger-button').onclick = function() {
-        self.showMenuModal();
-      }
+        document.getElementById('top-hamberger-button').onclick = function () {
+          self.showMenuModal();
+        }
 
-      document.getElementById('menu-modal-close-button').setOnClick(function() {
-        self.hideMenuModal();
+        document.getElementById('menu-modal-close-button').setOnClick(function () {
+          self.hideMenuModal();
+        });
       });
-    });
   }
 
   showMenuModal() {

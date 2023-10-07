@@ -1,11 +1,5 @@
 @import url('reset.css');
-
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('font-pretendard.css');
 
 :root {
   /* color */
@@ -137,7 +131,7 @@ html, body {
 .page-cover > span {
   color: var(--white);
   /* text-align: center;
-  font-family: Pretendard; */
+  font-family: Pretendard, sans-serif; */
   font-size: var(--main);
   font-weight: 700;
   line-height: 120%;
@@ -193,19 +187,23 @@ img.icon-arrow {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .menu-button-group > a {
   display: block;
   text-align: center;
-  font-family: Pretendard;
+  font-family: Pretendard, sans-serif;
   color: var(--gray-200, #B8BDC3);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 1.5rem */
 }
+.menu-button-group > a.active {
+  color: var(--white, #fff);
+}
+
 
 .navbar-container {
   width: 100%;
@@ -300,7 +298,7 @@ background-color: transparent;
 
 .menu-modal-header > a {
   text-align: center;
-  font-family: Pretendard;
+  font-family: Pretendard, sans-serif;
   color: var(--White, #FFF);
   font-size: 1.25rem;
   font-style: normal;
@@ -311,7 +309,7 @@ background-color: transparent;
 .menu-modal-footer {
   color: rgba(255, 255, 255, 0.56);
   text-align: center;
-  font-family: Pretendard;
+  font-family: Pretendard, sans-serif;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
