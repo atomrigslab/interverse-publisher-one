@@ -16,8 +16,7 @@
   /* bg color */
   --bg-intro: linear-gradient(117deg, #222635 0%, #060a1c 100%);
   --bg-kansong: linear-gradient(117deg, #786b5c 0%, #321846 100%);
-  /* TODO: pinzle 색깔 적용 필요 */
-  --bg-pinzle: linear-gradient(117deg, #786b5c 0%, #321846 100%);
+  --bg-pinzle: linear-gradient(117deg, #373948 0%, #2c193c 100%);
   --bg-ifland: linear-gradient(117deg, #5e43e3 0%, #321846 100%);
 
   /* text size */
