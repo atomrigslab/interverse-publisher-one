@@ -48,46 +48,71 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="--a-full-view">
-                  <span>
+              <div class="desktop-fullpage-slide-container flex-col">
+                <div class="item-text" style="text-align: center; width: 60%; max-width: 1000px">
+                  <span class="subtitle">
                     <%= nft.pinzle[0].subtitle %>
                   </span>
-                  <h2>
+                  <span class="title">
                     <%= nft.pinzle[0].title %>
-                  </h2>
-                  <p>
+                  </span>
+                  <span class="content" style="text-align: center;">
                     <%= nft.pinzle[0].content %>
-                  </p>
-                  <div style="display: flex; justify-content: center;">
-                    <img src="../assets/pinzle/img-pin-1-1_1x.png" />
-                    <img src="../assets/pinzle/img-pin-1-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
-                    <img src="../assets/pinzle/img-pin-1-3_1x.png" />
+                  </span>
+                  <div class="button-area justify-center">
+                    <button type="button" class="button" onClick="onViewIn3DClicked('pinzle', 0)">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        <%= view %>
+                      </span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        <%= example %>
+                      </span>
+                    </button>
                   </div>
+                </div>
+                <div class="flex justify-center">
+                  <img src="../assets/pinzle/img-pin-1-1_1x.png" />
+                  <img src="../assets/pinzle/img-pin-1-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
+                  <img src="../assets/pinzle/img-pin-1-3_1x.png" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="--a-full-view">
-                  <span>
+              <div class="desktop-fullpage-slide-container flex-col">
+                <div class="item-text" style="text-align: center; width: 60%; max-width: 1000px">
+                  <span class="subtitle">
                     <%= nft.pinzle[1].subtitle %>
                   </span>
-                  <h2>
+                  <span class="title">
                     <%= nft.pinzle[1].title %>
-                  </h2>
-                  <p>
+                  </span>
+                  <span class="content" style="text-align: center;">
                     <%= nft.pinzle[1].content %>
-                  </p>
-                  <div style="display: flex; justify-content: center;">
-                    <img src="../assets/pinzle/img-pin-2-1_1x.png" />
-                    <img src="../assets/pinzle/img-pin-2-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
-                    <img src="../assets/pinzle/img-pin-2-3_1x.png" />
+                  </span>
+                  <div class="button-area justify-center">
+                    <button type="button" class="button" onClick="onViewIn3DClicked('pinzle', 1)">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        <%= view %>
+                      </span>
+                    </button>
+                    <button type="button" class="button">
+                      <span><img src="../assets/icon-3d_2.svg" />
+                        <%= example %>
+                      </span>
+                    </button>
                   </div>
+                </div>
+                <div class="flex justify-center">
+                  <img src="../assets/pinzle/img-pin-2-1_1x.png" />
+                  <img src="../assets/pinzle/img-pin-2-2_1x.png" style="margin: 0px 30px; padding-top: 100px;" />
+                  <img src="../assets/pinzle/img-pin-2-3_1x.png" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
+
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
       </div> <!-- end of desktop-panel -->
