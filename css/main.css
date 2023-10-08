@@ -422,7 +422,7 @@ img.icon-arrow {
   color: var(--gray-100);
   font-size: var(--content);
   font-weight: 400;
-  line-height: 19.6px;
+  line-height: 22.5px;
   margin-top: 24px;
   text-align: left;
 }
@@ -431,7 +431,7 @@ img.icon-arrow {
   .item-text {
     justify-content: center;
     text-align: center;
-    padding: 0 16px;
+    padding: 0 28px;
   }
 }
 
