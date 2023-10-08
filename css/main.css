@@ -369,6 +369,8 @@ img.icon-arrow {
   position: relative;
   /* width: 508px; */
   width: 50%;
+  height: 100%;
+  max-height: 680px;
 }
 
 @media (max-width: 1024px) {
