@@ -136,7 +136,9 @@ class NFTView extends HTMLElement {
           <button type="button">
             <img src="../assets/mobile/icon-To-Left.svg" />
           </button>
-          <img src="${oneTimeImage}" />
+          <div style="flex-shrink: 1; width: 100%; display: flex; justify-content: center">
+            <img src="${oneTimeImage}" />
+          </div>
           <button type="button">
             <img src="../assets/mobile/icon-To-Right.svg" />
           </button>
@@ -154,7 +156,7 @@ class NFTView extends HTMLElement {
           </button>
         </div>
       </div>
-    `;
+    `;    
   }
 }
 

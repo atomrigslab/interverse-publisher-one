@@ -29,7 +29,6 @@
 .mobile-page-container {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(56.82deg, #967957 0%, #a246e8 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +40,7 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
+  width: 100%;
 }
 
 .mobile-button-group {

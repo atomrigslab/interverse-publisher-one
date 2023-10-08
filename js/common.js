@@ -128,7 +128,7 @@ class NavigationBarElement extends AtomrigsElement {
           <a class="navbar-brand" href="${homeUrl}">
             <img src="../assets/logo.svg" />
           </a>
-          <button class="mobile" type="button" id="top-hamberger-button">
+          <button class="mobile" type="button" id="top-hamberger-button" style="padding-left: 4rem">
             <img src="../assets/mobile/icon-menu.svg" />
           </button>
           <div class="web">
