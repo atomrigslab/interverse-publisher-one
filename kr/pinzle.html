@@ -9,20 +9,20 @@
   <meta HTTP-equiv="Expires" content="-1">
 
   <title>Interverse</title>
-  <link href="../css/main.css?dt=1696836782307" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696836782307" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696836782307" rel="stylesheet">
+  <link href="../css/main.css?dt=1696856986243" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696856986243" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696856986243" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696836782307"></script>
-  <script src="../js/components.js?dt=1696836782307"></script>
-  <script src="../js/modal.js?dt=1696836782307"></script>
-  <script src="../js/webgl-player.js?dt=1696836782307"></script>
+  <script src="../js/common.js?dt=1696856986243"></script>
+  <script src="../js/components.js?dt=1696856986243"></script>
+  <script src="../js/modal.js?dt=1696856986243"></script>
+  <script src="../js/webgl-player.js?dt=1696856986243"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696836782307"></script>
+  <script src="../js/funcs.js?dt=1696856986243"></script>
   <script>
     function onLoaded() {
       init();
@@ -48,29 +48,23 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container flex-col">
-                <div class="item-text" style="text-align: center; width: 60%; max-width: 1000px">
+              <div class="desktop-fullpage-slide-container flex-col items-center pinzle-fullpage-slide-container-padding">
+                <div class="pinzle-nft-desc-area" style="text-align: center; width: 60%; max-width: 1000px">
                   <span class="subtitle">
                     Illustrator / Basel, Switzerland
                   </span>
-                  <span class="title">
+                  <span class="title" style="margin-top: 0.5rem;">
                     Fabian Lavater
                   </span>
-                  <span class="content" style="text-align: center;">
+                  <span class="content" style="margin-top: 1.5rem;">
                     파비안 라바터는 바젤에서 활동하고 있는 일러스트레이터입니다. 파비안은 자연에서 경험하는 삶의 순간들을 감각적인 컬러로 표현합니다. 해변의 풍경과 파도, 서핑 등 아티스트 삶의 일부가 되어버린 자연과의 관계를 독특한 컬러와 메시지에 녹여 표현합니다. 편안하면서도 시선을 사로잡는 그의 화풍을 바탕으로, 아티스트는 친환경 의류 브랜드 및 인테리어, 아웃도어 브랜드 등과 협업을 이어가고 있습니다.
                   </span>
-                  <div class="button-area justify-center">
-                    <button type="button" class="button" onClick="onViewIn3DClicked('pinzle', 0)">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        3D 보기
-                      </span>
-                    </button>
-                    <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        적용 예
-                      </span>
-                    </button>
-                  </div>
+                  <atomrigs-button-group
+                    collection="pinzle"
+                    webgl-index="0"
+                    sample-index="1"
+                    class="flex justify-center"
+                  ></atomrigs-button-group>
                 </div>
                 <div class="flex justify-center" style="height: 60%; max-height: 540px; padding: 2rem">
                   <img src="../assets/pinzle/img-pin-1-1_1x.png" />
@@ -81,29 +75,23 @@
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container flex-col">
-                <div class="item-text" style="text-align: center; width: 60%; max-width: 1000px">
+              <div class="desktop-fullpage-slide-container flex-col items-center pinzle-fullpage-slide-container-padding">
+                <div class="pinzle-nft-desc-area" style="text-align: center; width: 60%; max-width: 1000px">
                   <span class="subtitle">
                     Illustrator / Seoul, Korea
                   </span>
-                  <span class="title">
+                  <span class="title"  style="margin-top: 0.5rem;">
                     Kim Jam
                   </span>
-                  <span class="content" style="text-align: center;">
+                  <span class="content" style="margin-top: 1.5rem;">
                     김잼은 서울에서 활동하고 있는 일러스트레이터입니다. 디자이너로 시작해 모션그래픽부터 사진까지, 다양한 매체로 작업해오던 김잼은 이제 일러스트레이션을 통해 그녀만의 스타일을 그려나갑니다. 강아지, 빵 등 자신이 좋아하는 요소들이 녹아 있는 아트워크들은 단순히 프로젝트만을 위해서가 아닌, 아티스트 스스로도 사랑해 마지않는 장면으로서 완성됩니다. 따뜻하고 말랑말랑한 느낌의 그림이 보는 사람의 기분과 공간의 무드 전부를 부드럽게 만들어 줍니다. 정형화되지 않은 김잼의 스타일은 평면적이면서도 고유의 생동감을 전하며, 아티스트가 표현하고자 하는 분위기와 정서로 주위를 차츰 물들게 합니다.
                   </span>
-                  <div class="button-area justify-center">
-                    <button type="button" class="button" onClick="onViewIn3DClicked('pinzle', 1)">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        3D 보기
-                      </span>
-                    </button>
-                    <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        적용 예
-                      </span>
-                    </button>
-                  </div>
+                  <atomrigs-button-group
+                    collection="pinzle"
+                    webgl-index="1"
+                    sample-index="0"
+                    class="flex justify-center"
+                  ></atomrigs-button-group>
                 </div>
                 <div class="flex justify-center" style="height: 60%; max-height: 540px; padding: 2rem">
                   <img src="../assets/pinzle/img-pin-2-1_1x.png" />

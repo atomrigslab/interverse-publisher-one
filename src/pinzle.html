@@ -48,29 +48,23 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container flex-col">
-                <div class="item-text" style="text-align: center; width: 60%; max-width: 1000px">
+              <div class="desktop-fullpage-slide-container flex-col items-center pinzle-fullpage-slide-container-padding">
+                <div class="pinzle-nft-desc-area" style="text-align: center; width: 60%; max-width: 1000px">
                   <span class="subtitle">
                     <%= nft.pinzle[0].subtitle %>
                   </span>
-                  <span class="title">
+                  <span class="title" style="margin-top: 0.5rem;">
                     <%= nft.pinzle[0].title %>
                   </span>
-                  <span class="content" style="text-align: center;">
+                  <span class="content" style="margin-top: 1.5rem;">
                     <%= nft.pinzle[0].content %>
                   </span>
-                  <div class="button-area justify-center">
-                    <button type="button" class="button" onClick="onViewIn3DClicked('pinzle', 0)">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        <%= view %>
-                      </span>
-                    </button>
-                    <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        <%= sample %>
-                      </span>
-                    </button>
-                  </div>
+                  <atomrigs-button-group
+                    collection="pinzle"
+                    webgl-index="0"
+                    sample-index="1"
+                    class="flex justify-center"
+                  ></atomrigs-button-group>
                 </div>
                 <div class="flex justify-center" style="height: 60%; max-height: 540px; padding: 2rem">
                   <img src="../assets/pinzle/img-pin-1-1_1x.png" />
@@ -81,29 +75,23 @@
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container flex-col">
-                <div class="item-text" style="text-align: center; width: 60%; max-width: 1000px">
+              <div class="desktop-fullpage-slide-container flex-col items-center pinzle-fullpage-slide-container-padding">
+                <div class="pinzle-nft-desc-area" style="text-align: center; width: 60%; max-width: 1000px">
                   <span class="subtitle">
                     <%= nft.pinzle[1].subtitle %>
                   </span>
-                  <span class="title">
+                  <span class="title"  style="margin-top: 0.5rem;">
                     <%= nft.pinzle[1].title %>
                   </span>
-                  <span class="content" style="text-align: center;">
+                  <span class="content" style="margin-top: 1.5rem;">
                     <%= nft.pinzle[1].content %>
                   </span>
-                  <div class="button-area justify-center">
-                    <button type="button" class="button" onClick="onViewIn3DClicked('pinzle', 1)">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        <%= view %>
-                      </span>
-                    </button>
-                    <button type="button" class="button">
-                      <span><img src="../assets/icon-3d_2.svg" />
-                        <%= sample %>
-                      </span>
-                    </button>
-                  </div>
+                  <atomrigs-button-group
+                    collection="pinzle"
+                    webgl-index="1"
+                    sample-index="0"
+                    class="flex justify-center"
+                  ></atomrigs-button-group>
                 </div>
                 <div class="flex justify-center" style="height: 60%; max-height: 540px; padding: 2rem">
                   <img src="../assets/pinzle/img-pin-2-1_1x.png" />
