@@ -157,7 +157,9 @@ class NavigationBarElement extends AtomrigsElement {
             ${menuButtons}
           </div>
           <div class="menu-modal-footer">
-            © Atomrigs Lab Inc.
+            <a href="https://atomrigs.io">
+              © Atomrigs Lab Inc.
+            </a>
           </div>
         </div>
       </div>

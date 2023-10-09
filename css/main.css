@@ -170,11 +170,29 @@ img.icon-arrow {
 /* common */
 .bottom-down-arrow {
   width: 100%;
+  min-height: 2.5rem;
   position: fixed;
-  padding-bottom: 40px;
+  bottom: 40px;
   z-index: 4000;
   display: flex;
   justify-content: center;
+}
+
+.footer-area {
+  width: 100%;
+  min-height: 2rem;
+  position: absolute;
+  bottom: 0px;
+  z-index: 4100;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2rem 2rem 0;
+}
+
+.footer-area > a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .navbar {
@@ -330,6 +348,12 @@ img.icon-arrow {
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 1.3125rem */
+}
+
+.menu-modal-footer > a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .bg-ifland {
@@ -560,6 +584,7 @@ img.icon-arrow {
 
 .web {
   display: block;
+  position: relative;
 }
 
 .mobile {
