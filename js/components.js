@@ -98,10 +98,10 @@ class NFTContainer extends HTMLElement {
                 ></atomrigs-nft-view>
               
                 <div class="desc-container --a-flex-center">
-                  <div class="item-text">
+                  <div class="nft-desc-area">
                     <span class="subtitle">${subtitle}</span>
                     <span class="title">${title}</span>
-                    <span class="content">${content}</span>
+                    <span class="content" style="margin-top: 1.25rem">${content}</span>
                   </div>
                   <button type="button" class="closeDescptionButton" onClick="closeDesc()">
                     <img src="../assets/mobile/icon-close.svg" alt="" />
