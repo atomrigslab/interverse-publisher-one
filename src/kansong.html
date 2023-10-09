@@ -50,106 +50,95 @@
         <div class="swiper desktop-fullpage">
           <div class="swiper-wrapper">
             <div class="swiper-slide --a-full-width">
+              <!-- 이미지 영역 + 설명 영역 -->
               <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/kansong/logo-kan.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 528px">
-                    <img src="../assets/kansong/img-kan-1.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/kansong/logo-kan.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/kansong/img-kan-1.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      <%= nft.kansong[0].subtitle %>
-                    </span>
-                    <span class="title">
-                      <%= nft.kansong[0].title %>
-                    </span>
-                    <span class="content">
-                      <%= nft.kansong[0].content %>
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('kansong', 0)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= view %>
-                        </span>
-                      </button>
-                      <button type="button" class="button" onClick="onSampleClicked('kansong', '1')">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= example %>
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    <%= nft.kansong[0].subtitle %>
                   </div>
+                  <div class="title">
+                    <%= nft.kansong[0].title %>
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    <%= nft.kansong[0].content %>
+                  </div>
+                  <atomrigs-button-group
+                    collection="kansong"
+                    webgl-index="0"
+                    sample-index="1"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
               <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/kansong/logo-kan.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 567px">
-                    <img src="../assets/kansong/img-kan-2.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/kansong/logo-kan.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/kansong/img-kan-2.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      <%= nft.kansong[1].subtitle %>
-                    </span>
-                    <span class="title">
-                      <%= nft.kansong[1].title %>
-                    </span>
-                    <span class="content">
-                      <%= nft.kansong[1].content %>
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('kansong', 1)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= view %>
-                        </span>
-                      </button>
-                      <button type="button" class="button" onClick="onSampleClicked('kansong', '2')">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= example %>
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    <%= nft.kansong[1].subtitle %>
                   </div>
+                  <div class="title">
+                    <%= nft.kansong[1].title %>
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    <%= nft.kansong[1].content %>
+                  </div>
+                  <atomrigs-button-group
+                    collection="kansong"
+                    webgl-index="1"
+                    sample-index="2"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
               <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/kansong/logo-kan.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 406px">
-                    <img src="../assets/kansong/img-kan-3.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/kansong/logo-kan.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/kansong/img-kan-3.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 7.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="title">
-                      <%= nft.kansong[2].title %>
-                    </span>
-                    <span class="content">
-                      <%= nft.kansong[2].content %>
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('kansong', 2)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= view %>
-                        </span>
-                      </button>
-                      <button type="button" class="button" onClick="onSampleClicked('kansong', '3')">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= example %>
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    <%= nft.kansong[2].subtitle %>
                   </div>
+                  <div class="title">
+                    <%= nft.kansong[2].title %>
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    <%= nft.kansong[2].content %>
+                  </div>
+                  <atomrigs-button-group
+                    collection="kansong"
+                    webgl-index="2"
+                    sample-index="3"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->

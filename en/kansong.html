@@ -11,20 +11,20 @@
   <title>Interverse</title>
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
-  <link href="../css/main.css?dt=1696764262264" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696764262264" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696764262264" rel="stylesheet">
+  <link href="../css/main.css?dt=1696837818438" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696837818438" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696837818438" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696764262264"></script>
-  <script src="../js/components.js?dt=1696764262264"></script>
-  <script src="../js/modal.js?dt=1696764262264"></script>
-  <script src="../js/webgl-player.js?dt=1696764262264"></script>
+  <script src="../js/common.js?dt=1696837818438"></script>
+  <script src="../js/components.js?dt=1696837818438"></script>
+  <script src="../js/modal.js?dt=1696837818438"></script>
+  <script src="../js/webgl-player.js?dt=1696837818438"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696764262264"></script>
+  <script src="../js/funcs.js?dt=1696837818438"></script>
 
   <script>
     function onLoaded() {
@@ -50,106 +50,95 @@
         <div class="swiper desktop-fullpage">
           <div class="swiper-wrapper">
             <div class="swiper-slide --a-full-width">
+              <!-- 이미지 영역 + 설명 영역 -->
               <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/kansong/logo-kan.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 528px">
-                    <img src="../assets/kansong/img-kan-1.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/kansong/logo-kan.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/kansong/img-kan-1.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      National treasure
-                    </span>
-                    <span class="title">
-                      Celadon water dropper in the shape of mother monkey with baby
-                    </span>
-                    <span class="content">
-                      This small celadon water dropper takes the shape of a squatting monkey cradling a young one, as its tiny hands caresses the mother’s face and chest as if to feel the warmth of her love. The jasper-blue and crystal-clear hue, smooth surface texture, and gentle curves come together to ensure an unparalleled sense of presence. This water dropper is one of the twenty celadons that Kansong Chun Hyungpil acquired in 1937 from John Gadsby, a British lawyer and also globally renowned celadon collector in Tokyo, Japan. As a cultural asset, this piece effectively exemplifies the aesthetics of mimetic Goryeo celadon.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('kansong', 0)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button" onClick="onSampleClicked('kansong', '1')">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    National treasure
                   </div>
+                  <div class="title">
+                    Celadon water dropper in the shape of mother monkey with baby
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    This small celadon water dropper takes the shape of a squatting monkey cradling a young one, as its tiny hands caresses the mother’s face and chest as if to feel the warmth of her love. The jasper-blue and crystal-clear hue, smooth surface texture, and gentle curves come together to ensure an unparalleled sense of presence. This water dropper is one of the twenty celadons that Kansong Chun Hyungpil acquired in 1937 from John Gadsby, a British lawyer and also globally renowned celadon collector in Tokyo, Japan. As a cultural asset, this piece effectively exemplifies the aesthetics of mimetic Goryeo celadon.
+                  </div>
+                  <atomrigs-button-group
+                    collection="kansong"
+                    webgl-index="0"
+                    sample-index="1"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
               <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/kansong/logo-kan.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 567px">
-                    <img src="../assets/kansong/img-kan-2.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/kansong/logo-kan.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/kansong/img-kan-2.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      National treasure
-                    </span>
-                    <span class="title">
-                      Blue-and-white porcelain bottle with chrysanthemum design in underglaze iron and copper
-                    </span>
-                    <span class="content">
-                      This Joseon dynasty’s white porcelain features understated decorations in a variety of colors against a pristine white backdrop. The elegant curve of its slender neck sits on a voluptuous body, which features a celadon-infused orchid along with insets decked in iron paint and copper-red pigments (Dongwha, Jinsa). An epitome of 18th-century Joseon white porcelain in its superb instantiation of rustic style and taste, this piece is also notable for the story behind its acquisition. At an auction held at the Gyeongseong Art Club in 1936, Kansong Chun Hyungpil outbid the Japanese company Yamanaka &amp; Co. with 14,580 won, marking record price for white porcelain at that time.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('kansong', 1)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button" onClick="onSampleClicked('kansong', '2')">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    National treasure
                   </div>
+                  <div class="title">
+                    Blue-and-white porcelain bottle with chrysanthemum design in underglaze iron and copper
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    This Joseon dynasty’s white porcelain features understated decorations in a variety of colors against a pristine white backdrop. The elegant curve of its slender neck sits on a voluptuous body, which features a celadon-infused orchid along with insets decked in iron paint and copper-red pigments (Dongwha, Jinsa). An epitome of 18th-century Joseon white porcelain in its superb instantiation of rustic style and taste, this piece is also notable for the story behind its acquisition. At an auction held at the Gyeongseong Art Club in 1936, Kansong Chun Hyungpil outbid the Japanese company Yamanaka &amp; Co. with 14,580 won, marking record price for white porcelain at that time.
+                  </div>
+                  <atomrigs-button-group
+                    collection="kansong"
+                    webgl-index="1"
+                    sample-index="2"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
               <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/kansong/logo-kan.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 406px">
-                    <img src="../assets/kansong/img-kan-3.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/kansong/logo-kan.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/kansong/img-kan-3.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 7.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="title">
-                      Pair of stone tigers
-                    </span>
-                    <span class="content">
-                      A pair of stone tiger statues, of smooth silhouettes. The round face, wide-eyed glare, and the equivocal expression bordering on both anger and amusement create a candid yet humorous feel. Entrusted with the power to ward off evil spirits in the folkloric tradition, these tigers stand guard in the gardens of the Kansong Art Museum. Records show that Kansong Chun Hyungpil purchased them at an auction held at Gyeongseong Art Club on March 3, 1935.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('kansong', 2)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button" onClick="onSampleClicked('kansong', '3')">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    National treasure
                   </div>
+                  <div class="title">
+                    Pair of stone tigers
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    A pair of stone tiger statues, of smooth silhouettes. The round face, wide-eyed glare, and the equivocal expression bordering on both anger and amusement create a candid yet humorous feel. Entrusted with the power to ward off evil spirits in the folkloric tradition, these tigers stand guard in the gardens of the Kansong Art Museum. Records show that Kansong Chun Hyungpil purchased them at an auction held at Gyeongseong Art Club on March 3, 1935.
+                  </div>
+                  <atomrigs-button-group
+                    collection="kansong"
+                    webgl-index="2"
+                    sample-index="3"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->

@@ -53,148 +53,126 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-text-wrapper justify-end">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      <%= nft.ifland[0].subtitle %>
-                    </span>
-                    <span class="title">
-                      <%= nft.ifland[0].title %>
-                    </span>
-                    <span class="content">
-                      <%= nft.ifland[0].content %>
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 0)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= view %>
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= example %>
-                        </span>
-                      </button>
-                    </div>
+              <div class="desktop-fullpage-slide-container narrow-nft-desc-gap">
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    <%= nft.ifland[0].subtitle %>
                   </div>
+                  <div class="title">
+                    <%= nft.ifland[0].title %>
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    <%= nft.ifland[0].content %>
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="0"
+                    sample-index="1"
+                  ></atomrigs-button-group>
                 </div>
-                <div class="item-nft">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="left: 90px; height: 100%; max-height: 484px">
-                    <img src="../assets/ifland/img-ifland-cathelmet.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-cathelmet.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 401px;">
-                    <img src="../assets/ifland/img-ifland-bagHelmet.png" alt="" style="height: 100%" />
-                  </div>
+              <div class="desktop-fullpage-slide-container wide-nft-desc-gap">
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-bagHelmet.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      <%= nft.ifland[1].subtitle %>
-                    </span>
-                    <span class="title">
-                      <%= nft.ifland[1].title %>
-                    </span>
-                    <span class="content">
-                      <%= nft.ifland[1].content %>
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 1)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= view %>
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= example %>
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    <%= nft.ifland[1].subtitle %>
                   </div>
+                  <div class="title">
+                    <%= nft.ifland[1].title %>
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    <%= nft.ifland[1].content %>
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="1"
+                    sample-index="2"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-text-wrapper justify-end">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      <%= nft.ifland[2].subtitle %>
-                    </span>
-                    <span class="title">
-                      <%= nft.ifland[2].title %>
-                    </span>
-                    <span class="content">
-                      <%= nft.ifland[2].content %>
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 2)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= view %>
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= example %>
-                        </span>
-                      </button>
-                    </div>
+              <div class="desktop-fullpage-slide-container narrow-nft-desc-gap">
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    <%= nft.ifland[2].subtitle %>
                   </div>
+                  <div class="title">
+                    <%= nft.ifland[2].title %>
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    <%= nft.ifland[2].content %>
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="2"
+                    sample-index="3"
+                  ></atomrigs-button-group>
                 </div>
-                <div class="item-nft">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="left: 125px; height: 100%; max-height: 425px">
-                    <img src="../assets/ifland/img-ifland-neonglasses.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-neonglasses.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="right: 45px; transform: translateY(-70%); height: 100%; max-height: 390px">
-                    <img src="../assets/ifland/img-ifland-metaverse-woman.png" alt="" style="height: 100%" />
-                  </div>
-                  <div style="right: -80px; transform: translateY(-36%); height: 100%; max-height: 390px">
-                    <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" style="height: 100%" />
-                  </div>
+              <div class="desktop-fullpage-slide-container wide-nft-desc-gap">
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-metaverse-man.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
+                  <!-- <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" style="height: 100%" /> -->
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      <%= nft.ifland[3].subtitle %>
-                    </span>
-                    <span class="title">
-                      <%= nft.ifland[3].title %>
-                    </span>
-                    <span class="content">
-                      <%= nft.ifland[3].content %>
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 3)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= view %>
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          <%= example %>
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    <%= nft.ifland[3].subtitle %>
                   </div>
+                  <div class="title">
+                    <%= nft.ifland[3].title %>
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    <%= nft.ifland[3].content %>
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="3"
+                    sample-index="4"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
@@ -231,98 +209,6 @@
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
       </div>
-      <!-- <div id="carousel-list1" class="page page-main mobile bg">
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-cathelmet.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" /><%= view %></span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" /><%= example %></span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-bagHelmet.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-              <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" /><%= view %></span>
-              <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" /><%= example %></span>
-          </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-neonglasses.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" /><%= view %></span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" /><%= example %></span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" />
-            <img src="../assets/ifland/img-ifland-metaverse-woman.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" /><%= view %></span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" /><%= example %></span>
-        </div>
-        </div>
-      </div>
-      
-      <div id="carousel-list2" class="page mobile test">
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-      </div>
-
-      <div id="carousel-list3" class="page mobile text">
-            <div class="carousel-content page-cover">
-              <div class="item-text">
-                <span class="subtitle"><%= nft.ifland[0].subtitle %></span>
-                <span class="title"><%= nft.ifland[0].title %></span>
-                <span class="content"><%= nft.ifland[0].content %></span>
-              </div>
-          </div>
-          <div class="carousel-content page-cover">
-            <div class="item-text">
-              <span class="subtitle"><%= nft.ifland[1].subtitle %></span>
-              <span class="title"><%= nft.ifland[1].title %></span>
-              <span class="content"><%= nft.ifland[1].content %></span>
-            </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="subtitle"><%= nft.ifland[2].subtitle %></span>
-            <span class="title"><%= nft.ifland[2].title %></span>
-            <span class="content"><%= nft.ifland[2].content %></span>
-          </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="subtitle"><%= nft.ifland[3].subtitle %></span>
-            <span class="title"><%= nft.ifland[3].title %></span>
-            <span class="content"><%= nft.ifland[3].content %></span>
-          </div>
-        </div>
-      </div> -->
     </main>
   </div>
 

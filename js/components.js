@@ -161,3 +161,46 @@ class NFTView extends HTMLElement {
 }
 
 customElements.define('atomrigs-nft-view', NFTView);
+
+class ButtonGroup extends AtomrigsElement {
+  constructor() {
+    super();
+  }
+
+  render() {
+    const { lang, langObj } = this.getLanguage();
+    const collection = this.getAttribute('collection');
+    const webglIndex = this.getAttribute('webgl-index');
+    const sampleIndex = this.getAttribute('sample-index');
+
+    this.innerHTML = `
+      <div class="button-area">
+        <div class="button-area-row">
+          <button type="button" onClick="onViewIn3DClicked('${collection}', ${webglIndex})">
+            <img src="../assets/icon-3d_2.svg" />
+            <span>${langObj['view']}</span>
+          </button>
+          <button type="button" onClick="onSampleClicked('${collection}', '${sampleIndex}')">
+            <img src="../assets/icon-3d_2.svg" />
+            <span>${langObj['sample']}</span>
+          </button>
+        </div>
+        <div class="button-area-row">
+          <button type="button" class="--a-full-width" onClick="onPurchaseClicked('${collection}', '${sampleIndex}')">
+            <img src="../assets/icon-3d_2.svg" />
+            <span>${langObj['purchase']}</span>
+          </button>
+        </div>
+      </div>
+    `;   
+  }
+
+  connectedCallback() {
+    super.connectedCallback()
+      .then(() => {
+        this.render();
+      });
+  }
+}
+
+customElements.define('atomrigs-button-group', ButtonGroup);

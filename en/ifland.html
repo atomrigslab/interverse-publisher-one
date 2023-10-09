@@ -11,20 +11,20 @@
   <title>Interverse</title>
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
-  <link href="../css/main.css?dt=1696764134943" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696764134943" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696764134943" rel="stylesheet">
+  <link href="../css/main.css?dt=1696838811958" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696838811958" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696838811958" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696764134943"></script>
-  <script src="../js/components.js?dt=1696764134943"></script>
-  <script src="../js/modal.js?dt=1696764134943"></script>
-  <script src="../js/webgl-player.js?dt=1696764134943"></script>
+  <script src="../js/common.js?dt=1696838811958"></script>
+  <script src="../js/components.js?dt=1696838811958"></script>
+  <script src="../js/modal.js?dt=1696838811958"></script>
+  <script src="../js/webgl-player.js?dt=1696838811958"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696764134943"></script>
+  <script src="../js/funcs.js?dt=1696838811958"></script>
 
   <script>
     function onLoaded() {
@@ -53,148 +53,126 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-text-wrapper justify-end">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Accessory
-                    </span>
-                    <span class="title">
-                      Cathelmet
-                    </span>
-                    <span class="content">
-                      살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 0)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+              <div class="desktop-fullpage-slide-container narrow-nft-desc-gap">
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Accessory
                   </div>
+                  <div class="title">
+                    Cathelmet
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="0"
+                    sample-index="1"
+                  ></atomrigs-button-group>
                 </div>
-                <div class="item-nft">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="left: 90px; height: 100%; max-height: 484px">
-                    <img src="../assets/ifland/img-ifland-cathelmet.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-cathelmet.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 401px;">
-                    <img src="../assets/ifland/img-ifland-bagHelmet.png" alt="" style="height: 100%" />
-                  </div>
+              <div class="desktop-fullpage-slide-container wide-nft-desc-gap">
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-bagHelmet.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Accessory
-                    </span>
-                    <span class="title">
-                      BagHelmet
-                    </span>
-                    <span class="content">
-                      살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 1)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Accessory
                   </div>
+                  <div class="title">
+                    BagHelmet
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="1"
+                    sample-index="2"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-text-wrapper justify-end">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Accessory
-                    </span>
-                    <span class="title">
-                      NeonGlasses
-                    </span>
-                    <span class="content">
-                      살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 2)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+              <div class="desktop-fullpage-slide-container narrow-nft-desc-gap">
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Accessory
                   </div>
+                  <div class="title">
+                    NeonGlasses
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="2"
+                    sample-index="3"
+                  ></atomrigs-button-group>
                 </div>
-                <div class="item-nft">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="left: 125px; height: 100%; max-height: 425px">
-                    <img src="../assets/ifland/img-ifland-neonglasses.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-neonglasses.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="right: 45px; transform: translateY(-70%); height: 100%; max-height: 390px">
-                    <img src="../assets/ifland/img-ifland-metaverse-woman.png" alt="" style="height: 100%" />
-                  </div>
-                  <div style="right: -80px; transform: translateY(-36%); height: 100%; max-height: 390px">
-                    <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" style="height: 100%" />
-                  </div>
+              <div class="desktop-fullpage-slide-container wide-nft-desc-gap">
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-metaverse-man.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
+                  <!-- <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" style="height: 100%" /> -->
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Clothing
-                    </span>
-                    <span class="title">
-                      MetaWorld #Daily
-                    </span>
-                    <span class="content">
-                      살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 3)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Clothing
                   </div>
+                  <div class="title">
+                    MetaWorld #Daily
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="3"
+                    sample-index="4"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
@@ -231,98 +209,6 @@
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
       </div>
-      <!-- <div id="carousel-list1" class="page page-main mobile bg">
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-cathelmet.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-bagHelmet.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-              <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-              <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-          </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-neonglasses.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" />
-            <img src="../assets/ifland/img-ifland-metaverse-woman.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-      </div>
-      
-      <div id="carousel-list2" class="page mobile test">
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-      </div>
-
-      <div id="carousel-list3" class="page mobile text">
-            <div class="carousel-content page-cover">
-              <div class="item-text">
-                <span class="subtitle">Accessory</span>
-                <span class="title">Cathelmet</span>
-                <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
-              </div>
-          </div>
-          <div class="carousel-content page-cover">
-            <div class="item-text">
-              <span class="subtitle">Accessory</span>
-              <span class="title">BagHelmet</span>
-              <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
-            </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="subtitle">Accessory</span>
-            <span class="title">NeonGlasses</span>
-            <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
-          </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="subtitle">Clothing</span>
-            <span class="title">MetaWorld #Daily</span>
-            <span class="content">살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.</span>
-          </div>
-        </div>
-      </div> -->
     </main>
   </div>
 

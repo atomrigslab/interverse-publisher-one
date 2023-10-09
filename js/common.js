@@ -18,6 +18,21 @@ class AtomrigsElement extends HTMLElement {
       });
   }
 
+  getLanguage() {
+    const tokens = window.location.pathname.split('/');
+    let [lang] = tokens.slice(-2, -1);
+    if (lang === undefined
+      || this.json[lang] === undefined
+      || (lang !== undefined && lang.length === 0)) {
+      lang = 'kr';
+    }
+
+    return {
+      lang,
+      langObj: this.json[lang] ?? this.json['kr']
+    };
+  }
+
   connectedCallback() {
     return this.loadTexts();
   }
@@ -74,13 +89,6 @@ class NavigationBarElement extends AtomrigsElement {
     let activeKey = this.getAttribute('activekey') || '';
 
     const tokens = window.location.pathname.split('/');
-    let [lang] = tokens.slice(-2, -1);
-    if (lang === undefined
-      || this.json[lang] === undefined
-      || (lang !== undefined && lang.length === 0)) {
-      lang = 'kr';
-    }
-
     let [filename] = tokens.slice(-1);
     if (filename !== undefined && filename.length === 0) {
       filename = 'index.html';
@@ -88,7 +96,7 @@ class NavigationBarElement extends AtomrigsElement {
 
     const urlPrefix = tokens.slice(0, -2).join('/');
 
-    const langObj = this.json[lang] ?? this.json['kr'];
+    const { lang, langObj } = this.getLanguage();
 
     // 여기 들어간 순서가 화면의 순서가 됨.
     let pageURL = {
@@ -102,7 +110,7 @@ class NavigationBarElement extends AtomrigsElement {
     const menuButtons = Object.entries(pageURL).map(([pageKey, pageUrl]) => (
       `
         <a
-          href="${pageUrl}" class="${pageKey === activeKey ? 'active' : ''}"
+          href="${pageUrl}" ${pageKey === activeKey ? 'class="active"' : ''}
         >
           ${langObj[pageKey]}
         </a>
@@ -116,7 +124,7 @@ class NavigationBarElement extends AtomrigsElement {
 
     function langSwitchButton(className, style) {
       return `
-        <a href="${langSwitchUrl}" class=${className} style="${style}">
+        <a href="${langSwitchUrl}" class="${className}" style="${style}">
           ${otherLang === 'kr' ? '한글' : 'EN'}
         </a>
       `;

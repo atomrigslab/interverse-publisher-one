@@ -99,6 +99,7 @@
   height: 100%;
 }
 
+/* 네비게이션 만큼 내림 */
 .desktop-fullpage-slide-container {
   width: 100%;
   height: 100%;
@@ -106,8 +107,16 @@
   position: relative;
   padding-top: var(--nav-bar-height);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  padding: 8rem 9.69rem;
+}
+
+.narrow-nft-desc-gap {
+  gap: 1.56rem;
+}
+
+.wide-nft-desc-gap {
+  gap: 13.1rem;
 }
 
 .mobile-swiper {

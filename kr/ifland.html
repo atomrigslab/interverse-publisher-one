@@ -11,20 +11,20 @@
   <title>Interverse</title>
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
-  <link href="../css/main.css?dt=1696764134941" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696764134941" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696764134941" rel="stylesheet">
+  <link href="../css/main.css?dt=1696838811955" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696838811955" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696838811955" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696764134941"></script>
-  <script src="../js/components.js?dt=1696764134941"></script>
-  <script src="../js/modal.js?dt=1696764134941"></script>
-  <script src="../js/webgl-player.js?dt=1696764134941"></script>
+  <script src="../js/common.js?dt=1696838811955"></script>
+  <script src="../js/components.js?dt=1696838811955"></script>
+  <script src="../js/modal.js?dt=1696838811955"></script>
+  <script src="../js/webgl-player.js?dt=1696838811955"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696764134941"></script>
+  <script src="../js/funcs.js?dt=1696838811955"></script>
 
   <script>
     function onLoaded() {
@@ -53,148 +53,126 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-text-wrapper justify-end">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Accessory
-                    </span>
-                    <span class="title">
-                      이프랜드 네코 헬멧
-                    </span>
-                    <span class="content">
-                      이프랜드 네코 헬멧은 Metaverse 내에서 유니크하고 귀여운 분위기를 연출하고 싶은 분들을 위한 아이템입니다. 네코 스타일의 헬멧은 고양이 귀 모양 디자인으로, 핑크 컬러로 더욱 돋보입니다. 이 아이템은 Metaverse에서만 소장 가능하며, 귀여우면서도 유니크한 외모를 자랑합니다.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 0)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+              <div class="desktop-fullpage-slide-container narrow-nft-desc-gap">
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Accessory
                   </div>
+                  <div class="title">
+                    이프랜드 네코 헬멧
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    이프랜드 네코 헬멧은 Metaverse 내에서 유니크하고 귀여운 분위기를 연출하고 싶은 분들을 위한 아이템입니다. 네코 스타일의 헬멧은 고양이 귀 모양 디자인으로, 핑크 컬러로 더욱 돋보입니다. 이 아이템은 Metaverse에서만 소장 가능하며, 귀여우면서도 유니크한 외모를 자랑합니다.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="0"
+                    sample-index="1"
+                  ></atomrigs-button-group>
                 </div>
-                <div class="item-nft">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="left: 90px; height: 100%; max-height: 484px">
-                    <img src="../assets/ifland/img-ifland-cathelmet.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-cathelmet.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="right: 0px; height: 100%; max-height: 401px;">
-                    <img src="../assets/ifland/img-ifland-bagHelmet.png" alt="" style="height: 100%" />
-                  </div>
+              <div class="desktop-fullpage-slide-container wide-nft-desc-gap">
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-bagHelmet.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Accessory
-                    </span>
-                    <span class="title">
-                      이프랜드 B급 포장지 모자
-                    </span>
-                    <span class="content">
-                      이프랜드 B급 포장지 모자는 Metaverse에서 유니크하고 유머러스한 스타일을 찾는 분들을 위한 아이템입니다. 이 모자는 이프랜드에서만 찾을 수 있는 통통튀는 디자인으로, 현실에서는 상상할 수 없는 비현실적인 모험을 추구하는 이용자들을 위해 제작되었습니다. 추가로 독특하고 유머러스한 디자인으로 주변의 이목을 끌 수 있습니다.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 1)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Accessory
                   </div>
+                  <div class="title">
+                    이프랜드 B급 포장지 모자
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    이프랜드 B급 포장지 모자는 Metaverse에서 유니크하고 유머러스한 스타일을 찾는 분들을 위한 아이템입니다. 이 모자는 이프랜드에서만 찾을 수 있는 통통튀는 디자인으로, 현실에서는 상상할 수 없는 비현실적인 모험을 추구하는 이용자들을 위해 제작되었습니다. 추가로 독특하고 유머러스한 디자인으로 주변의 이목을 끌 수 있습니다.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="1"
+                    sample-index="2"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-text-wrapper justify-end">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Accessory
-                    </span>
-                    <span class="title">
-                      피카소st 네온 안경
-                    </span>
-                    <span class="content">
-                      피카소 네온 안경은 Metaverse에서 예술적인 스타일을 선호하는 분들을 위한 아이템입니다. 이 안경은 거장 피카소의 예술적 영감을 받아 디자인되었으며, 미술과 패션의 결합을 나타냅니다. 안경 프레임에 장착된 네온 라이팅은 Metaverse 내에서 눈에 띄게 반짝이며, 주변의 주목을 끕니다.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 2)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+              <div class="desktop-fullpage-slide-container narrow-nft-desc-gap">
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Accessory
                   </div>
+                  <div class="title">
+                    피카소st 네온 안경
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    피카소 네온 안경은 Metaverse에서 예술적인 스타일을 선호하는 분들을 위한 아이템입니다. 이 안경은 거장 피카소의 예술적 영감을 받아 디자인되었으며, 미술과 패션의 결합을 나타냅니다. 안경 프레임에 장착된 네온 라이팅은 Metaverse 내에서 눈에 띄게 반짝이며, 주변의 주목을 끕니다.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="2"
+                    sample-index="3"
+                  ></atomrigs-button-group>
                 </div>
-                <div class="item-nft">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="left: 125px; height: 100%; max-height: 425px">
-                    <img src="../assets/ifland/img-ifland-neonglasses.png" alt="" style="height: 100%" />
-                  </div>
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-neonglasses.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
             <div class="swiper-slide --a-full-width">
-              <div class="desktop-fullpage-slide-container">
-                <div class="item-nft flex justify-end" style="padding-right: 150px">
-                  <img src="../assets/ifland/logo-ifland.svg" alt="" style="height: 100%" />
-                  <div style="right: 45px; transform: translateY(-70%); height: 100%; max-height: 390px">
-                    <img src="../assets/ifland/img-ifland-metaverse-woman.png" alt="" style="height: 100%" />
-                  </div>
-                  <div style="right: -80px; transform: translateY(-36%); height: 100%; max-height: 390px">
-                    <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" style="height: 100%" />
-                  </div>
+              <div class="desktop-fullpage-slide-container wide-nft-desc-gap">
+                <!-- 이미지 영역 (문 + NFT 이미지) -->
+                <div class="nft-image-area">
+                  <img
+                    src="../assets/ifland/logo-ifland.svg" alt=""
+                    class="relative-max-full-height" />
+                  <img
+                    src="../assets/ifland/img-ifland-metaverse-man.png" alt=""
+                    style="max-height: 80%; position: absolute; top: 2.7rem; left: 8rem;" />
+                  <!-- <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" style="height: 100%" /> -->
                 </div>
-                <div class="item-text-wrapper">
-                  <div class="item-text">
-                    <span class="subtitle">
-                      Clothing
-                    </span>
-                    <span class="title">
-                      MetaWorld #Daily
-                    </span>
-                    <span class="content">
-                      MetaWorld #Daily (남/여 의상)은이프랜드 내에서 더욱 독특하고 스타일리쉬한 룩을 원하는 분들을 위한 아이템입니다. 메타버스와 현실이 어우러진 디자인으로, 독특하면서도 편안한 스타일을 선보입니다. 메타버스의 일상에서도 특별한 모습으로 빛나고, 자신만의 아이덴티티를 자유롭게 표현하세요.
-                    </span>
-                    <div class="button-area">
-                      <button type="button" class="button" onClick="onViewIn3DClicked('ifland', 3)">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          3D 보기
-                        </span>
-                      </button>
-                      <button type="button" class="button">
-                        <span><img src="../assets/icon-3d_2.svg" />
-                          적용 예
-                        </span>
-                      </button>
-                    </div>
+                <!-- 설명 영역 -->
+                <div class="nft-desc-area">
+                  <div class="subtitle">
+                    Clothing
                   </div>
+                  <div class="title">
+                    MetaWorld #Daily
+                  </div>
+                  <div class="content" style="margin-top: 1.5rem;">
+                    MetaWorld #Daily (남/여 의상)은이프랜드 내에서 더욱 독특하고 스타일리쉬한 룩을 원하는 분들을 위한 아이템입니다. 메타버스와 현실이 어우러진 디자인으로, 독특하면서도 편안한 스타일을 선보입니다. 메타버스의 일상에서도 특별한 모습으로 빛나고, 자신만의 아이덴티티를 자유롭게 표현하세요.
+                  </div>
+                  <atomrigs-button-group
+                    collection="ifland"
+                    webgl-index="3"
+                    sample-index="4"
+                  ></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
@@ -231,98 +209,6 @@
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
       </div>
-      <!-- <div id="carousel-list1" class="page page-main mobile bg">
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-cathelmet.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-bagHelmet.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-              <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-              <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-          </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-neonglasses.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-
-        <div class="carousel-content">
-          <div class="bg-ifland"></div>
-          <div class="item-nft">
-            <img src="../assets/mobile/icon-To-Left.svg" alt="" />
-            <img src="../assets/ifland/img-ifland-metaverse-man.png" alt="" />
-            <img src="../assets/ifland/img-ifland-metaverse-woman.png" alt="" />
-            <img src="../assets/mobile/icon-To-Right.svg" alt="" />
-          </div>
-          <div class="button-area">
-            <span id="nft1-3d-view" class="button"><img src="../assets/icon-3d_2.svg" />3D 보기</span>
-            <span id="nft1-extra" class="button"><img src="../assets/icon-3d_2.svg" />적용 예</span>
-        </div>
-        </div>
-      </div>
-      
-      <div id="carousel-list2" class="page mobile test">
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-        <div class="carousel-content"></div>
-      </div>
-
-      <div id="carousel-list3" class="page mobile text">
-            <div class="carousel-content page-cover">
-              <div class="item-text">
-                <span class="subtitle">Accessory</span>
-                <span class="title">이프랜드 네코 헬멧</span>
-                <span class="content">이프랜드 네코 헬멧은 Metaverse 내에서 유니크하고 귀여운 분위기를 연출하고 싶은 분들을 위한 아이템입니다. 네코 스타일의 헬멧은 고양이 귀 모양 디자인으로, 핑크 컬러로 더욱 돋보입니다. 이 아이템은 Metaverse에서만 소장 가능하며, 귀여우면서도 유니크한 외모를 자랑합니다.</span>
-              </div>
-          </div>
-          <div class="carousel-content page-cover">
-            <div class="item-text">
-              <span class="subtitle">Accessory</span>
-              <span class="title">이프랜드 B급 포장지 모자</span>
-              <span class="content">이프랜드 B급 포장지 모자는 Metaverse에서 유니크하고 유머러스한 스타일을 찾는 분들을 위한 아이템입니다. 이 모자는 이프랜드에서만 찾을 수 있는 통통튀는 디자인으로, 현실에서는 상상할 수 없는 비현실적인 모험을 추구하는 이용자들을 위해 제작되었습니다. 추가로 독특하고 유머러스한 디자인으로 주변의 이목을 끌 수 있습니다.</span>
-            </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="subtitle">Accessory</span>
-            <span class="title">피카소st 네온 안경</span>
-            <span class="content">피카소 네온 안경은 Metaverse에서 예술적인 스타일을 선호하는 분들을 위한 아이템입니다. 이 안경은 거장 피카소의 예술적 영감을 받아 디자인되었으며, 미술과 패션의 결합을 나타냅니다. 안경 프레임에 장착된 네온 라이팅은 Metaverse 내에서 눈에 띄게 반짝이며, 주변의 주목을 끕니다.</span>
-          </div>
-        </div>
-        <div class="carousel-content page-cover">
-          <div class="item-text">
-            <span class="subtitle">Clothing</span>
-            <span class="title">MetaWorld #Daily</span>
-            <span class="content">MetaWorld #Daily (남/여 의상)은이프랜드 내에서 더욱 독특하고 스타일리쉬한 룩을 원하는 분들을 위한 아이템입니다. 메타버스와 현실이 어우러진 디자인으로, 독특하면서도 편안한 스타일을 선보입니다. 메타버스의 일상에서도 특별한 모습으로 빛나고, 자신만의 아이덴티티를 자유롭게 표현하세요.</span>
-          </div>
-        </div>
-      </div> -->
     </main>
   </div>
 
