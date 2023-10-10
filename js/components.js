@@ -169,6 +169,9 @@ class NFTView extends AtomrigsElement {
             </button>
           </div>
         </div>
+        <div class="bottom-down-arrow-mobile">
+            <img class="icon-arrow" src="../assets/icon-arrow-mobile.svg" alt="" />
+          </div>
       </div>
     `;
   }

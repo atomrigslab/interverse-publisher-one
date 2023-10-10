@@ -199,6 +199,16 @@ img.icon-arrow {
   animation: arrow-down 2s 2s infinite;
 }
 
+@media screen and (max-width: 1024px) {
+  img.icon-arrow {
+    z-index: 2;
+    position: static;
+    bottom: 0;
+    margin-bottom: 3vh;
+    animation: arrow-up 2s 2s infinite;
+  }
+}
+
 @keyframes arrow-down {
   0% {
     transform: translateY(0);
@@ -206,6 +216,16 @@ img.icon-arrow {
   40%,
   100% {
     transform: translateY(80%);
+  }
+}
+
+@keyframes arrow-up {
+  0% {
+    transform: translateY(0);
+  }
+  40%,
+  100% {
+    transform: translateY(-80%);
   }
 }
 
