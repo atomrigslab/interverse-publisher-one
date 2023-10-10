@@ -186,11 +186,11 @@ img.icon-arrow {
   z-index: 4100;
   display: flex;
   justify-content: flex-end;
-  padding: 0 2rem 2rem 0;
+  padding: 0 1rem 1rem 0;
 }
 
 .footer-area > a {
-  color: white;
+  color: var(--gray-200);
   text-decoration: none;
   cursor: pointer;
 }
