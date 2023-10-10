@@ -84,8 +84,8 @@
       "nstyle": ["총 33종", "(SKT 제작지원 3종, 앤스타일 직접 제작 30종)", "각 50개씩 민팅", "실물 T셔츠 제공", "(선착순 10명)"]
     },
     "intro": {
-      "title": ["Metaverse","와"," Web3","의"," 만남"],
-      "desc": "ifland original X INTERVERSE의 콜라보로 새로운 Web3 Metaverse 아이템들이 탄생하였습니다. 여러분이 영원히 소유하는 Web3 아이템들과 함께 Metaverse에서 나만의 특별한 이야기를 써나가 보세요. 현실 세계의 다양한 혜택도 준비되어 있습니다. Metaverse meets Web3 The collaboration between ifland original X INTERVERSE has resulted in new Web3 Metaverse items. Write your own unique story in the Metaverse with Web3 items that you can own forever. We've also got precious real-world goodies for you."
+      "title": ["Metaverse와 "," Web3의 "," 만남"],
+      "desc": "ifland original X INTERVERSE의 콜라보로 새로운 Web3 Metaverse 아이템들이 탄생하였습니다.\n여러분이 영원히 소유하는 Web3 아이템들과 함께 Metaverse에서 나만의 특별한 이야기를 써나가 보세요.\n현실 세계의 다양한 혜택도 준비되어 있습니다."
     }
   },
 
@@ -164,6 +164,17 @@
         "content": "MetaWorld #Daily series is for those who want a more unique and stylish look in ifland. The design combines the metaverse and reality, presenting a unique yet comfortable style. Shine with a special look in your daily life in the metaverse and freely express your own identity."
       }
     ]
+    },
+    "benefit": {
+      "th": ["NFT", "수량", "구매자 혜택"],
+      "ifland": ["총 5종", "각 1,000개씩 민팅", "이프랜트 무료재화(포인트)XXX원 지급 (미정)"],
+      "kansong": ["총 3종", "각 1,000개씩 민팅", "구매자 전원 간송 멤버쉽 NFT 제공", "3종을 모두 구매한 고객 대상 뷰잉데이 초청", "(기간 한정 : 10월 22일 구매자까지)"],
+      "pinzle": ["총 6종", "각 100개씩 민팅"],
+      "nstyle": ["총 33종", "(SKT 제작지원 3종, 앤스타일 직접 제작 30종)", "각 50개씩 민팅", "실물 T셔츠 제공", "(선착순 10명)"]
+    },
+    "intro": {
+      "title": ["Metaverse ","meets "," Web3"],
+      "desc": "The collaboration between ifland original X INTERVERSE has resulted in new Web3 Metaverse items.\nWrite your own unique story in the Metaverse with Web3 items that you can own forever.\nWe've also got precious real-world goodies for you."
     }
   }
 }
