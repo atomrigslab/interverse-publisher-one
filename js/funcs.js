@@ -39,12 +39,12 @@ const WEBGL_MODAL_ID = 'webgl-modal';
 const WEBGL_PLAYER_ID = 'webglPlayer';
 const SAMPLE_MODAL_ID = 'sample-modal';
 
-function onViewIn3DClicked(collection, webglIndex) {
+function onViewIn3DClicked(collection, itemNo) {
   const player = document.getElementById(WEBGL_PLAYER_ID);
 
   const onShownCallback = () => {
     setTimeout(() => {
-      player.startView(collection, webglIndex);
+      player.startView(collection, itemNo);
     }, 200);
   };
   const onHideCallback = () => {

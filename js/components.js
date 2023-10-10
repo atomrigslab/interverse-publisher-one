@@ -75,7 +75,7 @@ class NFTContainer extends HTMLElement {
     const subtitle = this.getAttribute('subtitle');
     const content = this.getAttribute('content');
     const collection = this.getAttribute('collection');
-    const webglIndex = this.getAttribute('webglIndex');
+    const itemNo = this.getAttribute('item-no');
 
     this.innerHTML = `
       <div class="swiper mobile-swiper-v">
@@ -84,7 +84,7 @@ class NFTContainer extends HTMLElement {
             <atomrigs-nft-view
               oneTimeImage="${oneTimeImage}"
               collection="${collection}"
-              webglIndex="${webglIndex}"
+              item-no="${itemNo}"
             ></atomrigs-nft-view>
           </div>
           <div class="swiper-slide mobile-slide">
@@ -127,10 +127,9 @@ class NFTView extends AtomrigsElement {
     const { lang, langObj } = this.getLanguage();
     const oneTimeImage = this.getAttribute('oneTimeImage');
     const collection = this.getAttribute('collection');
-    const webglIndex = this.getAttribute('webglIndex');
-    const sampleIndex = this.getAttribute('sample-index');
+    const itemNo = this.getAttribute('item-no');
 
-    const onViewIn3DClicked = collection ? `onClick="onViewIn3DClicked('${collection}', ${webglIndex})"` : '';
+    const onViewIn3DClicked = collection ? `onClick="onViewIn3DClicked('${collection}', '${itemNo}')"` : '';
 
     this.innerHTML = `
       <div class="mobile-page-container">
@@ -154,7 +153,7 @@ class NFTView extends AtomrigsElement {
             >
               <img src="../assets/icon-3d_2.svg" style="display: inline-block" />3D 보기
             </button>
-            <button type="button" class="tool-button" onClick="onSampleClicked('${collection}', '${sampleIndex}')">
+            <button type="button" class="tool-button" onClick="onSampleClicked('${collection}', '${itemNo}')">
               <img src="../assets/icon-if.svg" style="display: inline-block;" />적용 예
             </button>
           </div>
@@ -163,7 +162,7 @@ class NFTView extends AtomrigsElement {
               type="button"
               class="tool-button full-width"
               style="background-image: linear-gradient(117deg, #FF007D 0%, #490FBB 100%)"
-              onClick="onPurchaseClicked('${collection}', '${sampleIndex}')"
+              onClick="onPurchaseClicked('${collection}', '${itemNo}')"
             >
               <img src="../assets/icon-ifland.svg" />
               <span>${langObj['purchase']}</span>
@@ -192,16 +191,15 @@ class ButtonGroup extends AtomrigsElement {
   render() {
     const { lang, langObj } = this.getLanguage();
     const collection = this.getAttribute('collection');
-    const webglIndex = this.getAttribute('webgl-index');
-    const sampleIndex = this.getAttribute('sample-index');
+    const itemNo = this.getAttribute('item-no');
 
     this.innerHTML = `
       <div class="button-area">
-        <button type="button" onClick="onViewIn3DClicked('${collection}', ${webglIndex})">
+        <button type="button" onClick="onViewIn3DClicked('${collection}', '${itemNo}')">
           <img src="../assets/icon-3d_2.svg" />
           <span>${langObj['view']}</span>
         </button>
-        <button type="button" onClick="onSampleClicked('${collection}', '${sampleIndex}')">
+        <button type="button" onClick="onSampleClicked('${collection}', '${itemNo}')">
           <img src="../assets/icon-if.svg" />
           <span>${langObj['sample']}</span>
         </button>
@@ -209,7 +207,7 @@ class ButtonGroup extends AtomrigsElement {
           type="button"
           class="--a-full-width"
           style="background-image: linear-gradient(117deg, #FF007D 0%, #490FBB 100%)"
-          onClick="onPurchaseClicked('${collection}', '${sampleIndex}')"
+          onClick="onPurchaseClicked('${collection}', '${itemNo}')"
         >
           <img src="../assets/icon-ifland.svg" />
           <span>${langObj['purchase']}</span>
