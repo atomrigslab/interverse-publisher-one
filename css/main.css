@@ -554,6 +554,40 @@ img.icon-arrow {
   text-align: left;
 }
 
+.desktop-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 2.25rem 0rem;
+}
+
+.desktop-info-title {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  text-transform: uppercase;
+}
+
+.desktop-info-text1 {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 1.35rem */
+  text-transform: uppercase;
+}
+
+.desktop-info-text2 {
+  color: var(--gray-200);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 1.4rem */
+  text-transform: uppercase;
+}
+
 @media (max-width: 1024px) {
   .nft-desc-area {
     width: 100%;
