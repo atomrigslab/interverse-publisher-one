@@ -69,11 +69,14 @@
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
-                  <div class="subtitle">
-                    <%= nft.kansong[0].subtitle %>
+                  <div class="category">
+                    <span><%= nft.kansong[0].category %></span>
                   </div>
                   <div class="title">
                     <%= nft.kansong[0].title %>
+                  </div>
+                  <div class="subtitle">
+                    <%= nft.kansong[0].subtitle %>
                   </div>
                   <div class="content" style="margin-top: 1.5rem;">
                     <%= nft.kansong[0].content %>
@@ -94,16 +97,19 @@
                     src="../assets/kansong/logo-kan.svg" alt=""
                     class="relative-max-full-height" />
                   <img
-                    src="../assets/kansong/img-kan-2.png" alt=""
+                    src="../assets/kansong/img-kan-2_1x.png" alt=""
                     style="position: absolute; top: 6%; right: -53%;" />
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
-                  <div class="subtitle">
-                    <%= nft.kansong[1].subtitle %>
+                  <div class="category">
+                    <span><%= nft.kansong[1].category %></span>
                   </div>
                   <div class="title">
                     <%= nft.kansong[1].title %>
+                  </div>
+                  <div class="subtitle">
+                    <%= nft.kansong[1].subtitle %>
                   </div>
                   <div class="content" style="margin-top: 1.5rem;">
                     <%= nft.kansong[1].content %>
@@ -129,11 +135,14 @@
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
-                  <div class="subtitle">
-                    <%= nft.kansong[2].subtitle %>
+                  <div class="category">
+                    <span><%= nft.kansong[2].category %></span>
                   </div>
                   <div class="title">
                     <%= nft.kansong[2].title %>
+                  </div>
+                  <div class="subtitle">
+                    <%= nft.kansong[2].subtitle %>
                   </div>
                   <div class="content" style="margin-top: 1.5rem;">
                     <%= nft.kansong[2].content %>
@@ -158,19 +167,34 @@
         <div class="swiper mobile-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/kansong/img-kan-1.png"
-                title="<%= nft.kansong[0].title %>" subtitle="<%= nft.kansong[0].subtitle %>"
-                content="<%= nft.kansong[0].content %>" collection="kansong" item-no="1"></atomrigs-nft-container>
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-1.png"
+                category="<%= nft.kansong[0].category %>"
+                title="<%= nft.kansong[0].title %>"
+                subtitle="<%= nft.kansong[0].subtitle %>"
+                content="<%= nft.kansong[0].content %>"
+                collection="kansong"
+                item-no="1"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/kansong/img-kan-2.png"
-                title="<%= nft.kansong[1].title %>" subtitle="<%= nft.kansong[1].subtitle %>"
-                content="<%= nft.kansong[1].content %>" collection="kansong" item-no="2"></atomrigs-nft-container>
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-2_2x.png"
+                category="<%= nft.kansong[1].category %>"
+                title="<%= nft.kansong[1].title %>"
+                subtitle="<%= nft.kansong[1].subtitle %>"
+                content="<%= nft.kansong[1].content %>"
+                collection="kansong"
+                item-no="2"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/kansong/img-kan-3.png"
-                title="<%= nft.kansong[2].title %>" subtitle="<%= nft.kansong[2].subtitle %>"
-                content="<%= nft.kansong[2].content %>" collection="kansong" item-no="3"></atomrigs-nft-container>
+              <atomrigs-nft-container
+                oneTimeImage="../assets/kansong/img-kan-3.png"
+                category="<%= nft.kansong[2].category %>"
+                title="<%= nft.kansong[2].title %>"
+                subtitle="<%= nft.kansong[2].subtitle %>"
+                content="<%= nft.kansong[2].content %>"
+                collection="kansong"
+                item-no="3"></atomrigs-nft-container>
             </div>
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
@@ -184,6 +208,9 @@
 
   <atomrigs-modal id="sample-modal" width="fit-content" height="fit-content" bgColor="transparent">
     <img src="fallback.jpg" class="sample-image" />
+  </atomrigs-modal>
+  <atomrigs-modal id="mobile-desc-modal" width="fit-content" height="fit-content" bgColor="transparent">
+    <p>간송 혜택 설명</p>
   </atomrigs-modal>
 </body>
 

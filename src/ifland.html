@@ -62,11 +62,14 @@
               <div class="desktop-fullpage-slide-container narrow-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
-                  <div class="subtitle">
-                    <%= nft.ifland[0].subtitle %>
+                  <div class="category">
+                    <span><%= nft.ifland[0].category %></span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[0].title %>
+                  </div>
+                  <div class="subtitle">
+                    <%= nft.ifland[0].subtitle %>
                   </div>
                   <div class="content" style="margin-top: 1.5rem;">
                     <%= nft.ifland[0].content %>
@@ -101,11 +104,14 @@
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
-                  <div class="subtitle">
-                    <%= nft.ifland[1].subtitle %>
+                  <div class="category">
+                    <span><%= nft.ifland[1].category %></span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[1].title %>
+                  </div>
+                  <div class="subtitle">
+                    <%= nft.ifland[1].subtitle %>
                   </div>
                   <div class="content" style="margin-top: 1.5rem;">
                     <%= nft.ifland[1].content %>
@@ -122,11 +128,14 @@
               <div class="desktop-fullpage-slide-container narrow-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
-                  <div class="subtitle">
-                    <%= nft.ifland[2].subtitle %>
+                  <div class="category">
+                    <span><%= nft.ifland[2].category %></span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[2].title %>
+                  </div>
+                  <div class="subtitle">
+                    <%= nft.ifland[2].subtitle %>
                   </div>
                   <div class="content" style="margin-top: 1.5rem;">
                     <%= nft.ifland[2].content %>
@@ -156,16 +165,19 @@
                     src="../assets/ifland/logo-ifland.svg" alt=""
                     class="relative-max-full-height" />
                   <img
-                    src="../assets/ifland/img-ifland-metaverse.png" alt=""
-                    style="position: absolute; top: 15%; right: -40%;" />
+                    src="../assets/ifland/img-ifland-metaverse-clothing_2x.png" alt=""
+                    style="min-width: 400px; position: absolute; top: 8%; right: -70%;" />
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
-                  <div class="subtitle">
-                    <%= nft.ifland[3].subtitle %>
+                  <div class="category">
+                    <span><%= nft.ifland[3].category %></span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[3].title %>
+                  </div>
+                  <div class="subtitle">
+                    <%= nft.ifland[3].subtitle %>
                   </div>
                   <div class="content" style="margin-top: 1.5rem;">
                     <%= nft.ifland[3].content %>
@@ -190,24 +202,43 @@
         <div class="swiper mobile-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
-                title="<%= nft.ifland[0].title %>" subtitle="<%= nft.ifland[0].subtitle %>"
-                content="<%= nft.ifland[0].content %>" collection="ifland" item-no="1"></atomrigs-nft-container>
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
+                category="<%= nft.ifland[0].category %>"
+                title="<%= nft.ifland[0].title %>"
+                subtitle="<%= nft.ifland[0].subtitle %>"
+                content="<%= nft.ifland[0].content %>"
+                collection="ifland"
+                item-no="1"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
-                title="<%= nft.ifland[1].title %>" subtitle="<%= nft.ifland[1].subtitle %>"
-                content="<%= nft.ifland[1].content %>" collection="ifland" item-no="2"></atomrigs-nft-container>
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
+                category="<%= nft.ifland[1].category %>"
+                title="<%= nft.ifland[1].title %>"
+                subtitle="<%= nft.ifland[1].subtitle %>"
+                content="<%= nft.ifland[1].content %>"
+                collection="ifland"
+                item-no="2"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
-                title="<%= nft.ifland[2].title %>" subtitle="<%= nft.ifland[2].subtitle %>"
-                content="<%= nft.ifland[2].content %>" collection="ifland" item-no="3"></atomrigs-nft-container>
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
+                category="<%= nft.ifland[2].category %>"
+                title="<%= nft.ifland[2].title %>"
+                subtitle="<%= nft.ifland[2].subtitle %>"
+                content="<%= nft.ifland[2].content %>"
+                collection="ifland"
+                item-no="3"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-metaverse.png"
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-metaverse-clothing_1x.png"
+                category="<%= nft.ifland[3].category %>"
                 title="<%= nft.ifland[3].title %>"
-                subtitle="<%= nft.ifland[3].subtitle %>" content="<%= nft.ifland[3].content %>" collection="ifland"
+                subtitle="<%= nft.ifland[3].subtitle %>"
+                content="<%= nft.ifland[3].content %>"
+                collection="ifland"
                 item-no="4-1"></atomrigs-nft-container>
             </div>
           </div> <!-- end of swiper-wrapper -->
@@ -222,6 +253,10 @@
 
   <atomrigs-modal id="sample-modal" width="60%" height="60%" bgColor="transparent">
     <img src="fallback.jpg" />
+  </atomrigs-modal>
+
+  <atomrigs-modal id="mobile-desc-modal" width="fit-content" height="fit-content" bgColor="transparent">
+    <p>간송 혜택 설명</p>
   </atomrigs-modal>
 </body>
 

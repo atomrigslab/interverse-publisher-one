@@ -17,28 +17,33 @@
 
     "nft": {
       "kansong": [{
-        "subtitle": "메타버스 NFT 아이템",
-        "title": "청자모자원숭이형연적 (국보)",
+        "category": "메타버스 NFT 아이템",
+        "subtitle": "국보",
+        "title": "청자모자원숭이형연적",
         "content": "살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다."
       },
       {
-        "subtitle": "메타버스 NFT 아이템",
-        "title": "백자청화철채동채초충난국문병 (국보)",
+        "category": "메타버스 NFT 아이템",
+        "subtitle": "국보",
+        "title": "백자청화철채동채초충난국문병",
         "content": "깨끗한 순백색과 다양한 색감의 절제된 장식으로 빚어낸 조선백자입니다. 우아한 곡선으로 이어지는 가늘고 긴 목과 풍만한 몸체, 그 위에 청화 안료를 덧 입힌 난, 철화와 동화 안료로 칠한 국화와 곤충 장식이 조화를 이루고 있습니다. 조선 후기 조선백자 중에서도 특유의 소박한 멋과 맛을 갖춘 18세기 조선백자의 최고봉이라 할 수 있습니다. 1936년, 경성미술구락부 경매에서 간송 전형필이 일본의 거상 야마나카 상회[山中商會]를 물리치고 당시 백자 최고기록인 14,580원에 낙찰받은 이야기가 있습니다."
       },
       {
-        "subtitle": "메타버스 NFT 아이템",
-        "title": "석호상 (국보)",
+        "category": "메타버스 NFT 아이템",
+        "subtitle": "국보",
+        "title": "석호상",
         "content": "전체적으로 모난 데 없이 원만한 형상을 갖춘 한 쌍의 호랑이 석상입니다. 우리 민화에 나오는 호랑이들처럼 둥글둥글한 얼굴과 동글게 부릅뜬 눈, 화난 듯하면서도 웃는 듯한 아리송한 표정은 솔직하면서도 익살스러운 분위기를 전달합니다. 호랑이가 예부터 잡귀를 물리치는 영물로 믿어왔던 만큼 이 석상은 지금까지 간송미술관 정원을 지키고 있습니다. 1935년 3월 3일, 간송 전형필이 경성미술구락부 경매에서 구입한 기록이 있습니다."
       }],
 
       "pinzle": [
         {
+          "category": "메타버스 NFT 아이템",
           "subtitle": "Illustrator / Basel, Switzerland",
           "title": "Fabian Lavater",
           "content": "파비안 라바터는 바젤에서 활동하고 있는 일러스트레이터입니다. 파비안은 자연에서 경험하는 삶의 순간들을 감각적인 컬러로 표현합니다. 해변의 풍경과 파도, 서핑 등 아티스트 삶의 일부가 되어버린 자연과의 관계를 독특한 컬러와 메시지에 녹여 표현합니다. 편안하면서도 시선을 사로잡는 그의 화풍을 바탕으로, 아티스트는 친환경 의류 브랜드 및 인테리어, 아웃도어 브랜드 등과 협업을 이어가고 있습니다."
         },
         {
+          "category": "메타버스 NFT 아이템",
           "subtitle": "Illustrator / Seoul, Korea",
           "title": "Kim Jam",
           "content": "김잼은 서울에서 활동하고 있는 일러스트레이터입니다. 디자이너로 시작해 모션그래픽부터 사진까지, 다양한 매체로 작업해오던 김잼은 이제 일러스트레이션을 통해 그녀만의 스타일을 그려나갑니다. 강아지, 빵 등 자신이 좋아하는 요소들이 녹아 있는 아트워크들은 단순히 프로젝트만을 위해서가 아닌, 아티스트 스스로도 사랑해 마지않는 장면으로서 완성됩니다. 따뜻하고 말랑말랑한 느낌의 그림이 보는 사람의 기분과 공간의 무드 전부를 부드럽게 만들어 줍니다. 정형화되지 않은 김잼의 스타일은 평면적이면서도 고유의 생동감을 전하며, 아티스트가 표현하고자 하는 분위기와 정서로 주위를 차츰 물들게 합니다."
@@ -46,21 +51,25 @@
       ],
 
       "ifland": [{
+        "category": "메타버스 NFT 아이템",
         "subtitle": "Accessory",
         "title": "이프랜드 네코 헬멧",
         "content": "이프랜드 네코 헬멧은 Metaverse 내에서 유니크하고 귀여운 분위기를 연출하고 싶은 분들을 위한 아이템입니다. 네코 스타일의 헬멧은 고양이 귀 모양 디자인으로, 핑크 컬러로 더욱 돋보입니다. 이 아이템은 Metaverse에서만 소장 가능하며, 귀여우면서도 유니크한 외모를 자랑합니다."
       },
       {
+        "category": "메타버스 NFT 아이템",
         "subtitle": "Accessory",
         "title": "이프랜드 B급 포장지 모자",
         "content": "이프랜드 B급 포장지 모자는 Metaverse에서 유니크하고 유머러스한 스타일을 찾는 분들을 위한 아이템입니다. 이 모자는 이프랜드에서만 찾을 수 있는 통통튀는 디자인으로, 현실에서는 상상할 수 없는 비현실적인 모험을 추구하는 이용자들을 위해 제작되었습니다. 추가로 독특하고 유머러스한 디자인으로 주변의 이목을 끌 수 있습니다."
       },
       {
+        "category": "메타버스 NFT 아이템",
         "subtitle": "Accessory",
         "title": "피카소st 네온 안경",
         "content": "피카소 네온 안경은 Metaverse에서 예술적인 스타일을 선호하는 분들을 위한 아이템입니다. 이 안경은 거장 피카소의 예술적 영감을 받아 디자인되었으며, 미술과 패션의 결합을 나타냅니다. 안경 프레임에 장착된 네온 라이팅은 Metaverse 내에서 눈에 띄게 반짝이며, 주변의 주목을 끕니다."
       },
       {
+        "category": "메타버스 NFT 아이템",
         "subtitle": "Clothing",
         "title": "MetaWorld #Daily",
         "content": "MetaWorld #Daily (남/여 의상)은이프랜드 내에서 더욱 독특하고 스타일리쉬한 룩을 원하는 분들을 위한 아이템입니다. 메타버스와 현실이 어우러진 디자인으로, 독특하면서도 편안한 스타일을 선보입니다. 메타버스의 일상에서도 특별한 모습으로 빛나고, 자신만의 아이덴티티를 자유롭게 표현하세요."
@@ -98,49 +107,58 @@
 
     "nft": {
       "kansong": [{
-        "subtitle": "Metaverse NFT item",
-        "title": "Celadon water dropper in the shape of mother monkey with baby (National treasure)",
+        "category": "Metaverse NFT item",
+        "subtitle": "National treasure",
+        "title": "Celadon water dropper in the shape of mother monkey with baby",
         "content": "This small celadon water dropper takes the shape of a squatting monkey cradling a young one, as its tiny hands caresses the mother’s face and chest as if to feel the warmth of her love. The jasper-blue and crystal-clear hue, smooth surface texture, and gentle curves come together to ensure an unparalleled sense of presence. This water dropper is one of the twenty celadons that Kansong Chun Hyungpil acquired in 1937 from John Gadsby, a British lawyer and also globally renowned celadon collector in Tokyo, Japan. As a cultural asset, this piece effectively exemplifies the aesthetics of mimetic Goryeo celadon."
       },
       {
-        "subtitle": "Metaverse NFT item",
-        "title": "Blue-and-white porcelain bottle with chrysanthemum design in underglaze iron and copper (National treasure)",
+        "category": "Metaverse NFT item",
+        "subtitle": "National treasure",
+        "title": "Blue-and-white porcelain bottle with chrysanthemum design in underglaze iron and copper",
         "content": "This Joseon dynasty’s white porcelain features understated decorations in a variety of colors against a pristine white backdrop. The elegant curve of its slender neck sits on a voluptuous body, which features a celadon-infused orchid along with insets decked in iron paint and copper-red pigments (Dongwha, Jinsa). An epitome of 18th-century Joseon white porcelain in its superb instantiation of rustic style and taste, this piece is also notable for the story behind its acquisition. At an auction held at the Gyeongseong Art Club in 1936, Kansong Chun Hyungpil outbid the Japanese company Yamanaka & Co. with 14,580 won, marking record price for white porcelain at that time."
       },
       {
-        "subtitle": "Metaverse NFT item",
-        "title": "Pair of stone tigers (National treasure)",
+        "category": "Metaverse NFT item",
+        "subtitle": "National treasure",
+        "title": "Pair of stone tigers",
         "content": "A pair of stone tiger statues, of smooth silhouettes. The round face, wide-eyed glare, and the equivocal expression bordering on both anger and amusement create a candid yet humorous feel. Entrusted with the power to ward off evil spirits in the folkloric tradition, these tigers stand guard in the gardens of the Kansong Art Museum. Records show that Kansong Chun Hyungpil purchased them at an auction held at Gyeongseong Art Club on March 3, 1935."
       }
       ],
       "pinzle": [
         {
+          "category": "Metaverse NFT item",
           "subtitle": "Illustrator / Basel, Switzerland",
           "title": "Fabian Lavater",
           "content": "Fabian Lavater is an illustrator based in Basel. Fabian expresses the moments of life experienced in nature with sensuous colors. He expresses his relationship with nature, which has become a part of his artist's life, such as beach scenery, waves, and surfing, by dissolving them in unique colors and messages. Based on his comfortable and eye-catching style, Fabian continues to collaborate with eco-friendly clothing brands, and interior and outdoor brands."
         },
         {
+          "category": "Metaverse NFT item",
           "subtitle": "Illustrator / Seoul, Korea",
           "title": "Kim Jam",
           "content": "Kim Jam is an illustrator based in Seoul. Starting as a designer and a photographer, Kim Jam now draws her style through illustrations. The artwork, including her favorite elements such as puppies and bread, becomes not only for the project but also as a scene that the artist herself loves. The warm and lovely artwork creates the mood of the viewer and the mood of the space cozy. Depart from the standard pattern, Kim Jam's style conveys a flat yet unique liveliness, gradually dyeing its surroundings with the atmosphere and emotion that the artist wants to express."
         }
       ],
       "ifland": [{
+        "category": "Metaverse NFT item",
         "subtitle": "Accessory",
         "title": "ifland Neko-helmet",
         "content": "Ifland Neko-Helmet is an item for those who want cute and unique items in ifland. ifland Neko-helmet has a cat ear-shaped design, and its pink color makes it stand out even more. This item is only available in ifland."
       },
       {
+        "category": "Metaverse NFT item",
         "subtitle": "Accessory",
         "title": "ifland paper bag helmet",
         "content": "Ifland paper bag helmet is an item for those looking for a unique and humorous style in the metaverse. This hat has a unique design that can only be found in Ifland, and was created for users who seek unrealistic adventures that cannot be imagined in reality. Additionally, its humorous design will attract attention."
       },
       {
+        "category": "Metaverse NFT item",
         "subtitle": "Accessory",
         "title": "Picasso Neon-Glasses",
         "content": "Picasso neon glasses are for those who prefer an artistic style in the metaverse. These glasses were designed with artistic inspiration from the master Picasso and represent the combination of art and fashion. The neon lighting mounted on the glasses frame sparkles prominently in ifland, attracting attention."
       },
       {
+        "category": "Metaverse NFT item",
         "subtitle": "Clothing",
         "title": "MetaWorld #Daily",
         "content": "MetaWorld #Daily series is for those who want a more unique and stylish look in ifland. The design combines the metaverse and reality, presenting a unique yet comfortable style. Shine with a special look in your daily life in the metaverse and freely express your own identity."

@@ -73,6 +73,7 @@ class NFTContainer extends HTMLElement {
     const oneTimeImage = this.getAttribute('oneTimeImage');
     const title = this.getAttribute('title');
     const subtitle = this.getAttribute('subtitle');
+    const category = this.getAttribute('category');
     const content = this.getAttribute('content');
     const collection = this.getAttribute('collection');
     const itemNo = this.getAttribute('item-no');
@@ -99,6 +100,7 @@ class NFTContainer extends HTMLElement {
               
                 <div class="desc-container --a-flex-center">
                   <div class="nft-desc-area">
+                    <div class="category"><span>${category}<span></div>
                     <span class="subtitle">${subtitle}</span>
                     <span class="title">${title}</span>
                     <span class="content" style="margin-top: 1.25rem">${content}</span>
@@ -118,6 +120,7 @@ class NFTContainer extends HTMLElement {
 
 customElements.define('atomrigs-nft-container', NFTContainer);
 
+/* 모바일 */
 class NFTView extends AtomrigsElement {
   constructor() {
     super();
@@ -195,6 +198,9 @@ class ButtonGroup extends AtomrigsElement {
     const { lang, langObj } = this.getLanguage();
     const collection = this.getAttribute('collection');
     const itemNo = this.getAttribute('item-no');
+    const deviceType = this.getAttribute('device-type') ? this.getAttribute('device-type') : '';
+
+    const onSampleClicked = `onSampleClicked('${collection}', '${itemNo}', '${deviceType}')`;
 
     this.innerHTML = `
       <div class="button-area">
@@ -202,7 +208,7 @@ class ButtonGroup extends AtomrigsElement {
           <img src="../assets/icon-3d_2.svg" />
           <span>${langObj['view']}</span>
         </button>
-        <button type="button" onClick="onSampleClicked('${collection}', '${itemNo}')">
+        <button type="button" onClick="${onSampleClicked}">
           <img src="../assets/icon-if.svg" />
           <span>${langObj['sample']}</span>
         </button>
