@@ -375,6 +375,7 @@ img.icon-arrow {
   position: fixed;
   color: var(--white);
   opacity: 0.2;
+  mix-blend-mode: soft-light;
   font-size: var(--background);
   font-weight: 900;
   text-transform: uppercase;
