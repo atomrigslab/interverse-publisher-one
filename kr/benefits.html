@@ -8,17 +8,20 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta HTTP-equiv="Expires" content="-1">
 
+  <meta property="og:image" content="meta-image.jpg"/>
+  
   <title>Interverse</title>
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
-  <link href="../css/main.css?dt=1696981459416" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696981459416" rel="stylesheet">
+  <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
+  <link href="../css/main.css?dt=1696982153086" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696982153086" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696981459416"></script>
-  <script src="../js/components.js?dt=1696981459416"></script>
-  <script src="../js/modal.js?dt=1696981459416"></script>
-  <script src="../js/webgl-player.js?dt=1696981459416"></script>
+  <script src="../js/common.js?dt=1696982153086"></script>
+  <script src="../js/components.js?dt=1696982153086"></script>
+  <script src="../js/modal.js?dt=1696982153086"></script>
+  <script src="../js/webgl-player.js?dt=1696982153086"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
@@ -34,16 +37,98 @@
 </head>
 
 <body onLoad="onLoaded()">
-  <main id="container" class="intro-container">
     <navigation-bar-element activekey="benefits"></navigation-bar-element>
+    <main id="benefit-container" class="page-background --a-full-view"  style="background-image: var(--bg-intro); height: fit-content;">
+      <div class="web --a-full-view benefit-area">
+      <div class="benefit-title-area">
+          <p class="benefit-desc">Benefit</p>
+          <h2>구매 고객 혜택</h2>
+        </div>
 
-    <div class="web">
-      웹
-    </div>
-    <div class="mobile">
-      모바일
-    </div>
-  </main>
+        <!-- ifland -->
+        <div class="benefit-table-area">
+          <h3>ifland original</h3>
+          <table>
+            <tr>
+              <th>NFT</th>
+              <td><span class="benefit-td">총 5종</span></td>
+            </tr>
+            <tr>
+              <th>수량</th>
+              <td><span class="benefit-td">각 1,000개씩 민팅</span></td>
+            </tr>
+            <tr>
+              <th>구매자 혜택</th>
+              <td><span class="benefit-td">이프랜트 무료재화(포인트)XXX원 지급 (미정)</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 간송미술관 -->
+        <div class="benefit-table-area">
+          <h3>간송 메타버스</h3>
+          <table>
+            <tr>
+              <th>NFT</th>
+              <td><span class="benefit-td">총 3종</span></td>
+            </tr>
+            <tr>
+              <th>수량</th>
+              <td><span class="benefit-td">각 1,000개씩 민팅</span></td>
+            </tr>
+            <tr>
+              <th>구매자 혜택</th>
+              <td>
+                <span class="benefit-td">구매자 전원 간송 멤버쉽 NFT 제공</span>
+                <span class="benefit-td">3종을 모두 구매한 고객 대상 뷰잉데이 초청
+                  <span class="benefit-desc">(기간 한정 : 10월 22일 구매자까지)</span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- pinzle -->
+        <div class="benefit-table-area">
+          <h3>핀즐</h3>
+          <table>
+            <tr>
+              <th>NFT</th>
+              <td><span class="benefit-td">총 6종</span></td>
+            </tr>
+            <tr>
+              <th>수량</th>
+              <td><span class="benefit-td">각 100개씩 민팅</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 앤스타일 -->
+        <div class="benefit-table-area" style="display: none;">
+          <h3>앤스타일</h3>
+          <table>
+            <tr>
+              <th>NFT</th>
+              <td><span class="benefit-td">총 33종</span></td>
+            </tr>
+            <tr>
+              <th>수량</th>
+              <td><span class="benefit-td">(SKT 제작지원 3종, 앤스타일 직접 제작 30종)</span></td>
+            </tr>
+            <tr>
+              <th>구매자 혜택</th>
+              <td><span class="benefit-td">각 50개씩 민팅</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <!-- <div class="mobile">
+        모바일
+      </div> -->
+    </main>
+  </div>
 
   <atomrigs-modal id="webgl-modal" width="60%" height="60%">
     <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
