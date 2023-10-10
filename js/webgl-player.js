@@ -46,7 +46,7 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
       <style>
         ${style}
       </style>
-      <div>
+      <div class="webgl-container">
         <canvas id="${id}-unity-canvas"></canvas>
         <div id="${id}-unity-loading-bar">
           <div id="${id}-unity-logo"></div>

@@ -51,7 +51,9 @@ class AtomrigsModal extends HTMLElement {
         right: 0;
         bottom: 0;
         margin: auto;
-        display: ${this.isOpen ? 'block' : 'none'};
+        display: ${this.isOpen ? 'flex' : 'none'};
+        justify-content: center;
+        align-items: center;
         width: ${this.getAttribute('width') || '300px'};
         height: ${height};
         background-color: ${this.getAttribute('bgColor') || '#fff'};

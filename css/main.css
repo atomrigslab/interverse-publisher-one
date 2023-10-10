@@ -152,6 +152,42 @@ picture {
   z-index: 2;
 }
 
+.webgl-container {
+  width: 1024px;
+  height: 768px;
+}
+
+.sample-image {
+  width: 1024px;
+  height: 576px;
+}
+
+@media screen and (max-width: 1024px), 
+       screen and (max-height: 900px) {
+  .webgl-container {
+    width: 640px;
+    height: 480px;
+  }
+  
+  .sample-image {
+    width: 640px;
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 640px), 
+       screen and (max-height: 600px) {
+  .webgl-container {
+    width: 320px;
+    height: 240px;
+  }
+  
+  .sample-image {
+    width: 320px;
+    height: 180px;
+  }
+}
+
 img.icon-arrow {
   z-index: 2;
   position: fixed;

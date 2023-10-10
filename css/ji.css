@@ -1,6 +1,7 @@
 .webglPlayer {
   width: 100%;
-  margin: 0rem 0.5rem;
+  max-width: 1024px;
+  /* margin: 0rem 0.5rem; */
 }
 
 .desktop-panel {
