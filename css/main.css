@@ -420,6 +420,7 @@ img.icon-arrow {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .narrow-nft-desc-gap {
@@ -439,6 +440,7 @@ img.icon-arrow {
 
 .nft-image-area {
   position: relative;
+  max-height: 680px;
   height: 100%;
   display: flex;
   align-items: center;
