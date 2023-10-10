@@ -67,7 +67,8 @@
   border-radius: 1.5rem;
   padding: 0rem 1.2rem;
   color: white;
-  background-color: transparent;
+  background: rgba(34, 38, 53, 0.34);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
