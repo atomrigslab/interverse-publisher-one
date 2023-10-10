@@ -44,6 +44,9 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
+  min-height: -webkit-fill-available; 
+  height: -webkit-fill-available;
+  height: fill-available; 
   background-image: url("../assets/bg.jpg");
 }
 
@@ -59,12 +62,6 @@ body {
     --title: 1.625rem;
     --subTitle: 0.875rem;
     --content: 1rem;
-  }
-
-  html,body {
-    min-height: -webkit-fill-available; 
-    height: -webkit-fill-available;
-    height: fill-available;
   }
 }
 
@@ -443,13 +440,16 @@ img.icon-arrow {
 .nft-image-area {
   position: relative;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nft-desc-area {
   max-width: 34.6em;
-  margin-top: 8.41rem;
+  /* margin-top: 8.41rem; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   word-break: break-all;
 }
 
