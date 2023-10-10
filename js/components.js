@@ -195,6 +195,9 @@ class ButtonGroup extends AtomrigsElement {
     const { lang, langObj } = this.getLanguage();
     const collection = this.getAttribute('collection');
     const itemNo = this.getAttribute('item-no');
+    const deviceType = this.getAttribute('device-type') ? this.getAttribute('device-type') : '';
+
+    const onSampleClicked = `onSampleClicked('${collection}', '${itemNo}', '${deviceType}')`;
 
     this.innerHTML = `
       <div class="button-area">
@@ -202,7 +205,7 @@ class ButtonGroup extends AtomrigsElement {
           <img src="../assets/icon-3d_2.svg" />
           <span>${langObj['view']}</span>
         </button>
-        <button type="button" onClick="onSampleClicked('${collection}', '${itemNo}')">
+        <button type="button" onClick="${onSampleClicked}">
           <img src="../assets/icon-if.svg" />
           <span>${langObj['sample']}</span>
         </button>

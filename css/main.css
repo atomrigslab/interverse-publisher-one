@@ -166,6 +166,14 @@ picture {
   height: 576px;
 }
 
+.sample-image-modal {
+  width: calc(5rem + 1024px);
+  height: 576px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 @media screen and (max-width: 1024px), 
        screen and (max-height: 900px) {
   .webgl-container {
@@ -176,6 +184,11 @@ picture {
   .sample-image {
     width: 640px;
     height: 360px;
+  }
+
+  .sample-image-modal {
+    width: calc(5rem + 640px);
+    height: 576px;
   }
 }
 
@@ -614,6 +627,10 @@ img.icon-arrow {
   font-size: var(--button); /* font-size: 0.875rem; */
   font-weight: 400;
   line-height: 140%; /* 1.225rem */ /* 19.6px; */
+}
+
+.pinzle-sample-slide {
+  
 }
 
 .web {

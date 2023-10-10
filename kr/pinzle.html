@@ -9,23 +9,82 @@
   <meta HTTP-equiv="Expires" content="-1">
 
   <title>Interverse</title>
-  <link href="../css/main.css?dt=1696956545335" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696956545335" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696956545335" rel="stylesheet">
+  <link href="../css/main.css?dt=1696978589257" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696978589257" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696978589257" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696956545335"></script>
-  <script src="../js/components.js?dt=1696956545335"></script>
-  <script src="../js/modal.js?dt=1696956545335"></script>
-  <script src="../js/webgl-player.js?dt=1696956545335"></script>
+  <script src="../js/common.js?dt=1696978589257"></script>
+  <script src="../js/components.js?dt=1696978589257"></script>
+  <script src="../js/modal.js?dt=1696978589257"></script>
+  <script src="../js/webgl-player.js?dt=1696978589257"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696956545335"></script>
+  <script src="../js/funcs.js?dt=1696978589257"></script>
   <script>
+
+    function initPinzleSampleSwiper({
+      swiperSelector,
+      prevBtnId,
+      nextBtnId
+    }) {
+      const pinzleSampleSwiper = new Swiper(swiperSelector, {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false
+      });
+
+      const prevBtn = document.querySelector(prevBtnId);
+      console.log('prevBtnId:', prevBtnId);
+      const setVisibilityOfPrevBtn = () => {
+        if (pinzleSampleSwiper.activeIndex === 0) {
+          prevBtn.style.visibility = 'hidden';
+        } else {
+          prevBtn.style.visibility = 'visible';
+        }
+      }
+      const nextBtn = document.querySelector(nextBtnId);
+      const setVisibilityOfNextBtn = () => {
+        if (pinzleSampleSwiper.activeIndex === (pinzleSampleSwiper.slides.length - 1)) {
+          nextBtn.style.visibility = 'hidden';
+        } else {
+          nextBtn.style.visibility = 'visible';
+        }
+      }
+
+      setVisibilityOfPrevBtn();
+      setVisibilityOfNextBtn();
+
+      prevBtn
+        .addEventListener('click', () => {
+          pinzleSampleSwiper.slidePrev(200, () => {});
+          setVisibilityOfPrevBtn();
+          setVisibilityOfNextBtn();
+        })
+
+      nextBtn
+        .addEventListener('click', () => {
+          pinzleSampleSwiper.slideNext(200, () => {});
+          setVisibilityOfPrevBtn();
+          setVisibilityOfNextBtn();
+        })
+    }
+
     function onLoaded() {
       init();
+
+      initPinzleSampleSwiper({
+        swiperSelector: '.pinzle-sample-swiper1',
+        prevBtnId: '#prev-sample-image-btn1',
+        nextBtnId: '#next-sample-image-btn1'
+      });
+      initPinzleSampleSwiper({
+        swiperSelector: '.pinzle-sample-swiper2',
+        prevBtnId: '#prev-sample-image-btn2',
+        nextBtnId: '#next-sample-image-btn2'
+      });
     }
   </script>
 </head>
@@ -68,6 +127,7 @@
                   <atomrigs-button-group
                     collection="pinzle"
                     item-no="1"
+                    device-type="desktop"
                     class="flex justify-center"
                   ></atomrigs-button-group>
                 </div>
@@ -97,6 +157,7 @@
                   <atomrigs-button-group
                     collection="pinzle"
                     item-no="2"
+                    device-type="desktop"
                     class="flex justify-center"
                   ></atomrigs-button-group>
                 </div>
@@ -190,8 +251,52 @@
     <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
   </atomrigs-modal>
 
-  <atomrigs-modal id="sample-modal" width="60%" height="60%" bgColor="transparent">
-    <img src="fallback.jpg" />
+  <atomrigs-modal id="sample-modal1" width="60%" height="60%" bgColor="transparent">
+    <div class="sample-image-modal">
+      <button type="button" id="prev-sample-image-btn1">
+        <img src="../assets/mobile/icon-To-Left.svg" />
+      </button>
+      <div class="swiper pinzle-sample-swiper1 sample-image">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pinzle-sample-slide full-width">
+            <img src="../assets/pinzle/sample-1-1.png" class="full-width" />
+          </div>
+          <div class="swiper-slide pinzle-sample-slide full-width">
+            <img src="../assets/pinzle/sample-1-2.png" />
+          </div>
+          <div class="swiper-slide pinzle-sample-slide full-width">
+            <img src="../assets/pinzle/sample-1-3.png" />
+          </div>
+        </div>
+      </div>
+      <button type="button" id="next-sample-image-btn1">
+        <img src="../assets/mobile/icon-To-Right.svg" />
+      </button>
+    </div>
+  </atomrigs-modal>
+
+  <atomrigs-modal id="sample-modal2" width="60%" height="60%" bgColor="transparent">
+    <div class="sample-image-modal">
+      <button type="button" id="prev-sample-image-btn2">
+        <img src="../assets/mobile/icon-To-Left.svg" />
+      </button>
+      <div class="swiper pinzle-sample-swiper2 sample-image">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pinzle-sample-slide full-width">
+            <img src="../assets/pinzle/sample-2-1.png" class="full-width" />
+          </div>
+          <div class="swiper-slide pinzle-sample-slide full-width">
+            <img src="../assets/pinzle/sample-2-2.png" />
+          </div>
+          <div class="swiper-slide pinzle-sample-slide full-width">
+            <img src="../assets/pinzle/sample-2-3.png" />
+          </div>
+        </div>
+      </div>
+      <button type="button" id="next-sample-image-btn2">
+        <img src="../assets/mobile/icon-To-Right.svg" />
+      </button>
+    </div>
   </atomrigs-modal>
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
