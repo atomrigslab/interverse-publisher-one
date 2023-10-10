@@ -118,15 +118,17 @@ class NFTContainer extends HTMLElement {
 
 customElements.define('atomrigs-nft-container', NFTContainer);
 
-class NFTView extends HTMLElement {
+class NFTView extends AtomrigsElement {
   constructor() {
     super();
   }
 
-  connectedCallback() {
+  render() {
+    const { lang, langObj } = this.getLanguage();
     const oneTimeImage = this.getAttribute('oneTimeImage');
     const collection = this.getAttribute('collection');
     const webglIndex = this.getAttribute('webglIndex');
+    const sampleIndex = this.getAttribute('sample-index');
 
     const onViewIn3DClicked = collection ? `onClick="onViewIn3DClicked('${collection}', ${webglIndex})"` : '';
 
@@ -144,19 +146,39 @@ class NFTView extends HTMLElement {
           </button>
         </div>
         <div class="mobile-button-group">
-          <button
-            type="button"
-            class="tool-button"
-            ${onViewIn3DClicked}
-          >
-            <img src="../assets/icon-3d_2.svg" style="display: inline-block" />3D 보기
-          </button>
-          <button type="button" class="tool-button" onClick="alert('적용 예')">
-            <img src="../assets/icon-3d_2.svg" style="display: inline-block" />적용 예
-          </button>
+          <div class="mobile-button-group-row">
+            <button
+              type="button"
+              class="tool-button"
+              ${onViewIn3DClicked}
+            >
+              <img src="../assets/icon-3d_2.svg" style="display: inline-block" />3D 보기
+            </button>
+            <button type="button" class="tool-button" onClick="onSampleClicked('${collection}', '${sampleIndex}')">
+              <img src="../assets/icon-3d_2.svg" style="display: inline-block" />적용 예
+            </button>
+          </div>
+          <div class="mobile-button-group-row">
+            <button
+              type="button"
+              class="tool-button full-width"
+              style="background-image: linear-gradient(117deg, #FF007D 0%, #490FBB 100%)"
+              onClick="onPurchaseClicked('${collection}', '${sampleIndex}')"
+            >
+              <img src="../assets/icon-ifland.svg" />
+              <span>${langObj['purchase']}</span>
+            </button>
+          </div>
         </div>
       </div>
-    `;    
+    `;
+  }
+
+  connectedCallback() {
+    super.connectedCallback()
+      .then(() => {
+        this.render();
+      });
   }
 }
 
@@ -175,22 +197,23 @@ class ButtonGroup extends AtomrigsElement {
 
     this.innerHTML = `
       <div class="button-area">
-        <div class="button-area-row">
-          <button type="button" onClick="onViewIn3DClicked('${collection}', ${webglIndex})">
-            <img src="../assets/icon-3d_2.svg" />
-            <span>${langObj['view']}</span>
-          </button>
-          <button type="button" onClick="onSampleClicked('${collection}', '${sampleIndex}')">
-            <img src="../assets/icon-3d_2.svg" />
-            <span>${langObj['sample']}</span>
-          </button>
-        </div>
-        <div class="button-area-row">
-          <button type="button" class="--a-full-width" onClick="onPurchaseClicked('${collection}', '${sampleIndex}')">
-            <img src="../assets/icon-3d_2.svg" />
-            <span>${langObj['purchase']}</span>
-          </button>
-        </div>
+        <button type="button" onClick="onViewIn3DClicked('${collection}', ${webglIndex})">
+          <img src="../assets/icon-3d_2.svg" />
+          <span>${langObj['view']}</span>
+        </button>
+        <button type="button" onClick="onSampleClicked('${collection}', '${sampleIndex}')">
+          <img src="../assets/icon-3d_2.svg" />
+          <span>${langObj['sample']}</span>
+        </button>
+        <button
+          type="button"
+          class="--a-full-width"
+          style="background-image: linear-gradient(117deg, #FF007D 0%, #490FBB 100%)"
+          onClick="onPurchaseClicked('${collection}', '${sampleIndex}')"
+        >
+          <img src="../assets/icon-ifland.svg" />
+          <span>${langObj['purchase']}</span>
+        </button>
       </div>
     `;   
   }

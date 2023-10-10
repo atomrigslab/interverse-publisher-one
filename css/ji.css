@@ -45,11 +45,18 @@
 }
 
 .mobile-button-group {
-  width: 100%;
+  width: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.mobile-button-group-row {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
 }
 
 .tool-button {
