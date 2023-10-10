@@ -8,9 +8,12 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta HTTP-equiv="Expires" content="-1">
 
+  <meta property="og:image" content="meta-image.jpg"/>
+
   <title>Interverse</title>
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
+  <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
   <link href="../css/main.css?dt=<%= Date.now() %>" rel="stylesheet" crossorigin="anonymous">
   <link href="../css/ji.css?dt=<%= Date.now() %>" rel="stylesheet">
   <link href="../css/atomrigs.css?dt=<%= Date.now() %>" rel="stylesheet">
@@ -153,11 +156,8 @@
                     src="../assets/ifland/logo-ifland.svg" alt=""
                     class="relative-max-full-height" />
                   <img
-                    src="../assets/ifland/img-ifland-metaverse-woman.png" alt=""
+                    src="../assets/ifland/img-ifland-metaverse.png" alt=""
                     style="position: absolute; top: 8%; right: -20%;" />
-                  <img
-                    src="../assets/ifland/img-ifland-metaverse-man.png" alt=""
-                    style="position: absolute; top: 25%; right: -63%;" />
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
@@ -205,8 +205,8 @@
                 content="<%= nft.ifland[2].content %>" collection="ifland" item-no="3"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-metaverse-man.png"
-                oneTimeImage2="../assets/ifland/img-ifland-metaverse-woman.png" title="<%= nft.ifland[3].title %>"
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-metaverse.png"
+                title="<%= nft.ifland[3].title %>"
                 subtitle="<%= nft.ifland[3].subtitle %>" content="<%= nft.ifland[3].content %>" collection="ifland"
                 item-no="4-1"></atomrigs-nft-container>
             </div>
