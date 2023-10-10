@@ -24,7 +24,7 @@
   --subTitle: 1rem;
   --content: 0.875rem;
   --button: 0.875rem;
-  --nav: 1.25rem;
+  --nav: 1.125rem;
   --background: 12.5rem;
   --main: 3.125rem;
 
@@ -291,7 +291,7 @@ img.icon-arrow {
   display: block;
   text-align: center;
   color: var(--gray-200, #b8bdc3);
-  font-size: 1.25rem;
+  font-size: var(--nav);
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 1.5rem */
