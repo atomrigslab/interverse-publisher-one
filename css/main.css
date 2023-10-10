@@ -44,9 +44,6 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
-  min-height: -webkit-fill-available; 
-  height: -webkit-fill-available;
-  height: fill-available; 
   background-image: url("../assets/bg.jpg");
 }
 
@@ -62,6 +59,13 @@ body {
     --title: 1.625rem;
     --subTitle: 0.875rem;
     --content: 1rem;
+  }
+
+  html,
+  body {
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+    height: fill-available;
   }
 }
 
