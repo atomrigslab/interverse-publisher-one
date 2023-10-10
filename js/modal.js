@@ -78,7 +78,6 @@ class AtomrigsModal extends HTMLElement {
       .modal-header {
         width: 100%;
         min-height: 20px;
-        background-color: white;
         box-sizing: border-box;
         display: flex;
         justify-content: end;
@@ -96,8 +95,26 @@ class AtomrigsModal extends HTMLElement {
       .modal-footer {
         width: 100%;
         min-height: 20px;
-        background-color: white;
+        background-color: transparent;
         box-sizing: border-box;
+        text-align: center;
+        padding: 1rem 0rem;
+      }
+
+      .circle-btn-close {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid white;
+        border-radius: 50px;
+        padding: 8px;
+        background: transparent;
+        text-decoration: none;
+      }
+  
+      .btn-close-icon {
+        width: 100%;
+        height: 100%;
       }
     `;
     // https://codeshack.io/pure-css3-modal-example/
@@ -108,14 +125,13 @@ class AtomrigsModal extends HTMLElement {
       <div for="modal" class="modal-background"></div>
       <div class="modal">
         <div class="modal-container">
-          <div class="modal-header">
-            <span class="modal-close">X</span>
-          </div>
           <div class="modal-content">
             <slot></slot>
           </div>
           <div class="modal-footer">
-            &nbsp;
+            <button type="button" class="circle-btn-close">
+              <img src="../assets/mobile/icon-close.svg" alt="" class="btn-close-icon" />
+            </button>
           </div>
         </div>
       </div>
@@ -128,7 +144,7 @@ class AtomrigsModal extends HTMLElement {
     this.shadowRoot.querySelector('.modal-background')
     .addEventListener('click', hideFunc);
 
-    const elm = this.shadowRoot.querySelector('.modal-header > span');
+    const elm = this.shadowRoot.querySelector('.circle-btn-close');
     elm.addEventListener('click', hideFunc);
   }
 
