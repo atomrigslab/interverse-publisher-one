@@ -8,9 +8,12 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta HTTP-equiv="Expires" content="-1">
 
+  <meta property="og:image" content="meta-image.jpg"/>
+  
   <title>Interverse</title>
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
+  <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
   <link href="../css/main.css?dt=<%= Date.now() %>" rel="stylesheet">
   <link href="../css/ji.css?dt=<%= Date.now() %>" rel="stylesheet">
   <script src="../js/common.js?dt=<%= Date.now() %>"></script>
@@ -25,13 +28,13 @@
 </head>
 
 <body onLoad="onLoaded">
-  <div class="page-background" style="background-image: var(--bg-intro)">
+  <!-- <div class="page-background" style="background-image: var(--bg-intro)">
     <navigation-bar-element activekey="about"></navigation-bar-element>
     <main class="intro-slider">
       <div class="intro-webp-page">
         <div class="intro-page-content">
           <picture class="flex justify-center items-center">
-            <source srcset="../assets/interverse.webp" type="image/webp""/>
+            <source srcset="../assets/interverse.webp" type="image/webp" />
               <img src=" ../assets/bg.jpg" alt="" />
           </picture>
           <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
@@ -42,28 +45,53 @@
       <div id="about-page" class="intro-page intro-about-background flex-col">
         <div class="container">
           <div class="head-copy" style="width: 100%; text-align: center;">
-            <span class="text text--random" data-scroll="out" data-splitting="">카피라이트</span>
-            <span class="text text--random" data-scroll="out" data-splitting="">가</span>
-            <span class="text text--random" data-scroll="out" data-splitting="">나올거</span>
-            <span class="text text--random" data-scroll="out" data-splitting="">예요</span>
+            <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[0] %></span>
+            <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[1] %></span>
+            <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[2] %></span>
+            <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[3] %></span>
+            <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[4] %></span>
           </div>
         </div>
-        <div style="width: 100%; text-align: center;">
-          여기에는 설명이 나옵니다.
-        </div>
+        <div style="width: 100%; text-align: center;"><%= intro.desc %></div>
       </div>
 
     </main>
-  </div> <!-- end of home-background -->
+  </div> -->
+
+  <div class="page-background" style="background-image: var(--bg-intro)">
+    <navigation-bar-element activekey="about"></navigation-bar-element>
+    <main class="intro-slider cc">
+
+      <div class="intro-webp-page pp page-main" style="position:fixed">
+        <div class="intro-page-content">
+          <picture class="flex justify-center items-center">
+            <source srcset="../assets/interverse.webp" type="image/webp" />
+              <img src=" ../assets/bg.jpg" alt="" />
+          </picture>
+          <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+        </div>
+      </div>
+
+    <div class="page pp"></div>
+    <div class="page page-cover pp">
+      <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[0] %></span>
+      <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[1] %></span>
+      <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[2] %></span>
+      <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[3] %></span>
+      <span class="text text--random" data-scroll="out" data-splitting=""><%= intro.title[4] %></span>
+      <div class="intro-desc"><%= intro.desc %></div>
+    </div>
+    </main>
+  </div>
+  <!-- end of home-background -->
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <script>
     Splitting();
     ScrollOut({
       targets: ".word",
-      scrollingElement: ".container"
+      scrollingElement: ".cc"
     });
   </script>
 </body>
-
 </html>

@@ -52,6 +52,16 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-grow: 0.5;
+  margin-bottom: 3vh;
+}
+.bottom-down-arrow {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0.5;
   margin-bottom: 3vh;
 }
 

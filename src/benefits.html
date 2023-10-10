@@ -8,9 +8,12 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta HTTP-equiv="Expires" content="-1">
 
+  <meta property="og:image" content="meta-image.jpg"/>
+  
   <title>Interverse</title>
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
+  <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
   <link href="../css/main.css?dt=<%= Date.now() %>" rel="stylesheet" crossorigin="anonymous">
   <link href="../css/ji.css?dt=<%= Date.now() %>" rel="stylesheet">
 
@@ -34,16 +37,98 @@
 </head>
 
 <body onLoad="onLoaded()">
-  <main id="container" class="intro-container">
     <navigation-bar-element activekey="benefits"></navigation-bar-element>
+    <main id="benefit-container" class="page-background --a-full-view"  style="background-image: var(--bg-intro); height: fit-content;">
+      <div class="web --a-full-view benefit-area">
+      <div class="benefit-title-area">
+          <p class="benefit-desc">Benefit</p>
+          <h2>구매 고객 혜택</h2>
+        </div>
 
-    <div class="web">
-      웹
-    </div>
-    <div class="mobile">
-      모바일
-    </div>
-  </main>
+        <!-- ifland -->
+        <div class="benefit-table-area">
+          <h3><%= ifland %></h3>
+          <table>
+            <tr>
+              <th><%= benefit.th[0] %></th>
+              <td><span class="benefit-td"><%= benefit.ifland[0] %></span></td>
+            </tr>
+            <tr>
+              <th><%= benefit.th[1] %></th>
+              <td><span class="benefit-td"><%= benefit.ifland[1] %></span></td>
+            </tr>
+            <tr>
+              <th><%= benefit.th[2] %></th>
+              <td><span class="benefit-td"><%= benefit.ifland[2] %></span></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 간송미술관 -->
+        <div class="benefit-table-area">
+          <h3><%= kansong %></h3>
+          <table>
+            <tr>
+              <th><%= benefit.th[0] %></th>
+              <td><span class="benefit-td"><%= benefit.kansong[0] %></span></td>
+            </tr>
+            <tr>
+              <th><%= benefit.th[1] %></th>
+              <td><span class="benefit-td"><%= benefit.kansong[1] %></span></td>
+            </tr>
+            <tr>
+              <th><%= benefit.th[2] %></th>
+              <td>
+                <span class="benefit-td"><%= benefit.kansong[2] %></span>
+                <span class="benefit-td"><%= benefit.kansong[3] %>
+                  <span class="benefit-desc"><%= benefit.kansong[4] %></span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- pinzle -->
+        <div class="benefit-table-area">
+          <h3><%= pinzle %></h3>
+          <table>
+            <tr>
+              <th><%= benefit.th[0] %></th>
+              <td><span class="benefit-td"><%= benefit.pinzle[0] %></span></td>
+            </tr>
+            <tr>
+              <th><%= benefit.th[1] %></th>
+              <td><span class="benefit-td"><%= benefit.pinzle[1] %></span></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 앤스타일 -->
+        <div class="benefit-table-area" style="display: none;">
+          <h3><%= nstyle %></h3>
+          <table>
+            <tr>
+              <th><%= benefit.th[0] %></th>
+              <td><span class="benefit-td"><%= benefit.nstyle[0] %></span></td>
+            </tr>
+            <tr>
+              <th><%= benefit.th[1] %></th>
+              <td><span class="benefit-td"><%= benefit.nstyle[1] %></span></td>
+            </tr>
+            <tr>
+              <th><%= benefit.th[2] %></th>
+              <td><span class="benefit-td"><%= benefit.nstyle[2] %></span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <!-- <div class="mobile">
+        모바일
+      </div> -->
+    </main>
+  </div>
 
   <atomrigs-modal id="webgl-modal" width="60%" height="60%">
     <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
