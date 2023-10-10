@@ -190,7 +190,7 @@ img.icon-arrow {
 }
 
 .footer-area > a {
-  color: var(--gray-200);
+  color: rgba(255, 255, 255, 0.56); 
   text-decoration: none;
   cursor: pointer;
 }
@@ -549,6 +549,27 @@ img.icon-arrow {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+@media (max-width: 1023px) {
+  .button-area {
+    /* max-width: 13rem;
+    margin-top: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; */
+    border: 1px dotted greenyellow;
+
+    max-width: 100%;
+    margin: 0;
+
+    width: 100%;
+    /* border: 1px  solid green; */
+    height: auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 20px;
+  }
 }
 
 .button-area-row {
