@@ -40,9 +40,9 @@
 <body onLoad="onLoaded()">
   <div class="page-background" style="background-image: var(--bg-kansong)">
     <navigation-bar-element activekey="kansong"></navigation-bar-element>
-    <main class="--a-full-view">
+    <main class="full-view">
       <!-- WEB -->
-      <div class="web --a-full-view">
+      <div class="web full-view">
         <div class="footer-area">
           <a href="https://atomrigs.io">© Atomrigs Lab Inc.</a>
         </div>
@@ -53,9 +53,9 @@
             </div>
           </div>
         </div>
-        <div class="swiper desktop-fullpage">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide --a-full-width">
+        <div class="swiper desktop-fullpage safari-full-height">
+          <div class="swiper-wrapper safari-full-height">
+            <div class="swiper-slide full-width safari-full-height">
               <!-- 이미지 영역 + 설명 영역 -->
               <div class="desktop-fullpage-slide-container wide-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
@@ -103,7 +103,7 @@
               </div>
             </div> <!-- end of swiper-slide -->
 
-            <div class="swiper-slide --a-full-width">
+            <div class="swiper-slide full-width safari-full-height">
               <div class="desktop-fullpage-slide-container wide-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
@@ -150,7 +150,7 @@
               </div>
             </div> <!-- end of swiper-slide -->
 
-            <div class="swiper-slide --a-full-width">
+            <div class="swiper-slide full-width safari-full-height">
               <div class="desktop-fullpage-slide-container wide-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
@@ -213,10 +213,10 @@
       </div> <!-- end of web -->
 
       <!-- MOBILE -->
-      <div class="mobile-panel mobile-safari-full-height">
-        <div class="swiper mobile-swiper mobile-safari-full-height">
-          <div class="swiper-wrapper mobile-safari-full-height">
-            <div class="swiper-slide mobile-slide mobile-safari-full-height">
+      <div class="mobile-panel safari-full-height">
+        <div class="swiper mobile-swiper safari-full-height">
+          <div class="swiper-wrapper safari-full-height">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/kansong/img-kan-1.png"
                 category="<%= nft.kansong[0].category %>"
@@ -226,7 +226,7 @@
                 collection="kansong"
                 item-no="1"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide mobile-safari-full-height">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/kansong/img-kan-2.png"
                 category="<%= nft.kansong[1].category %>"
@@ -236,7 +236,7 @@
                 collection="kansong"
                 item-no="2"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide mobile-safari-full-height">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/kansong/img-kan-3.png"
                 category="<%= nft.kansong[2].category %>"

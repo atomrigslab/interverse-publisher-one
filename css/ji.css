@@ -106,7 +106,7 @@
   flex-direction: column;
 }
 
-.mobile-safari-full-height {
+.safari-full-height {
   min-height: -webkit-fill-available !important;
   height: -webkit-fill-available !important;
   height: fill-available !important;

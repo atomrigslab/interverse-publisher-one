@@ -14,20 +14,20 @@
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1697021027630" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1697021027630" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1697021027630" rel="stylesheet">
+  <link href="../css/main.css?dt=1697033767857" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1697033767857" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1697033767857" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1697021027630"></script>
-  <script src="../js/components.js?dt=1697021027630"></script>
-  <script src="../js/modal.js?dt=1697021027630"></script>
-  <script src="../js/webgl-player.js?dt=1697021027630"></script>
+  <script src="../js/common.js?dt=1697033767857"></script>
+  <script src="../js/components.js?dt=1697033767857"></script>
+  <script src="../js/modal.js?dt=1697033767857"></script>
+  <script src="../js/webgl-player.js?dt=1697033767857"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1697021027630"></script>
+  <script src="../js/funcs.js?dt=1697033767857"></script>
 
   <script>
     let currentActiveWebGLIndex = 4;
@@ -80,10 +80,10 @@
 <body onLoad="onLoaded()">
   <div class="page-background" style="background-image: var(--bg-ifland)">
     <navigation-bar-element activekey="ifland"></navigation-bar-element>
-    <main class="--a-full-view">
+    <main class="full-view">
 
       <!-- WEB -->
-      <div class="web --a-full-view">
+      <div class="web full-view">
         <div class="footer-area">
           <a href="https://atomrigs.io">© Atomrigs Lab Inc.</a>
         </div>
@@ -95,10 +95,10 @@
           </div>
         </div>
 
-        <div class="swiper desktop-fullpage">
-          <div class="swiper-wrapper">
+        <div class="swiper desktop-fullpage safari-full-height">
+          <div class="swiper-wrapper safari-full-height">
 
-            <div class="swiper-slide --a-full-width">
+            <div class="swiper-slide full-width safari-full-height">
               <div class="desktop-fullpage-slide-container narrow-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
@@ -144,7 +144,7 @@
               </div>
             </div> <!-- end of swiper-slide -->
 
-            <div class="swiper-slide --a-full-width">
+            <div class="swiper-slide full-width safari-full-height">
               <div class="desktop-fullpage-slide-container wide-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
@@ -190,7 +190,7 @@
               </div>
             </div> <!-- end of swiper-slide -->
 
-            <div class="swiper-slide --a-full-width">
+            <div class="swiper-slide full-width safari-full-height">
               <div class="desktop-fullpage-slide-container narrow-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
@@ -236,7 +236,7 @@
               </div>
             </div> <!-- end of swiper-slide -->
 
-            <div class="swiper-slide --a-full-width">
+            <div class="swiper-slide full-width safari-full-height">
               <div class="desktop-fullpage-slide-container wide-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
@@ -245,7 +245,7 @@
                     class="relative-max-full-height" />
                   <img
                     src="../assets/ifland/img-ifland-metaverse-clothing_2x.png" alt=""
-                    style="min-width: 400px; position: absolute; top: 8%; right: -70%;" />
+                    style="min-width: 400px; position: absolute; top: 18%; right: -45%;" />
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
@@ -297,10 +297,10 @@
       </div> <!-- end of web-->
 
       <!-- MOBILE -->
-      <div class="mobile-panel">
-        <div class="swiper mobile-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide mobile-slide">
+      <div class="mobile-panel safari-full-height">
+        <div class="swiper mobile-swiper safari-full-height">
+          <div class="swiper-wrapper safari-full-height">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
                 category="Metaverse NFT item"
@@ -310,7 +310,7 @@
                 collection="ifland"
                 item-no="1"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
                 category="Metaverse NFT item"
@@ -320,7 +320,7 @@
                 collection="ifland"
                 item-no="2"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
                 category="Metaverse NFT item"
@@ -330,7 +330,7 @@
                 collection="ifland"
                 item-no="3"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/ifland/mobile-img-ifland-metaverse_woman.png"
                 category="Metaverse NFT item"
@@ -340,7 +340,7 @@
                 collection="ifland"
                 item-no="4"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/ifland/mobile-img-ifland-metaverse_man.png"
                 category="Metaverse NFT item"
