@@ -28,29 +28,48 @@
 </head>
 
 <body onLoad="onLoaded">
-<div class="page-background" style="background-image: var(--bg-intro)">
+  <!-- Web -->
+  <div class="page-background" style="background-image: var(--bg-intro)">
     <navigation-bar-element activekey="about"></navigation-bar-element>
     <main class="intro-slider cc">
-
-    <div class="intro-webp-page pp page-main" style="position:fixed">
+    <div class="intro-webp-page pp page-main web" style="position:fixed">
       <div class="intro-page-content">
         <picture class="flex justify-center items-center">
           <source srcset="../assets/interverse.webp" type="image/webp" />
             <img src=" ../assets/bg.jpg" alt="" />
         </picture>
-        <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
       </div>
     </div>
 
-    <div class="page pp"></div>
+    <div class="page pp">
+      <div class="bottom-down-arrow">
+        <button
+          id="down-arrow-at-bottom"
+          type="button"
+          style="background-color: transparent; text-decoration: none;"
+          onClick="moveToNextSlide()"
+        >
+          <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+    </div>
     <div class="page page-cover pp">
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" ><%= intro.title[0] %></span>
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" ><%= intro.title[1] %></span>
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" ><%= intro.title[2] %></span>
-      <div class="intro-desc"><%= intro.desc %></div>
+      <div>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" ><%= intro.title[0] %></span>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" ><%= intro.title[1] %></span>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" ><%= intro.title[2] %></span>
+      </div>
+      <div class="intro-desc">
+          <span class="intro-desc-gra"><%= intro.desc[0] %></span>
+          <span><%= intro.desc[1] %></span>
+          <span class="intro-desc-gra"><%= intro.desc[2] %></span>
+          <span><%= intro.desc[3] %></span>
+          <span style="white-space: pre-line; font-weight: 400;"><%= intro.desc[4] %></span>
+      </div>
     </div>
     </main>
   </div>
+
   <!-- end of home-background -->
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
