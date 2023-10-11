@@ -780,8 +780,7 @@ picture {
 }
 
 /* benefit */
-.web .benefit-area {
-  /* height: 100%; */
+.benefit-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
