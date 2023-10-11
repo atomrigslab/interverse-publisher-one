@@ -581,6 +581,7 @@ picture {
   font-weight: 400;
   line-height: 140%; /* 1.4rem */
   text-align: left;
+  margin-bottom: 2.25rem;
 }
 
 .pinzle-nft-desc-area > .content {
