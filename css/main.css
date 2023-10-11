@@ -68,6 +68,8 @@ body {
     min-height: -webkit-fill-available;
     height: -webkit-fill-available;
     height: fill-available;
+    height: 100vh;
+    max-height: 100vh;
   }
 }
 

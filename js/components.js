@@ -64,6 +64,7 @@
 // }
 // customElements.define('atomrigs-bg-text', MarqueeBackgroundText);
 
+/* 모바일 */
 class NFTContainer extends HTMLElement {
   constructor() {
     super();
@@ -79,9 +80,9 @@ class NFTContainer extends HTMLElement {
     const itemNo = this.getAttribute('item-no');
 
     this.innerHTML = `
-      <div class="swiper mobile-swiper-v">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide mobile-slide">
+      <div class="swiper mobile-swiper-v mobile-safari-full-height">
+        <div class="swiper-wrapper mobile-safari-full-height">
+          <div class="swiper-slide mobile-slide mobile-safari-full-height">
           <div class="benefit-image"><img src="../assets/btn-benefit.png" /></div>
             <atomrigs-nft-view
               oneTimeImage="${oneTimeImage}"
@@ -89,7 +90,7 @@ class NFTContainer extends HTMLElement {
               item-no="${itemNo}"
             ></atomrigs-nft-view>
           </div>
-          <div class="swiper-slide mobile-slide">
+          <div class="swiper-slide mobile-slide mobile-safari-full-height">
             <div class="--a-full-view --a-flex-center">
               <div class="--a-full-view">
               
@@ -121,7 +122,6 @@ class NFTContainer extends HTMLElement {
 
 customElements.define('atomrigs-nft-container', NFTContainer);
 
-/* 모바일 */
 class NFTView extends AtomrigsElement {
   constructor() {
     super();
