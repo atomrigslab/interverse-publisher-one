@@ -150,7 +150,7 @@ class NFTContainer extends HTMLElement {
 
               <!-- 중요: 일부러 atomrigs-nft-view를 배경으로 깔아서 오버레이 된것 같은 효과를 줌 -->
               <atomrigs-nft-view
-                style="position: fixed; width: 100%; height: 100%;"
+                style="position: fixed; width: 100%; height: 100%; z-index: -1"
                 oneTimeImage="${oneTimeImage}"
               ></atomrigs-nft-view>
 
@@ -164,8 +164,8 @@ class NFTContainer extends HTMLElement {
                 <button type="button" class="closeDescptionButton" onClick="closeDesc()">
                   <img src="../assets/mobile/icon-close.svg" alt="" />
                 </button>
+              </div>
 
-            </div>
           </div>
 
         </div>
