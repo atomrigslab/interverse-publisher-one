@@ -14,22 +14,62 @@
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1697017928963" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1697017928963" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1697017928963" rel="stylesheet">
+  <link href="../css/main.css?dt=1697020758599" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1697020758599" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1697020758599" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1697017928963"></script>
-  <script src="../js/components.js?dt=1697017928963"></script>
-  <script src="../js/modal.js?dt=1697017928963"></script>
-  <script src="../js/webgl-player.js?dt=1697017928963"></script>
+  <script src="../js/common.js?dt=1697020758599"></script>
+  <script src="../js/components.js?dt=1697020758599"></script>
+  <script src="../js/modal.js?dt=1697020758599"></script>
+  <script src="../js/webgl-player.js?dt=1697020758599"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1697017928963"></script>
+  <script src="../js/funcs.js?dt=1697020758599"></script>
 
   <script>
+    let currentActiveWebGLIndex = 4;
+    let minWebGLIndex = 4;
+    let maxWebGLIndex = 5;
+    function prev() {
+      const prev3DBtn = document.getElementById('prev-3d-btn');
+      const next3DBtn = document.getElementById('next-3d-btn');
+
+      const player = document.getElementById('webglPlayer');
+      player.close();
+
+      currentActiveWebGLIndex -= 1;
+      player.startView('ifland', currentActiveWebGLIndex);
+
+      if (currentActiveWebGLIndex === minWebGLIndex) {
+        prev3DBtn.style.visibility = 'hidden';
+        next3DBtn.style.visibility = 'visible';
+      } else {
+        next3DBtn.style.visibility = 'visible';
+      }
+    }
+    
+    function next(prev3DBtnId, next3DBtnId) {
+      const prev3DBtn = document.getElementById('prev-3d-btn');
+      const next3DBtn = document.getElementById('next-3d-btn');
+
+      const player = document.getElementById('webglPlayer');
+      player.close();
+
+      currentActiveWebGLIndex += 1;
+      player.startView('ifland', currentActiveWebGLIndex);
+
+      console.log({ currentActiveWebGLIndex, maxWebGLIndex });
+      if (currentActiveWebGLIndex >= maxWebGLIndex) {
+        next3DBtn.style.visibility = 'hidden';
+        prev3DBtn.style.visibility = 'visible';
+      } else {
+        prev3DBtn.style.visibility = 'visible';
+      }
+    }
+
     function onLoaded() {
       init();
     }
@@ -89,6 +129,7 @@
                   <atomrigs-button-group
                     collection="ifland"
                     item-no="1"
+                    device-type="desktop"
                   ></atomrigs-button-group>
                 </div>
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
@@ -143,6 +184,7 @@
                   <atomrigs-button-group
                     collection="ifland"
                     item-no="2"
+                    device-type="desktop"
                   ></atomrigs-button-group>
                 </div>
               </div>
@@ -179,6 +221,7 @@
                   <atomrigs-button-group
                     collection="ifland"
                     item-no="3"
+                    device-type="desktop"
                   ></atomrigs-button-group>
                 </div>
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
@@ -232,7 +275,8 @@
                   </div>
                   <atomrigs-button-group
                     collection="ifland"
-                    item-no="4-1"
+                    item-no="4"
+                    device-type="desktop"
                   ></atomrigs-button-group>
                 </div>
               </div>
@@ -294,7 +338,17 @@
                 subtitle="Clothing"
                 content="MetaWorld #Daily series is for those who want a more unique and stylish look in ifland. The design combines the metaverse and reality, presenting a unique yet comfortable style. Shine with a special look in your daily life in the metaverse and freely express your own identity."
                 collection="ifland"
-                item-no="4-1"></atomrigs-nft-container>
+                item-no="4"></atomrigs-nft-container>
+            </div>
+            <div class="swiper-slide mobile-slide">
+              <atomrigs-nft-container
+                oneTimeImage="../assets/ifland/img-ifland-metaverse-clothing_1x.png"
+                category="Metaverse NFT item"
+                title="MetaWorld #Daily"
+                subtitle="Clothing"
+                content="MetaWorld #Daily series is for those who want a more unique and stylish look in ifland. The design combines the metaverse and reality, presenting a unique yet comfortable style. Shine with a special look in your daily life in the metaverse and freely express your own identity."
+                collection="ifland"
+                item-no="5"></atomrigs-nft-container>
             </div>
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
@@ -312,7 +366,17 @@
   </atomrigs-modal>
 
   <atomrigs-modal id="webgl-modal" bgColor="transparent">
-    <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
+    <div style="display: flex; flex-direction: column;">
+      <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
+      <div id="webgl-controller" style="display: flex; justify-content: center;">
+        <button id="prev-3d-btn" type="button" onClick="prev();" style="visibility: hidden;">
+          <img src="../assets/mobile/icon-To-Left.svg" />
+        </button>
+        <button id="next-3d-btn" type="button" onClick="next();">
+          <img src="../assets/mobile/icon-To-Right.svg" />
+        </button>
+      </div>
+    </div>
   </atomrigs-modal>
 
   <atomrigs-modal id="sample-modal" bgColor="transparent">

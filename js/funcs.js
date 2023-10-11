@@ -57,15 +57,15 @@ function onViewIn3DClicked(collection, itemNo, deviceType) {
   const player = document.getElementById(WEBGL_PLAYER_ID);
 
   if (collection === 'pinzle' && deviceType === 'desktop') {
-    document.getElementById('prev-3d-btn1')
+    document.getElementById('prev-3d-btn')
       .style.visibility = 'hidden';
-    document.getElementById('next-3d-btn1')
+    document.getElementById('next-3d-btn')
       .style.visibility = 'visible';
 
     if (itemNo === '1') {
       currentActiveWebGLIndex = 1;
       minWebGLIndex = 1;
-      maxWebGLIndex = 3;  
+      maxWebGLIndex = 3;
     } else {
       currentActiveWebGLIndex = 4;
       minWebGLIndex = 4;
@@ -73,6 +73,25 @@ function onViewIn3DClicked(collection, itemNo, deviceType) {
     }
 
     itemNo = currentActiveWebGLIndex;
+  }
+
+  console.log({collection, itemNo, deviceType})
+  if (collection === 'ifland') {
+    if (itemNo === '4' && deviceType === 'desktop') {
+      document.getElementById('prev-3d-btn')
+        .style.visibility = 'hidden';
+      document.getElementById('next-3d-btn')
+        .style.visibility = 'visible';
+      document.getElementById('webgl-controller')
+        .style.visibility = 'visible';
+    } else {
+      document.getElementById('webgl-controller')
+        .style.visibility = 'hidden';
+    }
+
+    currentActiveWebGLIndex = 4;
+    minWebGLIndex = 4;
+    maxWebGLIndex = 5;
   }
 
   const onShownCallback = () => {

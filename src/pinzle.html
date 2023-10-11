@@ -79,8 +79,8 @@
     let minWebGLIndex = 1;
     let maxWebGLIndex = 3;
     function prev() {
-      const prev3DBtn = document.getElementById('prev-3d-btn1');
-      const next3DBtn = document.getElementById('next-3d-btn1');
+      const prev3DBtn = document.getElementById('prev-3d-btn');
+      const next3DBtn = document.getElementById('next-3d-btn');
 
       const player = document.getElementById('webglPlayer');
       player.close();
@@ -96,8 +96,8 @@
     }
     
     function next(prev3DBtnId, next3DBtnId) {
-      const prev3DBtn = document.getElementById('prev-3d-btn1');
-      const next3DBtn = document.getElementById('next-3d-btn1');
+      const prev3DBtn = document.getElementById('prev-3d-btn');
+      const next3DBtn = document.getElementById('next-3d-btn');
 
       const player = document.getElementById('webglPlayer');
       player.close();
@@ -323,10 +323,10 @@
     <div style="display: flex; flex-direction: column;">
       <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
       <div style="display: flex; justify-content: center;">
-        <button id="prev-3d-btn1" type="button" onClick="prev();" style="visibility: hidden;">
+        <button id="prev-3d-btn" type="button" onClick="prev();" style="visibility: hidden;">
           <img src="../assets/mobile/icon-To-Left.svg" />
         </button>
-        <button id="next-3d-btn1" type="button" onClick="next();">
+        <button id="next-3d-btn" type="button" onClick="next();">
           <img src="../assets/mobile/icon-To-Right.svg" />
         </button>
       </div>
