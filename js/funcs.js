@@ -114,16 +114,14 @@ function onViewIn3DClicked(collection, itemNo, deviceType) {
 }
 
 function onSampleClicked(collection, imgIndex, deviceType) {
-  if (collection !== 'pinzle') {
-    const imgElm = document.querySelector('#sample-modal > img');
-    imgElm.src = `../assets/${collection}/sample-${imgIndex}.png`;
-  }
-
   const onShownCallback = () => {};
   const onHideCallback = () => {};
   if (collection === 'pinzle' && deviceType === 'desktop') {
     document.getElementById(`sample-modal${imgIndex}`).open(onShownCallback, onHideCallback);
   } else {
+    const imgElm = document.querySelector('#sample-modal > img');
+    imgElm.src = `../assets/${collection}/sample-${imgIndex}.png`;
+
     document.getElementById(SAMPLE_MODAL_ID).open(onShownCallback, onHideCallback);
   }
 }
