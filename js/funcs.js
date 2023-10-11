@@ -39,8 +39,27 @@ const WEBGL_MODAL_ID = 'webgl-modal';
 const WEBGL_PLAYER_ID = 'webglPlayer';
 const SAMPLE_MODAL_ID = 'sample-modal';
 
-function onViewIn3DClicked(collection, itemNo) {
+function onViewIn3DClicked(collection, itemNo, deviceType) {
   const player = document.getElementById(WEBGL_PLAYER_ID);
+
+  if (collection === 'pinzle' && deviceType === 'desktop') {
+    document.getElementById('prev-3d-btn1')
+      .style.visibility = 'hidden';
+    document.getElementById('next-3d-btn1')
+      .style.visibility = 'visible';
+
+    if (itemNo === '1') {
+      currentActiveWebGLIndex = 1;
+      minWebGLIndex = 1;
+      maxWebGLIndex = 3;  
+    } else {
+      currentActiveWebGLIndex = 4;
+      minWebGLIndex = 4;
+      maxWebGLIndex = 6;
+    }
+
+    itemNo = currentActiveWebGLIndex;
+  }
 
   const onShownCallback = () => {
     setTimeout(() => {
@@ -67,4 +86,10 @@ function onSampleClicked(collection, imgIndex, deviceType) {
   } else {
     document.getElementById(SAMPLE_MODAL_ID).open(onShownCallback, onHideCallback);
   }
+}
+
+function onPurchaseClicked(collection, itemNo) {
+  const onShownCallback = () => {};
+  const onHideCallback = () => {};
+  document.getElementById('benefit-modal').open(onShownCallback, onHideCallback);
 }

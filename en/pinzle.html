@@ -13,20 +13,20 @@
   <title>Interverse</title>
 
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1696982627794" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696982627794" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696982627794" rel="stylesheet">
+  <link href="../css/main.css?dt=1696988209563" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696988209563" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696988209563" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696982627794"></script>
-  <script src="../js/components.js?dt=1696982627794"></script>
-  <script src="../js/modal.js?dt=1696982627794"></script>
-  <script src="../js/webgl-player.js?dt=1696982627794"></script>
+  <script src="../js/common.js?dt=1696988209563"></script>
+  <script src="../js/components.js?dt=1696988209563"></script>
+  <script src="../js/modal.js?dt=1696988209563"></script>
+  <script src="../js/webgl-player.js?dt=1696988209563"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696982627794"></script>
+  <script src="../js/funcs.js?dt=1696988209563"></script>
   <script>
 
     function initPinzleSampleSwiper({
@@ -41,7 +41,6 @@
       });
 
       const prevBtn = document.querySelector(prevBtnId);
-      console.log('prevBtnId:', prevBtnId);
       const setVisibilityOfPrevBtn = () => {
         if (pinzleSampleSwiper.activeIndex === 0) {
           prevBtn.style.visibility = 'hidden';
@@ -74,6 +73,43 @@
           setVisibilityOfPrevBtn();
           setVisibilityOfNextBtn();
         })
+    }
+
+    let currentActiveWebGLIndex = 1;
+    let minWebGLIndex = 1;
+    let maxWebGLIndex = 3;
+    function prev() {
+      const prev3DBtn = document.getElementById('prev-3d-btn1');
+      const next3DBtn = document.getElementById('next-3d-btn1');
+
+      const player = document.getElementById('webglPlayer');
+      player.close();
+
+      currentActiveWebGLIndex -= 1;
+      player.startView('pinzle', currentActiveWebGLIndex);
+
+      if (currentActiveWebGLIndex === minWebGLIndex) {
+        prev3DBtn.style.visibility = 'hidden';
+      } else {
+        next3DBtn.style.visibility = 'visible';
+      }
+    }
+    
+    function next(prev3DBtnId, next3DBtnId) {
+      const prev3DBtn = document.getElementById('prev-3d-btn1');
+      const next3DBtn = document.getElementById('next-3d-btn1');
+
+      const player = document.getElementById('webglPlayer');
+      player.close();
+
+      currentActiveWebGLIndex += 1;
+      player.startView('pinzle', currentActiveWebGLIndex);
+
+      if (currentActiveWebGLIndex >= maxWebGLIndex) {
+        next3DBtn.style.visibility = 'hidden';
+      } else {
+        prev3DBtn.style.visibility = 'visible';
+      }
     }
 
     function onLoaded() {
@@ -130,8 +166,8 @@
                   </span>
                   <div class="desktop-info" style="align-items: center;">
                     <div style="display: flex; gap: 0.75rem;">
-                      <div class="desktop-info-title">Quantity</div>
-                      <div class="desktop-info-text1">100 each minted</div>
+                      <div class="nft-info-title">Quantity</div>
+                      <div class="nft-info-text1">100 each minted</div>
                     </div>
                   </div>
                   <atomrigs-button-group
@@ -166,8 +202,8 @@
                   </span>
                   <div class="desktop-info" style="align-items: center;">
                     <div style="display: flex; gap: 0.75rem;">
-                      <div class="desktop-info-title">Quantity</div>
-                      <div class="desktop-info-text1">100 each minted</div>
+                      <div class="nft-info-title">Quantity</div>
+                      <div class="nft-info-text1">100 each minted</div>
                     </div>
                   </div>
                   <atomrigs-button-group
@@ -263,11 +299,28 @@
     </main>
   </div>
 
-  <atomrigs-modal id="webgl-modal" width="60%" height="60%" bgColor="transparent">
-    <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
+  <atomrigs-modal id="benefit-modal" bgColor="transparent">
+    <div class="mobile-info">
+      <div class="nft-info-title">Quantity</div>
+      <div class="nft-info-text1" style="margin-top: 1.25rem;">100 each minted</div>
+    </div>
   </atomrigs-modal>
 
-  <atomrigs-modal id="sample-modal1" width="60%" height="60%" bgColor="transparent">
+  <atomrigs-modal id="webgl-modal" bgColor="transparent">
+    <div style="display: flex; flex-direction: column;">
+      <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
+      <div style="display: flex; justify-content: center;">
+        <button id="prev-3d-btn1" type="button" onClick="prev();" style="visibility: hidden;">
+          <img src="../assets/mobile/icon-To-Left.svg" />
+        </button>
+        <button id="next-3d-btn1" type="button" onClick="next();">
+          <img src="../assets/mobile/icon-To-Right.svg" />
+        </button>
+      </div>
+    </div>
+  </atomrigs-modal>
+
+  <atomrigs-modal id="sample-modal1" bgColor="transparent">
     <div class="sample-image-modal">
       <button type="button" id="prev-sample-image-btn1">
         <img src="../assets/mobile/icon-To-Left.svg" />
@@ -291,7 +344,7 @@
     </div>
   </atomrigs-modal>
 
-  <atomrigs-modal id="sample-modal2" width="60%" height="60%" bgColor="transparent">
+  <atomrigs-modal id="sample-modal2" bgColor="transparent">
     <div class="sample-image-modal">
       <button type="button" id="prev-sample-image-btn2">
         <img src="../assets/mobile/icon-To-Left.svg" />

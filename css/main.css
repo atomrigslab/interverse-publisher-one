@@ -571,7 +571,16 @@ img.icon-arrow {
   margin: 2.25rem 0rem;
 }
 
-.desktop-info-title {
+.mobile-info {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.75rem;
+}
+
+.nft-info-title {
   color: var(--white);
   font-size: 1.125rem;
   font-style: normal;
@@ -580,7 +589,7 @@ img.icon-arrow {
   text-transform: uppercase;
 }
 
-.desktop-info-text1 {
+.nft-info-text1 {
   color: var(--white);
   font-size: 1.125rem;
   font-style: normal;
@@ -589,7 +598,7 @@ img.icon-arrow {
   text-transform: uppercase;
 }
 
-.desktop-info-text2 {
+.nft-info-text2 {
   color: var(--gray-200);
   font-size: 1rem;
   font-style: normal;

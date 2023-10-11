@@ -189,6 +189,7 @@ class NFTView extends AtomrigsElement {
 
 customElements.define('atomrigs-nft-view', NFTView);
 
+/* 데스크탑 */
 class ButtonGroup extends AtomrigsElement {
   constructor() {
     super();
@@ -200,11 +201,12 @@ class ButtonGroup extends AtomrigsElement {
     const itemNo = this.getAttribute('item-no');
     const deviceType = this.getAttribute('device-type') ? this.getAttribute('device-type') : '';
 
+    const onViewIn3DClicked = `onViewIn3DClicked('${collection}', '${itemNo}', '${deviceType}')`;
     const onSampleClicked = `onSampleClicked('${collection}', '${itemNo}', '${deviceType}')`;
 
     this.innerHTML = `
       <div class="button-area">
-        <button type="button" onClick="onViewIn3DClicked('${collection}', '${itemNo}')">
+        <button type="button" onClick="${onViewIn3DClicked}">
           <img src="../assets/icon-3d_2.svg" />
           <span>${langObj['view']}</span>
         </button>
