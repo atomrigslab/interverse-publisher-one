@@ -95,8 +95,8 @@
       "nstyle": ["총 33종", "(SKT 제작지원 3종, 앤스타일 직접 제작 30종)", "각 50개씩 민팅", "실물 T셔츠 제공", "(선착순 10명)"]
     },
     "intro": {
-      "title": ["Metaverse와 "," Web3의 "," 만남"],
-      "desc": "ifland original X INTERVERSE의 콜라보로 새로운 Web3 Metaverse 아이템들이 탄생하였습니다.\n여러분이 영원히 소유하는 Web3 아이템들과 함께 Metaverse에서 나만의 특별한 이야기를 써나가 보세요.\n현실 세계의 다양한 혜택도 준비되어 있습니다."
+      "title": ["Metaverse와"," Web3의 ","만남"],
+      "desc": ["ifland original X INTERVERSE의 콜라보","로 ","새로운 Web3 Metaverse 아이템","들이 탄생하였습니다.","\n여러분이 영원히 소유하는 Web3 아이템들과 함께 Metaverse에서 나만의 특별한 이야기를 써나가 보세요.\n현실 세계의 다양한 혜택도 준비되어 있습니다."]
     }
   },
 
@@ -195,7 +195,7 @@
       "nstyle": ["총 33종", "(SKT 제작지원 3종, 앤스타일 직접 제작 30종)", "각 50개씩 민팅", "실물 T셔츠 제공", "(선착순 10명)"]
     },
     "intro": {
-      "title": ["Metaverse ","meets "," Web3"],
+      "title": ["Metaverse"," meets ","Web3"],
       "desc": "The collaboration between ifland original X INTERVERSE has resulted in new Web3 Metaverse items.\nWrite your own unique story in the Metaverse with Web3 items that you can own forever.\nWe've also got precious real-world goodies for you."
     }
   }
