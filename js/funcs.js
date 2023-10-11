@@ -167,8 +167,8 @@ function onPurchaseClicked(collection, itemNo) {
       "1": "https://www.google.com",
       "2": "https://www.google.com",
       "3": "https://www.google.com",
-      "4-1": "https://www.google.com",
-      "4-2": "https://www.google.com"
+      "4": "https://www.google.com",
+      "5": "https://www.google.com"
     }
   };
 
