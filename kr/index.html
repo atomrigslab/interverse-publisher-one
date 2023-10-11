@@ -14,11 +14,11 @@
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1696995664405" rel="stylesheet">
-  <link href="../css/ji.css?dt=1696995664405" rel="stylesheet">
-  <script src="../js/common.js?dt=1696995664405"></script>
-  <script src="../js/components.js?dt=1696995664405"></script>
-  <script src="../js/funcs.js?dt=1696995664405"></script>
+  <link href="../css/main.css?dt=1697013589582" rel="stylesheet">
+  <link href="../css/ji.css?dt=1697013589582" rel="stylesheet">
+  <script src="../js/common.js?dt=1697013589582"></script>
+  <script src="../js/components.js?dt=1697013589582"></script>
+  <script src="../js/funcs.js?dt=1697013589582"></script>
 
   <script>
     function onLoaded() {
@@ -28,32 +28,55 @@
 </head>
 
 <body onLoad="onLoaded">
-<div class="page-background" style="background-image: var(--bg-intro)">
+  <!-- Web -->
+  <div class="page-background" style="background-image: var(--bg-intro)">
     <navigation-bar-element activekey="about"></navigation-bar-element>
     <main class="intro-slider cc">
-
-    <div class="intro-webp-page pp page-main" style="position:fixed">
+    <div class="intro-webp-page pp page-main web" style="position:fixed">
       <div class="intro-page-content">
         <picture class="flex justify-center items-center">
           <source srcset="../assets/interverse.webp" type="image/webp" />
             <img src=" ../assets/bg.jpg" alt="" />
         </picture>
-        <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
       </div>
     </div>
 
-    <div class="page pp"></div>
+    <div class="page pp">
+      <div class="bottom-down-arrow">
+        <button
+          id="down-arrow-at-bottom"
+          type="button"
+          style="background-color: transparent; text-decoration: none;"
+          onClick="moveToNextSlide()"
+        >
+          <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+    </div>
     <div class="page page-cover pp">
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" >Metaverse와 </span>
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" > Web3의 </span>
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" > 만남</span>
-      <div class="intro-desc">ifland original X INTERVERSE의 콜라보로 새로운 Web3 Metaverse 아이템들이 탄생하였습니다.
+      <div>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" >Metaverse와</span>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" > Web3의 </span>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" >만남</span>
+      </div>
+      <div class="intro-desc">
+          <span >ifland original X INTERVERSE의 콜라보</span>
+          <span>로 </span>
+          <span >새로운 Web3 Metaverse 아이템</span>
+          <span>들이 탄생하였습니다.</span>
+          <span style="white-space: pre-line; font-weight: 400;">
 여러분이 영원히 소유하는 Web3 아이템들과 함께 Metaverse에서 나만의 특별한 이야기를 써나가 보세요.
-현실 세계의 다양한 혜택도 준비되어 있습니다.</div>
+현실 세계의 다양한 혜택도 준비되어 있습니다.</span>
+      </div>
     </div>
     </main>
   </div>
+
   <!-- end of home-background -->
+  <script> 
+    $("span:contains('ifland original X INTERVERSE')").addClass("intro-desc-gra");
+    $("span:contains('Web3 Metaverse')").addClass("intro-desc-gra");
+  </script>
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <script>

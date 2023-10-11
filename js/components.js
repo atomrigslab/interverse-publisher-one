@@ -155,10 +155,10 @@ class NFTView extends AtomrigsElement {
               class="tool-button"
               ${onViewIn3DClicked}
             >
-              <img src="../assets/icon-3d_2.svg" style="display: inline-block" />3D 보기
+              <img src="../assets/icon-3d_2.svg" style="display: inline-block" />${langObj['view']}
             </button>
             <button type="button" class="tool-button" onClick="onSampleClicked('${collection}', '${itemNo}')">
-              <img src="../assets/icon-if.svg" width="18" height="19" style="display: inline-block;" />적용 예
+              <img src="../assets/icon-if.svg" width="18" height="19" style="display: inline-block;" />${langObj['sample']}
             </button>
           </div>
           <div class="mobile-button-group-row">

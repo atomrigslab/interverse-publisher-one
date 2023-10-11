@@ -14,11 +14,11 @@
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1696995664406" rel="stylesheet">
-  <link href="../css/ji.css?dt=1696995664406" rel="stylesheet">
-  <script src="../js/common.js?dt=1696995664406"></script>
-  <script src="../js/components.js?dt=1696995664406"></script>
-  <script src="../js/funcs.js?dt=1696995664406"></script>
+  <link href="../css/main.css?dt=1697013589584" rel="stylesheet">
+  <link href="../css/ji.css?dt=1697013589584" rel="stylesheet">
+  <script src="../js/common.js?dt=1697013589584"></script>
+  <script src="../js/components.js?dt=1697013589584"></script>
+  <script src="../js/funcs.js?dt=1697013589584"></script>
 
   <script>
     function onLoaded() {
@@ -28,32 +28,55 @@
 </head>
 
 <body onLoad="onLoaded">
-<div class="page-background" style="background-image: var(--bg-intro)">
+  <!-- Web -->
+  <div class="page-background" style="background-image: var(--bg-intro)">
     <navigation-bar-element activekey="about"></navigation-bar-element>
     <main class="intro-slider cc">
-
-    <div class="intro-webp-page pp page-main" style="position:fixed">
+    <div class="intro-webp-page pp page-main web" style="position:fixed">
       <div class="intro-page-content">
         <picture class="flex justify-center items-center">
           <source srcset="../assets/interverse.webp" type="image/webp" />
             <img src=" ../assets/bg.jpg" alt="" />
         </picture>
-        <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
       </div>
     </div>
 
-    <div class="page pp"></div>
+    <div class="page pp">
+      <div class="bottom-down-arrow">
+        <button
+          id="down-arrow-at-bottom"
+          type="button"
+          style="background-color: transparent; text-decoration: none;"
+          onClick="moveToNextSlide()"
+        >
+          <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+    </div>
     <div class="page page-cover pp">
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" >Metaverse </span>
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" >meets </span>
-      <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" > Web3</span>
-      <div class="intro-desc">The collaboration between ifland original X INTERVERSE has resulted in new Web3 Metaverse items.
+      <div>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" >Metaverse</span>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" > meets </span>
+        <span class="text text--random" data-scroll="out" data-splitting="" style="white-space: pre;" >Web3</span>
+      </div>
+      <div class="intro-desc">
+          <span >The collaboration between</span>
+          <span>ifland original X INTERVERSE</span>
+          <span >has</span>
+          <span>resulted in new Web3 Metaverse items.</span>
+          <span style="white-space: pre-line; font-weight: 400;">
 Write your own unique story in the Metaverse with Web3 items that you can own forever.
-We&#39;ve also got precious real-world goodies for you.</div>
+We&#39;ve also got precious real-world goodies for you.</span>
+      </div>
     </div>
     </main>
   </div>
+
   <!-- end of home-background -->
+  <script> 
+    $("span:contains('ifland original X INTERVERSE')").addClass("intro-desc-gra");
+    $("span:contains('Web3 Metaverse')").addClass("intro-desc-gra");
+  </script>
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <script>
