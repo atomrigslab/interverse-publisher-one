@@ -1,92 +1,92 @@
 const webglList = {
   ifland: {
     '1': {
-      data: '/../webgl/S01/S01.data',
-      loader: '/../webgl/S01/S01.loader.js',
-      framework: '/../webgl/S01/S01.framework.js',
-      wasm: '/../webgl/S01/S01.wasm'
+      data: 'S01/S01.data',
+      loader: 'S01/S01.loader.js',
+      framework: 'S01/S01.framework.js',
+      wasm: 'S01/S01.wasm'
     },
     '2': {
-      data: '/../webgl/S02/S02.data',
-      loader: '/../webgl/S02/S02.loader.js',
-      framework: '/../webgl/S02/S02.framework.js',
-      wasm: '/../webgl/S02/S02.wasm'
+      data: 'S02/S02.data',
+      loader: 'S02/S02.loader.js',
+      framework: 'S02/S02.framework.js',
+      wasm: 'S02/S02.wasm'
     },
     '3': {
-      data: '/../webgl/S03/S03.data',
-      loader: '/../webgl/S03/S03.loader.js',
-      framework: '/../webgl/S03/S03.framework.js',
-      wasm: '/../webgl/S03/S03.wasm'
+      data: 'S03/S03.data',
+      loader: 'S03/S03.loader.js',
+      framework: 'S03/S03.framework.js',
+      wasm: 'S03/S03.wasm'
     },
     '4': {
-      data: '/../webgl/S04/S04.data',
-      loader: '/../webgl/S04/S04.loader.js',
-      framework: '/../webgl/S04/S04.framework.js',
-      wasm: '/../webgl/S04/S04.wasm'
+      data: 'S04/S04.data',
+      loader: 'S04/S04.loader.js',
+      framework: 'S04/S04.framework.js',
+      wasm: 'S04/S04.wasm'
     },
     '5': {
-      data: '/../webgl/S05/S05.data',
-      loader: '/../webgl/S05/S05.loader.js',
-      framework: '/../webgl/S05/S05.framework.js',
-      wasm: '/../webgl/S05/S05.wasm'
+      data: 'S05/S05.data',
+      loader: 'S05/S05.loader.js',
+      framework: 'S05/S05.framework.js',
+      wasm: 'S05/S05.wasm'
     }
   },
   kansong: {
     '1': {
-      data: '/../webgl/K01/K01.data',
-      loader: '/../webgl/K01/K01.loader.js',
-      framework: '/../webgl/K01/K01.framework.js',
-      wasm: '/../webgl/K01/K01.wasm'
+      data: 'K01/K01.data',
+      loader: 'K01/K01.loader.js',
+      framework: 'K01/K01.framework.js',
+      wasm: 'K01/K01.wasm'
     },
     '2': {
-      data: '/../webgl/K02/K02.data',
-      loader: '/../webgl/K02/K02.loader.js',
-      framework: '/../webgl/K02/K02.framework.js',
-      wasm: '/../webgl/K02/K02.wasm'
+      data: 'K02/K02.data',
+      loader: 'K02/K02.loader.js',
+      framework: 'K02/K02.framework.js',
+      wasm: 'K02/K02.wasm'
     },
     '3': {
-      data: '/../webgl/K03/K03.data',
-      loader: '/../webgl/K03/K03.loader.js',
-      framework: '/../webgl/K03/K03.framework.js',
-      wasm: '/../webgl/K03/K03.wasm'
+      data: 'K03/K03.data',
+      loader: 'K03/K03.loader.js',
+      framework: 'K03/K03.framework.js',
+      wasm: 'K03/K03.wasm'
     },
   },
   pinzle: {
     '1': {
-      data: '/../webgl/P01/P01.data',
-      loader: '/../webgl/P01/P01.loader.js',
-      framework: '/../webgl/P01/P01.framework.js',
-      wasm: '/../webgl/P01/P01.wasm'
+      data: 'P01/P01.data',
+      loader: 'P01/P01.loader.js',
+      framework: 'P01/P01.framework.js',
+      wasm: 'P01/P01.wasm'
     },
     '2': {
-      data: '/../webgl/P02/P02.data',
-      loader: '/../webgl/P02/P02.loader.js',
-      framework: '/../webgl/P02/P02.framework.js',
-      wasm: '/../webgl/P02/P02.wasm'
+      data: 'P02/P02.data',
+      loader: 'P02/P02.loader.js',
+      framework: 'P02/P02.framework.js',
+      wasm: 'P02/P02.wasm'
     },
     '3': {
-      data: '/../webgl/P03/P03.data',
-      loader: '/../webgl/P03/P03.loader.js',
-      framework: '/../webgl/P03/P03.framework.js',
-      wasm: '/../webgl/P03/P03.wasm'
+      data: 'P03/P03.data',
+      loader: 'P03/P03.loader.js',
+      framework: 'P03/P03.framework.js',
+      wasm: 'P03/P03.wasm'
     },
     '4': {
-      data: '/../webgl/P04/P04.data',
-      loader: '/../webgl/P04/P04.loader.js',
-      framework: '/../webgl/P04/P04.framework.js',
-      wasm: '/../webgl/P04/P04.wasm'
+      data: 'P04/P04.data',
+      loader: 'P04/P04.loader.js',
+      framework: 'P04/P04.framework.js',
+      wasm: 'P04/P04.wasm'
     },
     '5': {
-      data: '/../webgl/P05/P05.data',
-      loader: '/../webgl/P05/P05.loader.js',
-      framework: '/../webgl/P05/P05.framework.js',
-      wasm: '/../webgl/P05/P05.wasm'
+      data: 'P05/P05.data',
+      loader: 'P05/P05.loader.js',
+      framework: 'P05/P05.framework.js',
+      wasm: 'P05/P05.wasm'
     },
     '6': {
-      data: '/../webgl/P06/P06.data',
-      loader: '/../webgl/P06/P06.loader.js',
-      framework: '/../webgl/P06/P06.framework.js',
-      wasm: '/../webgl/P06/P06.wasm'
+      data: 'P06/P06.data',
+      loader: 'P06/P06.loader.js',
+      framework: 'P06/P06.framework.js',
+      wasm: 'P06/P06.wasm'
     }
   },
 };
@@ -169,12 +169,12 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
     // https://docs.unity3d.com/Manual/webgl-building.html
     // https://docs.unity3d.com/Manual/webgl-templates.html
 
-    const prefix = `/../webgl`;
+    const prefix = `../webgl/`;
     const config = {
-      loaderUrl: `${webglList[collection][itemNo].loader}`,
-      dataUrl: `${webglList[collection][itemNo].data}`,
-      frameworkUrl: `${webglList[collection][itemNo].framework}`,
-      codeUrl: `${webglList[collection][itemNo].wasm}`,
+      loaderUrl: `${prefix}${webglList[collection][itemNo].loader}`,
+      dataUrl: `${prefix}${webglList[collection][itemNo].data}`,
+      frameworkUrl: `${prefix}${webglList[collection][itemNo].framework}`,
+      codeUrl: `${prefix}${webglList[collection][itemNo].wasm}`,
       // loaderUrl: `${prefix}/loader.js`,
       // frameworkUrl: `${prefix}/framework.js`,
       // codeUrl: `${prefix}/webgl.wasm`,
