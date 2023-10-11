@@ -13,19 +13,19 @@
   <title>Interverse</title>
 
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1697046245271" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1697046245271" rel="stylesheet">
+  <link href="../css/main.css?dt=1697060261815" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1697060261815" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1697046245271"></script>
-  <script src="../js/components.js?dt=1697046245271"></script>
-  <script src="../js/modal.js?dt=1697046245271"></script>
-  <script src="../js/webgl-player.js?dt=1697046245271"></script>
+  <script src="../js/common.js?dt=1697060261815"></script>
+  <script src="../js/components.js?dt=1697060261815"></script>
+  <script src="../js/modal.js?dt=1697060261815"></script>
+  <script src="../js/webgl-player.js?dt=1697060261815"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1697046245271"></script>
+  <script src="../js/funcs.js?dt=1697060261815"></script>
   <script>
 
     function initPinzleSampleSwiper({
@@ -40,15 +40,15 @@
       });
 
       const prevBtn = document.querySelector(prevBtnId);
-      const setVisibilityOfPrevBtn = () => {
+      const nextBtn = document.querySelector(nextBtnId);
+
+      const setVisibilityOfBtns = () => {
         if (pinzleSampleSwiper.activeIndex === 0) {
           prevBtn.style.visibility = 'hidden';
         } else {
           prevBtn.style.visibility = 'visible';
         }
-      }
-      const nextBtn = document.querySelector(nextBtnId);
-      const setVisibilityOfNextBtn = () => {
+
         if (pinzleSampleSwiper.activeIndex === (pinzleSampleSwiper.slides.length - 1)) {
           nextBtn.style.visibility = 'hidden';
         } else {
@@ -56,21 +56,18 @@
         }
       }
 
-      setVisibilityOfPrevBtn();
-      setVisibilityOfNextBtn();
+      setVisibilityOfBtns();
 
       prevBtn
         .addEventListener('click', () => {
           pinzleSampleSwiper.slidePrev(200, () => {});
-          setVisibilityOfPrevBtn();
-          setVisibilityOfNextBtn();
+          setVisibilityOfBtns();
         })
 
       nextBtn
         .addEventListener('click', () => {
           pinzleSampleSwiper.slideNext(200, () => {});
-          setVisibilityOfPrevBtn();
-          setVisibilityOfNextBtn();
+          setVisibilityOfBtns();
         })
     }
 

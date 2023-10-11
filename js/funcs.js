@@ -29,7 +29,7 @@ function init() {
     }
   });
 
-  const mobileNFTSwiper = new Swiper('.mobile-swiper', {
+  new Swiper('.mobile-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: false
@@ -63,23 +63,34 @@ const SAMPLE_MODAL_ID = 'sample-modal';
 function onViewIn3DClicked(collection, itemNo, deviceType) {
   const player = document.getElementById(WEBGL_PLAYER_ID);
 
-  if (collection === 'pinzle' && deviceType === 'desktop') {
-    document.getElementById('prev-3d-btn')
-      .style.visibility = 'hidden';
-    document.getElementById('next-3d-btn')
-      .style.visibility = 'visible';
+  if (collection === 'pinzle') {
+    if (deviceType === 'desktop') {
+      document.getElementById('prev-3d-btn')
+        .style.visibility = 'hidden';
+      document.getElementById('next-3d-btn')
+        .style.visibility = 'visible';
 
-    if (itemNo === '1') {
-      currentActiveWebGLIndex = 1;
-      minWebGLIndex = 1;
-      maxWebGLIndex = 3;
+      if (itemNo === '1') {
+        currentActiveWebGLIndex = 1;
+        minWebGLIndex = 1;
+        maxWebGLIndex = 3;
+      } else {
+        currentActiveWebGLIndex = 4;
+        minWebGLIndex = 4;
+        maxWebGLIndex = 6;
+      }
+
+      itemNo = currentActiveWebGLIndex;
     } else {
-      currentActiveWebGLIndex = 4;
-      minWebGLIndex = 4;
-      maxWebGLIndex = 6;
+      document.getElementById('prev-3d-btn')
+        .style.visibility = 'hidden';
+      document.getElementById('prev-3d-btn')
+        .style.display = 'none';
+      document.getElementById('next-3d-btn')
+        .style.visibility = 'hidden';
+      document.getElementById('next-3d-btn')
+        .style.display = 'none';
     }
-
-    itemNo = currentActiveWebGLIndex;
   }
 
   if (collection === 'ifland') {
@@ -93,6 +104,8 @@ function onViewIn3DClicked(collection, itemNo, deviceType) {
     } else {
       document.getElementById('webgl-controller')
         .style.visibility = 'hidden';
+      document.getElementById('webgl-controller')
+        .style.display = 'none';
     }
 
     currentActiveWebGLIndex = 4;

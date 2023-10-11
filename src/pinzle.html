@@ -40,15 +40,15 @@
       });
 
       const prevBtn = document.querySelector(prevBtnId);
-      const setVisibilityOfPrevBtn = () => {
+      const nextBtn = document.querySelector(nextBtnId);
+
+      const setVisibilityOfBtns = () => {
         if (pinzleSampleSwiper.activeIndex === 0) {
           prevBtn.style.visibility = 'hidden';
         } else {
           prevBtn.style.visibility = 'visible';
         }
-      }
-      const nextBtn = document.querySelector(nextBtnId);
-      const setVisibilityOfNextBtn = () => {
+
         if (pinzleSampleSwiper.activeIndex === (pinzleSampleSwiper.slides.length - 1)) {
           nextBtn.style.visibility = 'hidden';
         } else {
@@ -56,21 +56,18 @@
         }
       }
 
-      setVisibilityOfPrevBtn();
-      setVisibilityOfNextBtn();
+      setVisibilityOfBtns();
 
       prevBtn
         .addEventListener('click', () => {
           pinzleSampleSwiper.slidePrev(200, () => {});
-          setVisibilityOfPrevBtn();
-          setVisibilityOfNextBtn();
+          setVisibilityOfBtns();
         })
 
       nextBtn
         .addEventListener('click', () => {
           pinzleSampleSwiper.slideNext(200, () => {});
-          setVisibilityOfPrevBtn();
-          setVisibilityOfNextBtn();
+          setVisibilityOfBtns();
         })
     }
 
