@@ -14,14 +14,14 @@
 
   <!-- html 파일들은 각 언어별 디렉토리에 있으므로 ../이 필요 -->
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=<%= Date.now() %>" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=<%= Date.now() %>" rel="stylesheet">
+  <link href="../css/main.css?dt=<%- Date.now() %>" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=<%- Date.now() %>" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=<%= Date.now() %>"></script>
-  <script src="../js/components.js?dt=<%= Date.now() %>"></script>
-  <script src="../js/modal.js?dt=<%= Date.now() %>"></script>
-  <script src="../js/webgl-player.js?dt=<%= Date.now() %>"></script>
+  <script src="../js/common.js?dt=<%- Date.now() %>"></script>
+  <script src="../js/components.js?dt=<%- Date.now() %>"></script>
+  <script src="../js/modal.js?dt=<%- Date.now() %>"></script>
+  <script src="../js/webgl-player.js?dt=<%- Date.now() %>"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
@@ -51,41 +51,41 @@
 
         <!-- ifland -->
         <div class="benefit-table-area">
-          <h3><%= ifland %></h3>
+          <h3><%- ifland %></h3>
           <table>
             <tr>
-              <th><%= benefit.th[0] %></th>
-              <td><span class="benefit-td"><%= benefit.ifland[0] %></span></td>
+              <th><%- benefit.th[0] %></th>
+              <td><span class="benefit-td"><%- benefit.ifland[0] %></span></td>
             </tr>
             <tr>
-              <th><%= benefit.th[1] %></th>
-              <td><span class="benefit-td"><%= benefit.ifland[1] %></span></td>
+              <th><%- benefit.th[1] %></th>
+              <td><span class="benefit-td"><%- benefit.ifland[1] %></span></td>
             </tr>
             <tr>
-              <th><%= benefit.th[2] %></th>
-              <td><span class="benefit-td"><%= benefit.ifland[2] %></span></td>
+              <th><%- benefit.th[2] %></th>
+              <td><span class="benefit-td"><%- benefit.ifland[2] %></span></td>
             </tr>
           </table>
         </div>
 
         <!-- 간송미술관 -->
         <div class="benefit-table-area">
-          <h3><%= kansongMuseum %></h3>
+          <h3><%- kansongMuseum %></h3>
           <table>
             <tr>
-              <th><%= benefit.th[0] %></th>
-              <td><span class="benefit-td"><%= benefit.kansong[0] %></span></td>
+              <th><%- benefit.th[0] %></th>
+              <td><span class="benefit-td"><%- benefit.kansong[0] %></span></td>
             </tr>
             <tr>
-              <th><%= benefit.th[1] %></th>
-              <td><span class="benefit-td"><%= benefit.kansong[1] %></span></td>
+              <th><%- benefit.th[1] %></th>
+              <td><span class="benefit-td"><%- benefit.kansong[1] %></span></td>
             </tr>
             <tr>
-              <th><%= benefit.th[2] %></th>
+              <th><%- benefit.th[2] %></th>
               <td>
-                <span class="benefit-td"><%= benefit.kansong[2] %></span>
-                <span class="benefit-td"><%= benefit.kansong[3] %>
-                  <span class="benefit-desc"><%= benefit.kansong[4] %></span>
+                <span class="benefit-td"><%- benefit.kansong[2] %></span>
+                <span class="benefit-td"><%- benefit.kansong[3] %>
+                  <span class="benefit-desc"><%- benefit.kansong[4] %></span>
                 </span>
               </td>
             </tr>
@@ -94,22 +94,22 @@
 
         <!-- pinzle -->
         <div class="benefit-table-area">
-          <h3><%= pinzle %></h3>
+          <h3><%- pinzle %></h3>
           <table>
             <tr>
-              <th><%= benefit.th[0] %></th>
-              <td><span class="benefit-td"><%= benefit.pinzle[0] %></span></td>
+              <th><%- benefit.th[0] %></th>
+              <td><span class="benefit-td"><%- benefit.pinzle[0] %></span></td>
             </tr>
             <tr>
-              <th><%= benefit.th[1] %></th>
-              <td><span class="benefit-td"><%= benefit.pinzle[1] %></span></td>
+              <th><%- benefit.th[1] %></th>
+              <td><span class="benefit-td"><%- benefit.pinzle[1] %></span></td>
             </tr>
           </table>
         </div>
 
         <!-- 앤스타일 -->
         <div class="benefit-table-area">
-          <h3><%= nstyle %></h3>
+          <h3><%- nstyle %></h3>
           <table>
             <tr>
               <th><%- benefit.th[0] %></th>

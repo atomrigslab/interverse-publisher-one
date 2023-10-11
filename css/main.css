@@ -827,6 +827,12 @@ picture {
   color: var(--gray-300);
   margin-top: 0.25rem;
 }
+
+.benefit-text {
+  font-size: 1rem;
+  color: var(--gray-300);
+}
+
 .benefit-image {
   position: absolute;
   right: 12px;
