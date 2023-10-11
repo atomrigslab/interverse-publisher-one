@@ -817,6 +817,13 @@ picture {
   color: var(--gray-300);
   margin-top: 0.25rem;
 }
+.benefit-image {
+  position: absolute;
+  right: 12px;
+  margin-top: 56px;
+  width: 65px;
+  height: 65px;
+}
 
 table {
   border-collapse : collapse;
