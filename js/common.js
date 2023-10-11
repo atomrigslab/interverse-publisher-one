@@ -132,11 +132,11 @@ class NavigationBarElement extends AtomrigsElement {
 
     this.innerHTML = `
       <nav class="navbar">
-        <div class="navbar-container">
-          <a class="navbar-brand" href="${homeUrl}">
+        <div class="navbar-container" style="overflow: hidden">
+          <a class="navbar-brand" href="${homeUrl}" style="flex-shrink: 1">
             <img src="../assets/logo.svg" />
           </a>
-          <button class="mobile" type="button" id="top-hamberger-button" style="padding-left: 4rem">
+          <button class="mobile" type="button" id="top-hamberger-button" style="padding-left: 2rem; flex-shrink: 0">
             <img src="../assets/mobile/icon-menu.svg" />
           </button>
           <div class="web">

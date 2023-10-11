@@ -5,7 +5,14 @@ function moveToNextSlide() {
   fullPageSwiper.slideNext(200, () => {});
 }
 
+function setVh() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+}
+
 function init() {
+  window.addEventListener('resize', setVh);
+  setVh();
+
   fullPageSwiper = new Swiper('.desktop-fullpage', {
     // Optional parameters
     direction: 'vertical',
