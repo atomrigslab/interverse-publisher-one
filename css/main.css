@@ -243,16 +243,6 @@ img.icon-arrow {
 }
 
 /* common */
-.bottom-down-arrow {
-  width: 100%;
-  min-height: 2.5rem;
-  position: fixed;
-  bottom: 40px;
-  z-index: 4000;
-  display: flex;
-  justify-content: center;
-}
-
 .footer-area {
   width: 100%;
   min-height: 2rem;
