@@ -8,7 +8,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta HTTP-equiv="Expires" content="-1">
 
-  <meta property="og:image" content="meta-image.jpg"/>
+  <meta property="og:image" content="meta-image.jpg" />
 
   <title>Interverse</title>
 
@@ -50,7 +50,7 @@
         next3DBtn.style.visibility = 'visible';
       }
     }
-    
+
     function next(prev3DBtnId, next3DBtnId) {
       const prev3DBtn = document.getElementById('prev-3d-btn');
       const next3DBtn = document.getElementById('next-3d-btn');
@@ -103,7 +103,9 @@
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
                   <div class="category">
-                    <span><%= nft.ifland[0].category %></span>
+                    <span>
+                      <%= nft.ifland[0].category %>
+                    </span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[0].title %>
@@ -116,29 +118,30 @@
                   </div>
                   <div class="desktop-info">
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= quantity %></div>
-                      <div class="nft-info-text1"><%= nft.ifland[0].quantity %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= quantity %>
+                      </div>
+                      <div class="nft-info-text1">
+                        <%= nft.ifland[0].quantity %>
+                      </div>
                     </div>
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= desktopBenefit %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= desktopBenefit %>
+                      </div>
                       <div style="display: flex; flex-direction: column">
-                        <div class="nft-info-text1"><%= nft.ifland[0].benefit1 %></div>
+                        <div class="nft-info-text1">
+                          <%= nft.ifland[0].benefit1 %>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <atomrigs-button-group
-                    collection="ifland"
-                    item-no="1"
-                    device-type="desktop"
-                  ></atomrigs-button-group>
+                  <atomrigs-button-group collection="ifland" item-no="1" device-type="desktop"></atomrigs-button-group>
                 </div>
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
-                  <img
-                    src="../assets/ifland/logo-ifland.svg" alt=""
-                    class="relative-max-full-height" />
-                  <img
-                    src="../assets/ifland/img-ifland-cathelmet.png" alt=""
+                  <img src="../assets/ifland/logo-ifland.svg" alt="" class="relative-max-full-height" />
+                  <img src="../assets/ifland/img-ifland-cathelmet.png" alt=""
                     style="position: absolute; top: 13%; right: -42%;" />
                 </div>
               </div>
@@ -148,17 +151,16 @@
               <div class="desktop-fullpage-slide-container wide-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
-                  <img
-                    src="../assets/ifland/logo-ifland.svg" alt=""
-                    class="relative-max-full-height" />
-                  <img
-                    src="../assets/ifland/img-ifland-bagHelmet.png" alt=""
+                  <img src="../assets/ifland/logo-ifland.svg" alt="" class="relative-max-full-height" />
+                  <img src="../assets/ifland/img-ifland-bagHelmet.png" alt=""
                     style="position: absolute; top: 22%; right: -30%;" />
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
                   <div class="category">
-                    <span><%= nft.ifland[1].category %></span>
+                    <span>
+                      <%= nft.ifland[1].category %>
+                    </span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[1].title %>
@@ -171,21 +173,25 @@
                   </div>
                   <div class="desktop-info">
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= quantity %></div>
-                      <div class="nft-info-text1"><%= nft.ifland[0].quantity %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= quantity %>
+                      </div>
+                      <div class="nft-info-text1">
+                        <%= nft.ifland[0].quantity %>
+                      </div>
                     </div>
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= desktopBenefit %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= desktopBenefit %>
+                      </div>
                       <div style="display: flex; flex-direction: column">
-                        <div class="nft-info-text1"><%= nft.ifland[0].benefit1 %></div>
+                        <div class="nft-info-text1">
+                          <%= nft.ifland[0].benefit1 %>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <atomrigs-button-group
-                    collection="ifland"
-                    item-no="2"
-                    device-type="desktop"
-                  ></atomrigs-button-group>
+                  <atomrigs-button-group collection="ifland" item-no="2" device-type="desktop"></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
@@ -195,7 +201,9 @@
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
                   <div class="category">
-                    <span><%= nft.ifland[2].category %></span>
+                    <span>
+                      <%= nft.ifland[2].category %>
+                    </span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[2].title %>
@@ -208,29 +216,30 @@
                   </div>
                   <div class="desktop-info">
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= quantity %></div>
-                      <div class="nft-info-text1"><%= nft.ifland[0].quantity %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= quantity %>
+                      </div>
+                      <div class="nft-info-text1">
+                        <%= nft.ifland[0].quantity %>
+                      </div>
                     </div>
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= desktopBenefit %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= desktopBenefit %>
+                      </div>
                       <div style="display: flex; flex-direction: column">
-                        <div class="nft-info-text1"><%= nft.ifland[0].benefit1 %></div>
+                        <div class="nft-info-text1">
+                          <%= nft.ifland[0].benefit1 %>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <atomrigs-button-group
-                    collection="ifland"
-                    item-no="3"
-                    device-type="desktop"
-                  ></atomrigs-button-group>
+                  <atomrigs-button-group collection="ifland" item-no="3" device-type="desktop"></atomrigs-button-group>
                 </div>
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
-                  <img
-                    src="../assets/ifland/logo-ifland.svg" alt=""
-                    class="relative-max-full-height" />
-                  <img
-                    src="../assets/ifland/img-ifland-neonglasses.png" alt=""
+                  <img src="../assets/ifland/logo-ifland.svg" alt="" class="relative-max-full-height" />
+                  <img src="../assets/ifland/img-ifland-neonglasses.png" alt=""
                     style="position: absolute; top: 15%; right: -35%;" />
                 </div>
               </div>
@@ -240,17 +249,16 @@
               <div class="desktop-fullpage-slide-container wide-nft-desc-gap fullpage-slide-container-padding">
                 <!-- 이미지 영역 (문 + NFT 이미지) -->
                 <div class="nft-image-area">
-                  <img
-                    src="../assets/ifland/logo-ifland.svg" alt=""
-                    class="relative-max-full-height" />
-                  <img
-                    src="../assets/ifland/img-ifland-metaverse-clothing_2x.png" alt=""
+                  <img src="../assets/ifland/logo-ifland.svg" alt="" class="relative-max-full-height" />
+                  <img src="../assets/ifland/img-ifland-metaverse-clothing_2x.png" alt=""
                     style="min-width: 400px; position: absolute; top: 8%; right: -70%;" />
                 </div>
                 <!-- 설명 영역 -->
                 <div class="nft-desc-area">
                   <div class="category">
-                    <span><%= nft.ifland[3].category %></span>
+                    <span>
+                      <%= nft.ifland[3].category %>
+                    </span>
                   </div>
                   <div class="title">
                     <%= nft.ifland[3].title %>
@@ -263,21 +271,25 @@
                   </div>
                   <div class="desktop-info">
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= quantity %></div>
-                      <div class="nft-info-text1"><%= nft.ifland[0].quantity %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= quantity %>
+                      </div>
+                      <div class="nft-info-text1">
+                        <%= nft.ifland[0].quantity %>
+                      </div>
                     </div>
                     <div style="display: flex; gap: 1.5rem;">
-                      <div class="nft-info-title" style="min-width: 5.125rem;"><%= desktopBenefit %></div>
+                      <div class="nft-info-title" style="min-width: 5.125rem;">
+                        <%= desktopBenefit %>
+                      </div>
                       <div style="display: flex; flex-direction: column">
-                        <div class="nft-info-text1"><%= nft.ifland[0].benefit1 %></div>
+                        <div class="nft-info-text1">
+                          <%= nft.ifland[0].benefit1 %>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <atomrigs-button-group
-                    collection="ifland"
-                    item-no="4"
-                    device-type="desktop"
-                  ></atomrigs-button-group>
+                  <atomrigs-button-group collection="ifland" item-no="4" device-type="desktop"></atomrigs-button-group>
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
@@ -285,12 +297,8 @@
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
         <div class="bottom-down-arrow">
-          <button
-            id="down-arrow-at-bottom"
-            type="button"
-            style="background-color: transparent; text-decoration: none;"
-            onClick="moveToNextSlide()"
-          >
+          <button id="down-arrow-at-bottom" type="button" style="background-color: transparent; text-decoration: none;"
+            onClick="moveToNextSlide()">
             <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
           </button>
         </div>
@@ -301,53 +309,33 @@
         <div class="swiper mobile-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
-                category="<%= nft.ifland[0].category %>"
-                title="<%= nft.ifland[0].title %>"
-                subtitle="<%= nft.ifland[0].subtitle %>"
-                content="<%= nft.ifland[0].content %>"
-                collection="ifland"
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-cathelmet.png"
+                category="<%= nft.ifland[0].category %>" title="<%= nft.ifland[0].title %>"
+                subtitle="<%= nft.ifland[0].subtitle %>" content="<%= nft.ifland[0].content %>" collection="ifland"
                 item-no="1"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
-                category="<%= nft.ifland[1].category %>"
-                title="<%= nft.ifland[1].title %>"
-                subtitle="<%= nft.ifland[1].subtitle %>"
-                content="<%= nft.ifland[1].content %>"
-                collection="ifland"
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-bagHelmet.png"
+                category="<%= nft.ifland[1].category %>" title="<%= nft.ifland[1].title %>"
+                subtitle="<%= nft.ifland[1].subtitle %>" content="<%= nft.ifland[1].content %>" collection="ifland"
                 item-no="2"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
-                category="<%= nft.ifland[2].category %>"
-                title="<%= nft.ifland[2].title %>"
-                subtitle="<%= nft.ifland[2].subtitle %>"
-                content="<%= nft.ifland[2].content %>"
-                collection="ifland"
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/img-ifland-neonglasses.png"
+                category="<%= nft.ifland[2].category %>" title="<%= nft.ifland[2].title %>"
+                subtitle="<%= nft.ifland[2].subtitle %>" content="<%= nft.ifland[2].content %>" collection="ifland"
                 item-no="3"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/mobile-img-ifland-metaverse_woman.png"
-                category="<%= nft.ifland[3].category %>"
-                title="<%= nft.ifland[3].title %>"
-                subtitle="<%= nft.ifland[3].subtitle %>"
-                content="<%= nft.ifland[3].content %>"
-                collection="ifland"
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/mobile-img-ifland-metaverse_woman.png"
+                category="<%= nft.ifland[3].category %>" title="<%= nft.ifland[3].title %>"
+                subtitle="<%= nft.ifland[3].subtitle %>" content="<%= nft.ifland[3].content %>" collection="ifland"
                 item-no="4"></atomrigs-nft-container>
             </div>
             <div class="swiper-slide mobile-slide">
-              <atomrigs-nft-container
-                oneTimeImage="../assets/ifland/mobile-img-ifland-metaverse_man.png"
-                category="<%= nft.ifland[4].category %>"
-                title="<%= nft.ifland[4].title %>"
-                subtitle="<%= nft.ifland[4].subtitle %>"
-                content="<%= nft.ifland[4].content %>"
-                collection="ifland"
+              <atomrigs-nft-container oneTimeImage="../assets/ifland/mobile-img-ifland-metaverse_man.png"
+                category="<%= nft.ifland[4].category %>" title="<%= nft.ifland[4].title %>"
+                subtitle="<%= nft.ifland[4].subtitle %>" content="<%= nft.ifland[4].content %>" collection="ifland"
                 item-no="5"></atomrigs-nft-container>
             </div>
           </div> <!-- end of swiper-wrapper -->
@@ -358,10 +346,18 @@
 
   <atomrigs-modal id="benefit-modal" bgColor="transparent">
     <div class="mobile-info">
-      <div class="nft-info-title"><%= quantity %></div>
-      <div class="nft-info-text1" style="margin-top: 1.25rem;"><%= nft.ifland[0].quantity %></div>
-      <div class="nft-info-title" style="margin-top: 2.25rem;"><%= desktopBenefit %></div>
-      <div class="nft-info-text1" style="margin-top: 1.25rem;"><%= nft.ifland[0].benefit1 %></div>
+      <div class="nft-info-title">
+        <%= quantity %>
+      </div>
+      <div class="nft-info-text1" style="margin-top: 1.25rem;">
+        <%= nft.ifland[0].quantity %>
+      </div>
+      <div class="nft-info-title" style="margin-top: 2.25rem;">
+        <%= desktopBenefit %>
+      </div>
+      <div class="nft-info-text1" style="margin-top: 1.25rem;">
+        <%= nft.ifland[0].benefit1 %>
+      </div>
     </div>
   </atomrigs-modal>
 

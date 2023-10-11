@@ -20,14 +20,14 @@
 //         text-transform: uppercase;
 //         z-index: -2;
 //       }
-      
+
 //       .bg-text .track {
 //         position: relative;
 //         white-space: nowrap;
 //         will-change: transform;
 //         animation: marquee ${speed}s linear infinite;
 //       }
-      
+
 //       @keyframes marquee {
 //         from {
 //           transform: translateX(0); 
@@ -36,7 +36,7 @@
 //           transform: translateX(-50%);
 //         }
 //       }
-      
+
 //       @media (hover: hover) {
 //         .bg-text.content {
 //           -webkit-transform: translateY(calc(100% - 8rem));
@@ -79,47 +79,83 @@ class NFTContainer extends HTMLElement {
     const collection = this.getAttribute('collection');
     const itemNo = this.getAttribute('item-no');
 
+    // this.innerHTML = `
+    //   <div class="swiper mobile-swiper-v mobile-safari-full-height">
+    //     <div class="swiper-wrapper mobile-safari-full-height">
+    //       <div class="swiper-slide mobile-slide mobile-safari-full-height">
+    //       <div class="benefit-image">
+    //         <button
+    //           style="background: transparent; text-decoration: none;"
+    //           onClick="onBenefitBadgeClicked('${collection}', '${itemNo}')"
+    //         >
+    //           <img src="../assets/btn-benefit.png" />
+    //         </button>
+    //       </div>
+    //         <atomrigs-nft-view
+    //           oneTimeImage="${oneTimeImage}"
+    //           collection="${collection}"
+    //           item-no="${itemNo}"
+    //         ></atomrigs-nft-view>
+    //       </div>
+    //       <div class="swiper-slide mobile-slide mobile-safari-full-height">
+    //         <div class="--a-full-view --a-flex-center">
+    //           <div class="--a-full-view">
+
+    //             <!-- 중요: 일부러 atomrigs-nft-view를 배경으로 깔아서 오버레이 된것 같은 효과를 줌 -->
+    //             <atomrigs-nft-view
+    //               style="position: fixed; width: 100%;"
+    //               oneTimeImage="${oneTimeImage}"
+    //             ></atomrigs-nft-view>
+
+    //             <div class="desc-container --a-flex-center">
+    //               <div class="nft-desc-area">
+    //                 <div class="category"><span>${category}<span></div>
+    //                 <span class="subtitle">${subtitle}</span>
+    //                 <span class="title">${title}</span>
+    //                 <span class="content" style="margin-top: 1.25rem">${content}</span>
+    //               </div>
+    //               <button type="button" class="closeDescptionButton" onClick="closeDesc()">
+    //                 <img src="../assets/mobile/icon-close.svg" alt="" />
+    //               </button>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // `;
+
     this.innerHTML = `
-      <div class="swiper mobile-swiper-v mobile-safari-full-height">
-        <div class="swiper-wrapper mobile-safari-full-height">
-          <div class="swiper-slide mobile-slide mobile-safari-full-height">
-          <div class="benefit-image">
-            <button
-              style="background: transparent; text-decoration: none;"
-              onClick="onBenefitBadgeClicked('${collection}', '${itemNo}')"
-            >
-              <img src="../assets/btn-benefit.png" />
-            </button>
-          </div>
-            <atomrigs-nft-view
-              oneTimeImage="${oneTimeImage}"
-              collection="${collection}"
-              item-no="${itemNo}"
-            ></atomrigs-nft-view>
-          </div>
-          <div class="swiper-slide mobile-slide mobile-safari-full-height">
-            <div class="--a-full-view --a-flex-center">
-              <div class="--a-full-view">
-              
-                <!-- 중요: 일부러 atomrigs-nft-view를 배경으로 깔아서 오버레이 된것 같은 효과를 줌 -->
-                <atomrigs-nft-view
-                  style="position: fixed; width: 100%;"
-                  oneTimeImage="${oneTimeImage}"
-                ></atomrigs-nft-view>
-              
-                <div class="desc-container --a-flex-center">
-                  <div class="nft-desc-area">
-                    <div class="category"><span>${category}<span></div>
-                    <span class="subtitle">${subtitle}</span>
-                    <span class="title">${title}</span>
-                    <span class="content" style="margin-top: 1.25rem">${content}</span>
-                  </div>
-                  <button type="button" class="closeDescptionButton" onClick="closeDesc()">
-                    <img src="../assets/mobile/icon-close.svg" alt="" />
-                  </button>
-                </div>
-              </div>
-            </div>
+      <div class="swiper mobile-swiper-v" style="height: 100vh">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide mobile-slide">
+
+<div style="width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: space-between">
+
+  <div style="width: 100%; height: calc(100% - 56px - 100px - 20px); margin-top: 56px; 
+    display: flex; align-items: center; justify-content: space-between; background: green">
+  
+    <div style="width: 50px; background: red">1</div>
+    <div style="height: 100%; width: calc(100% - 100px); 
+      display: flex; justify-content: center; align-items: center; background: orange;">
+
+      <img src="http://interverse.link/assets/ifland/img-ifland-cathelmet.png" 
+        style="width: 100%; height: 100%; object-fit: contain"
+        alt="" />
+
+    </div>
+    <div style="width: 50px; background: red">1</div>
+
+  </div>
+  <div style="width: 100%; height: 100px; background: blue">
+  
+  
+  </div>
+
+</div>
+
+
           </div>
         </div>
       </div>
@@ -232,7 +268,7 @@ class ButtonGroup extends AtomrigsElement {
           <span>${langObj['purchase']}</span>
         </button>
       </div>
-    `;   
+    `;
   }
 
   connectedCallback() {
