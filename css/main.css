@@ -738,7 +738,7 @@ img.icon-arrow {
   font-size: 1.125rem;
 }
 
-.benefit-table-area h3{
+.benefit-table-area h3 {
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -772,6 +772,33 @@ td {
     min-width: 764px;
     border: 1px solid var(--gray-400);
     vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  .benefit-title-area h2 {
+    color: var(--white);
+    font-size: 2rem;
+  }
+
+  .benefit-table-area {
+    width: auto;
+    font-size: 1.125rem;
+  }
+
+  .benefit-table-area h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  th {
+    min-width: 3rem;
+    padding: 1.25rem 1rem;
+  }
+
+  td {
+    min-width: 13.5rem;
+    padding: 0.75rem 1rem;
+  }
 }
 
 /* 인트로 - about */
