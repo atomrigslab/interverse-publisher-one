@@ -83,7 +83,14 @@ class NFTContainer extends HTMLElement {
       <div class="swiper mobile-swiper-v mobile-safari-full-height">
         <div class="swiper-wrapper mobile-safari-full-height">
           <div class="swiper-slide mobile-slide mobile-safari-full-height">
-          <div class="benefit-image"><img src="../assets/btn-benefit.png" /></div>
+          <div class="benefit-image">
+            <button
+              style="background: transparent; text-decoration: none;"
+              onClick="onBenefitBadgeClicked('${collection}', '${itemNo}')"
+            >
+              <img src="../assets/btn-benefit.png" />
+            </button>
+          </div>
             <atomrigs-nft-view
               oneTimeImage="${oneTimeImage}"
               collection="${collection}"

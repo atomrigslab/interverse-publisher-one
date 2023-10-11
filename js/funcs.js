@@ -103,6 +103,37 @@ function onSampleClicked(collection, imgIndex, deviceType) {
 }
 
 function onPurchaseClicked(collection, itemNo) {
+  const nftPurchaseLink = {
+    kansong: {
+      "1": "https://www.google.com",
+      "2": "https://www.google.com",
+      "3": "https://www.google.com"
+    },
+    pinzle: {
+      "1": "https://www.google.com",
+      "2": "https://www.google.com",
+      "3": "https://www.google.com",
+      "4": "https://www.google.com",
+      "5": "https://www.google.com",
+      "6": "https://www.google.com"
+    },
+    ifland: {
+      "1": "https://www.google.com",
+      "2": "https://www.google.com",
+      "3": "https://www.google.com",
+      "4-1": "https://www.google.com",
+      "4-2": "https://www.google.com"
+    }
+  };
+
+  const target = nftPurchaseLink[collection][itemNo];
+  if (target) {
+    window.location.href = target;
+  }
+}
+
+function onBenefitBadgeClicked() {
+  // 각 페이지별로 이미 모달이 존재해서 그냥 띄우기만 하면 됨. (콜렉션 별로 혜택이 동일해서)
   const onShownCallback = () => {};
   const onHideCallback = () => {};
   document.getElementById('benefit-modal').open(onShownCallback, onHideCallback);

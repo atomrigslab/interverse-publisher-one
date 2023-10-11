@@ -640,7 +640,6 @@ picture {
 }
 
 .nft-info-text1 {
-  width: 100%;
   color: var(--white);
   font-size: 1.125rem;
   font-style: normal;
@@ -648,6 +647,12 @@ picture {
   line-height: 120%; /* 1.35rem */
   text-transform: uppercase;
   word-break:break-all;
+}
+
+@media (max-width: 1024px) {
+  .nft-info-text1 {
+    width: auto;
+  }
 }
 
 .nft-info-text2 {
