@@ -163,10 +163,6 @@ class NFTContainer extends HTMLElement {
                     <img src="../assets/mobile/icon-close.svg" alt="" />
                   </button>
                 </div>
-                <button type="button" class="closeDescptionButton" onClick="closeDesc()">
-                  <img src="../assets/mobile/icon-close.svg" alt="" />
-                </button>
-
           </div>
 
         </div>
