@@ -82,7 +82,6 @@ function onViewIn3DClicked(collection, itemNo, deviceType) {
     itemNo = currentActiveWebGLIndex;
   }
 
-  console.log({collection, itemNo, deviceType})
   if (collection === 'ifland') {
     if (itemNo === '4' && deviceType === 'desktop') {
       document.getElementById('prev-3d-btn')

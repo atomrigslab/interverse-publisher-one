@@ -195,8 +195,6 @@ class NFTView extends AtomrigsElement {
       }
     })();
 
-    console.log({itemNo, showPrevBtn, showNextBtn});
-
     const onViewIn3DClicked = collection ? `onClick="onViewIn3DClicked('${collection}', '${itemNo}')"` : '';
 
     // this.innerHTML = `

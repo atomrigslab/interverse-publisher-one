@@ -186,7 +186,7 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
       productVersion: "1.0",
       showBanner: false
     };
-    console.log({config});
+    // console.log({config});
 
     // By default Unity keeps WebGL canvas render target size matched with
     // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -252,7 +252,6 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
       this.status = 'loaded';
       console.log('The loader script is loaded. (Probably along with the framework script)');
 
-      console.log({canvas: this.canvas})
       createUnityInstance(this.canvas, this.config, (progress) => {
         // progressBarFull.style.width = 100 * progress + "%";
       }).then((unityInstance) => {
