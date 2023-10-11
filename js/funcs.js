@@ -20,9 +20,9 @@ function init() {
     } else {
       downArrowElm.style.visibility = 'visible';
     }
-  })
+  });
 
-  new Swiper('.mobile-swiper', {
+  const mobileNFTSwiper = new Swiper('.mobile-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: false
