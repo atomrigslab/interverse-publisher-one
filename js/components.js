@@ -127,8 +127,8 @@ class NFTContainer extends HTMLElement {
 
     this.innerHTML = `
       <div class="swiper mobile-swiper-v safari-full-height">
-        <div class="swiper-wrapper safari-full-height">
-          <div class="swiper-slide mobile-slide safari-full-height">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide mobile-slide">
           <div class="benefit-image">
             <button
               style="background: transparent; text-decoration: none;"
@@ -144,7 +144,7 @@ class NFTContainer extends HTMLElement {
             ></atomrigs-nft-view>
 
           </div>
-          <div class="swiper-slide mobile-slide safari-full-height">
+          <div class="swiper-slide mobile-slide">
               
                 <!-- 중요: 일부러 atomrigs-nft-view를 배경으로 깔아서 오버레이 된것 같은 효과를 줌 -->
                 <atomrigs-nft-view
