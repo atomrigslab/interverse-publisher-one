@@ -9,7 +9,7 @@
     "kansongMuseum": "간송 메타버스 뮤지엄",
     "pinzle": "핀즐",
     "ifland": "ifland original",
-    "nstyle": "앤스타일",
+    "annstyle": "앤스타일",
     "benefits": "구매혜택",
 
     "quantity": "수량",
@@ -25,9 +25,9 @@
         "subtitle": "국보",
         "title": "청자모자원숭이형연적",
         "content": "살짝 웅크리듯 쪼그려 앉아 두 팔로 새끼를 안고 있는 어미 원숭이와 그 품속에서 따듯한 사랑을 느끼려는 듯 어미의 얼굴과 가슴에 작은 손을 갖다 댄 새끼 원숭이를 형상화한 작은 연적입니다. 매끄러운 표면의 느낌과 부드러운 곡선, 벽옥처럼 푸르고 수정처럼 맑은 비색(翡色)의 조합이 돋보입니다. 1937년, 간송 전형필이 당시 일본 도쿄에 살던 세계 최고의 청자 수집가였던 영국인 변호사 존 개스비(John Gadsby)에게서 인수한 20여 점의 청자 중 하나로 고려 상형 청자를 대표하는 문화재입니다.",
-        "quantity": "각 1,000개씩 민팅",
+        "quantity": "1,000개 민팅",
         "benefit1": "구매자 전원 간송 멤버십 NFT 제공",
-        "benefit2": "아이템 3종 모두 구매시 뷰잉데이 초청",
+        "benefit2": "아이템 3종 모두 구매시 뷰잉데이 초청 <span class='benefit-text'>(국보 혜원전신첩 직관)</span>",
         "benefit3": "(기간 한정 : 10월 22일 구매자까지)"
       },
       {
@@ -49,7 +49,7 @@
           "subtitle": "Illustrator / Basel, Switzerland",
           "title": "Fabian Lavater",
           "content": "파비안 라바터는 바젤에서 활동하고 있는 일러스트레이터입니다. 파비안은 자연에서 경험하는 삶의 순간들을 감각적인 컬러로 표현합니다. 해변의 풍경과 파도, 서핑 등 아티스트 삶의 일부가 되어버린 자연과의 관계를 독특한 컬러와 메시지에 녹여 표현합니다. 편안하면서도 시선을 사로잡는 그의 화풍을 바탕으로, 아티스트는 친환경 의류 브랜드 및 인테리어, 아웃도어 브랜드 등과 협업을 이어가고 있습니다.",
-          "quantity": "각 100개씩 민팅"
+          "quantity": "100개 민팅"
         },
         {
           "category": "메타버스 NFT 아이템",
@@ -64,8 +64,8 @@
         "subtitle": "Accessory",
         "title": "이프랜드 네코 헬멧",
         "content": "이프랜드 네코 헬멧은 Metaverse 내에서 유니크하고 귀여운 분위기를 연출하고 싶은 분들을 위한 아이템입니다. 네코 스타일의 헬멧은 고양이 귀 모양 디자인으로, 핑크 컬러로 더욱 돋보입니다. 이 아이템은 Metaverse에서만 소장 가능하며, 귀여우면서도 유니크한 외모를 자랑합니다.",
-        "quantity": "각 1,000개씩 민팅",
-        "benefit1": "이프랜드 무료재화(포인트) xxx원 지급 (상세 금액 미정)"
+        "quantity": "1,000개 민팅",
+        "benefit1": "구매 시 10,000 포인트 지급"
       },
       {
         "category": "메타버스 NFT 아이템",
@@ -95,10 +95,10 @@
     },
     "benefit": {
       "th": ["NFT", "수량", "구매자 혜택"],
-      "ifland": ["총 5종", "1,000개 민팅", "구매 시 10,000 포인트 지급"],
-      "kansong": ["총 3종", "1,000개 민팅", "구매자 전원 간송 멤버십 NFT 제공", "아이템 3종 모두 구매시 뷰잉데이 초청 <span class='benefit-text'>(국보 혜원전신첩 직관)</span>", "(10월 22일 구매자까지)"],
-      "pinzle": ["총 6종", "100개 민팅"],
-      "nstyle": [
+      "ifland": ["총 5종", "각 1,000개씩 민팅", "구매 시 10,000 포인트 지급"],
+      "kansong": ["총 3종", "각 1,000개씩 민팅", "구매자 전원 간송 멤버십 NFT 제공", "아이템 3종 모두 구매시 뷰잉데이 초청 <span class='benefit-text'>(국보 혜원전신첩 직관)</span>", "(10월 22일 구매자까지)"],
+      "pinzle": ["총 6종", "각 100개씩 민팅"],
+      "annstyle": [
         "총 33종",
         "(SKT 제작지원 3종, 앤스타일 직접 제작 30종)",
         "50개 민팅",
@@ -122,7 +122,7 @@
     "kansongMuseum": "Kansong metaverse museum",
     "pinzle": "Pinzel",
     "ifland": "ifland original",
-    "nstyle": "n style",
+    "annstyle": "Annstyle",
     "benefits": "Benefits",
 
     "quantity": "Quantity",
@@ -138,9 +138,9 @@
         "subtitle": "National treasure",
         "title": "Celadon water dropper in the shape of mother monkey with baby",
         "content": "This small celadon water dropper takes the shape of a squatting monkey cradling a young one, as its tiny hands caresses the mother’s face and chest as if to feel the warmth of her love. The jasper-blue and crystal-clear hue, smooth surface texture, and gentle curves come together to ensure an unparalleled sense of presence. This water dropper is one of the twenty celadons that Kansong Chun Hyungpil acquired in 1937 from John Gadsby, a British lawyer and also globally renowned celadon collector in Tokyo, Japan. As a cultural asset, this piece effectively exemplifies the aesthetics of mimetic Goryeo celadon.",
-        "quantity": "1,000 each minted",
+        "quantity": "1,000 minted",
         "benefit1": "Every buyer gets a kansong membership NFT",
-        "benefit2": "Invite to Viewing Day with purchase of all 3 items",
+        "benefit2": "Invite to Viewing Day with purchase of all 3 items <br /><span class='benefit-text'>(national treasure \"Album of Genre Paintings by Hyewon\")</span>",
         "benefit3": "(Limited period - until October 22nd)"
       },
       {
@@ -162,7 +162,7 @@
           "subtitle": "Illustrator / Basel, Switzerland",
           "title": "Fabian Lavater",
           "content": "Fabian Lavater is an illustrator based in Basel. Fabian expresses the moments of life experienced in nature with sensuous colors. He expresses his relationship with nature, which has become a part of his artist's life, such as beach scenery, waves, and surfing, by dissolving them in unique colors and messages. Based on his comfortable and eye-catching style, Fabian continues to collaborate with eco-friendly clothing brands, and interior and outdoor brands.",
-          "quantity": "100 each minted"
+          "quantity": "100 minted"
         },
         {
           "category": "Metaverse NFT item",
@@ -176,8 +176,8 @@
         "subtitle": "Accessory",
         "title": "ifland Neko-helmet",
         "content": "Ifland Neko-Helmet is an item for those who want cute and unique items in ifland. ifland Neko-helmet has a cat ear-shaped design, and its pink color makes it stand out even more. This item is only available in ifland.",
-        "quantity": "1,000 each minted",
-        "benefit1": "IFP points,  xxx won payment (detailed amount TBD)"
+        "quantity": "1,000 minted",
+        "benefit1": "Get 10,000 points for purchasing items"
       },
       {
         "category": "Metaverse NFT item",
@@ -207,10 +207,10 @@
     },
     "benefit": {
       "th": ["NFT", "Quantity", "Benefits"],
-      "ifland": ["Total 5 types", "1,000 minted", "Get 10,000 points for purchasing items"],
-      "kansong": ["Total 3 types", "1,000 minted", "Every buyer gets a kansong membership NFT", "Invite to Viewing Day with purchase of all 3 items <span class='benefit-text' style='display:block;'>(View 'Album of Genre Paintings by Hyewon', Korean National Treasure directly)</span>", "(Limited period - until October 22nd)"],
-      "pinzle": ["Total 6 types", "100 minted"],
-      "nstyle": [
+      "ifland": ["Total 5 types", "each 1,000 minted", "Get 10,000 points for purchasing items"],
+      "kansong": ["Total 3 types", "each 1,000 minted", "Every buyer gets a kansong membership NFT", "Invite to Viewing Day with purchase of all 3 items <span class='benefit-text' style='display:block;'>(View 'Album of Genre Paintings by Hyewon', Korean National Treasure directly)</span>", "(Limited period - until October 22nd)"],
+      "pinzle": ["Total 6 types", "each 100 minted"],
+      "annstyle": [
         "Total 33 types",
         "(3 types supported by SKT, 30 types directly produced by Annstyle)",
         "50 minted",
