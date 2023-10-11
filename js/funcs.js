@@ -57,15 +57,15 @@ function onViewIn3DClicked(collection, itemNo, deviceType) {
   const player = document.getElementById(WEBGL_PLAYER_ID);
 
   if (collection === 'pinzle' && deviceType === 'desktop') {
-    document.getElementById('prev-3d-btn1')
+    document.getElementById('prev-3d-btn')
       .style.visibility = 'hidden';
-    document.getElementById('next-3d-btn1')
+    document.getElementById('next-3d-btn')
       .style.visibility = 'visible';
 
     if (itemNo === '1') {
       currentActiveWebGLIndex = 1;
       minWebGLIndex = 1;
-      maxWebGLIndex = 3;  
+      maxWebGLIndex = 3;
     } else {
       currentActiveWebGLIndex = 4;
       minWebGLIndex = 4;
@@ -73,6 +73,25 @@ function onViewIn3DClicked(collection, itemNo, deviceType) {
     }
 
     itemNo = currentActiveWebGLIndex;
+  }
+
+  console.log({collection, itemNo, deviceType})
+  if (collection === 'ifland') {
+    if (itemNo === '4' && deviceType === 'desktop') {
+      document.getElementById('prev-3d-btn')
+        .style.visibility = 'hidden';
+      document.getElementById('next-3d-btn')
+        .style.visibility = 'visible';
+      document.getElementById('webgl-controller')
+        .style.visibility = 'visible';
+    } else {
+      document.getElementById('webgl-controller')
+        .style.visibility = 'hidden';
+    }
+
+    currentActiveWebGLIndex = 4;
+    minWebGLIndex = 4;
+    maxWebGLIndex = 5;
   }
 
   const onShownCallback = () => {
@@ -103,6 +122,37 @@ function onSampleClicked(collection, imgIndex, deviceType) {
 }
 
 function onPurchaseClicked(collection, itemNo) {
+  const nftPurchaseLink = {
+    kansong: {
+      "1": "https://www.google.com",
+      "2": "https://www.google.com",
+      "3": "https://www.google.com"
+    },
+    pinzle: {
+      "1": "https://www.google.com",
+      "2": "https://www.google.com",
+      "3": "https://www.google.com",
+      "4": "https://www.google.com",
+      "5": "https://www.google.com",
+      "6": "https://www.google.com"
+    },
+    ifland: {
+      "1": "https://www.google.com",
+      "2": "https://www.google.com",
+      "3": "https://www.google.com",
+      "4-1": "https://www.google.com",
+      "4-2": "https://www.google.com"
+    }
+  };
+
+  const target = nftPurchaseLink[collection][itemNo];
+  if (target) {
+    window.location.href = target;
+  }
+}
+
+function onBenefitBadgeClicked() {
+  // 각 페이지별로 이미 모달이 존재해서 그냥 띄우기만 하면 됨. (콜렉션 별로 혜택이 동일해서)
   const onShownCallback = () => {};
   const onHideCallback = () => {};
   document.getElementById('benefit-modal').open(onShownCallback, onHideCallback);

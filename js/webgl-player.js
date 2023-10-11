@@ -137,7 +137,9 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
       const context = this.canvas.getContext('2d');
       if (context) {
         context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        context.reset();
+        if (context.reset) {
+          context.reset();
+        }
       }
     }
 

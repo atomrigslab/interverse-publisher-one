@@ -13,20 +13,20 @@
   <title>Interverse</title>
 
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1697010200510" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1697010200510" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1697010200510" rel="stylesheet">
+  <link href="../css/main.css?dt=1697033699435" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1697033699435" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1697033699435" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1697010200510"></script>
-  <script src="../js/components.js?dt=1697010200510"></script>
-  <script src="../js/modal.js?dt=1697010200510"></script>
-  <script src="../js/webgl-player.js?dt=1697010200510"></script>
+  <script src="../js/common.js?dt=1697033699435"></script>
+  <script src="../js/components.js?dt=1697033699435"></script>
+  <script src="../js/modal.js?dt=1697033699435"></script>
+  <script src="../js/webgl-player.js?dt=1697033699435"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1697010200510"></script>
+  <script src="../js/funcs.js?dt=1697033699435"></script>
   <script>
 
     function initPinzleSampleSwiper({
@@ -79,8 +79,8 @@
     let minWebGLIndex = 1;
     let maxWebGLIndex = 3;
     function prev() {
-      const prev3DBtn = document.getElementById('prev-3d-btn1');
-      const next3DBtn = document.getElementById('next-3d-btn1');
+      const prev3DBtn = document.getElementById('prev-3d-btn');
+      const next3DBtn = document.getElementById('next-3d-btn');
 
       const player = document.getElementById('webglPlayer');
       player.close();
@@ -96,8 +96,8 @@
     }
     
     function next(prev3DBtnId, next3DBtnId) {
-      const prev3DBtn = document.getElementById('prev-3d-btn1');
-      const next3DBtn = document.getElementById('next-3d-btn1');
+      const prev3DBtn = document.getElementById('prev-3d-btn');
+      const next3DBtn = document.getElementById('next-3d-btn');
 
       const player = document.getElementById('webglPlayer');
       player.close();
@@ -136,7 +136,7 @@
 <body onLoad="onLoaded()">
   <div class="page-background" style="background-image: var(--bg-pinzle)">
     <navigation-bar-element activekey="pinzle"></navigation-bar-element>
-    <main class="--a-full-view">
+    <main class="full-view">
       <!-- 데스크탑 -->
       <div class="desktop-panel">
         <div class="footer-area">
@@ -150,10 +150,11 @@
           </div>
         </div>
 
-        <div class="swiper desktop-fullpage">
-          <div class="swiper-wrapper">
+        <div class="swiper desktop-fullpage safari-full-height">
+          <div class="swiper-wrapper safari-full-height">
 
-            <div class="swiper-slide --a-full-width">
+            <!-- 중요. 핀즐 페이지는 swiper-slide에 safari-full-height 를 넣을 필요 없음-->
+            <div class="swiper-slide full-width">
               <div class="desktop-fullpage-slide-container flex-col items-center pinzle-fullpage-slide-container-padding justify-start">
                 <div class="pinzle-nft-desc-area">
                   <div class="category" style="justify-content: center;">
@@ -182,15 +183,15 @@
                     is-pinzle="button-area-pinzle"
                   ></atomrigs-button-group>
                 </div>
-                <div class="flex justify-center" style="height: 60%; max-height: 540px; padding: 2rem;">
+                <div class="flex justify-center" style="height: 60%; max-height: 500px; padding: 2rem; gap: 50px; position: relative;">
                   <img src="../assets/pinzle/img-pin-1-1_1x.png" class="pinzle-desktop-img" />
-                  <img src="../assets/pinzle/img-pin-1-2_1x.png" class="pinzle-desktop-img" />
-                  <img src="../assets/pinzle/img-pin-1-3_1x.png" class="pinzle-desktop-img"/>
+                  <img src="../assets/pinzle/img-pin-1-2_1x.png" class="pinzle-desktop-img" style="margin-top: 3.5rem;" />
+                  <img src="../assets/pinzle/img-pin-1-3_1x.png" class="pinzle-desktop-img" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
 
-            <div class="swiper-slide --a-full-width">
+            <div class="swiper-slide full-width">
               <div class="desktop-fullpage-slide-container flex-col items-center pinzle-fullpage-slide-container-padding justify-start">
                 <div class="pinzle-nft-desc-area">
                   <div class="category" style="justify-content: center;">
@@ -219,10 +220,10 @@
                     is-pinzle="button-area-pinzle"
                   ></atomrigs-button-group>
                 </div>
-                <div class="flex justify-center" style="height: 60%; max-height: 540px; padding: 2rem">
-                  <img src="../assets/pinzle/img-pin-2-1_1x.png" class="pinzle-desktop-img"/>
+                <div class="flex justify-center" style="height: 60%; max-height: 500px; padding: 2rem; gap: 50px; position: relative;">
+                  <img src="../assets/pinzle/img-pin-2-1_1x.png" class="pinzle-desktop-img"  style="margin-top: 3.5rem;" />
                   <img src="../assets/pinzle/img-pin-2-2_1x.png" class="pinzle-desktop-img" />
-                  <img src="../assets/pinzle/img-pin-2-3_1x.png" class="pinzle-desktop-img"/>
+                  <img src="../assets/pinzle/img-pin-2-3_1x.png" class="pinzle-desktop-img"  style="margin-top: 3.5rem;" />
                 </div>
               </div>
             </div> <!-- end of swiper-slide -->
@@ -242,10 +243,10 @@
       </div> <!-- end of desktop-panel -->
 
       <!-- 모바일 -->
-      <div class="mobile-panel">
-        <div class="swiper mobile-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide mobile-slide">
+      <div class="mobile-panel safari-full-height">
+        <div class="swiper mobile-swiper safari-full-height">
+          <div class="swiper-wrapper safari-full-height">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-1-1_1x.png"
                 category="메타버스 NFT 아이템"
@@ -255,7 +256,7 @@
                 collection="pinzle"
                 item-no="1"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-1-2_1x.png"
                 category="메타버스 NFT 아이템"
@@ -265,7 +266,7 @@
                 collection="pinzle"
                 item-no="2"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-1-3_1x.png"
                 category="메타버스 NFT 아이템"
@@ -276,7 +277,7 @@
                 item-no="3"></atomrigs-nft-container>
             </div>
 
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-2-1_1x.png"
                 category="메타버스 NFT 아이템"
@@ -286,7 +287,7 @@
                 collection="pinzle"
                 item-no="4"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-2-2_1x.png"
                 category="메타버스 NFT 아이템"
@@ -296,7 +297,7 @@
                 collection="pinzle"
                 item-no="5"></atomrigs-nft-container>
             </div>
-            <div class="swiper-slide mobile-slide">
+            <div class="swiper-slide mobile-slide safari-full-height">
               <atomrigs-nft-container
                 oneTimeImage="../assets/pinzle/img-pin-2-3_1x.png"
                 category="메타버스 NFT 아이템"
@@ -323,10 +324,10 @@
     <div style="display: flex; flex-direction: column;">
       <atomrigs-webgl-player id="webglPlayer" class="webglPlayer"></atomrigs-webgl-player>
       <div style="display: flex; justify-content: center;">
-        <button id="prev-3d-btn1" type="button" onClick="prev();" style="visibility: hidden;">
+        <button id="prev-3d-btn" type="button" onClick="prev();" style="visibility: hidden;">
           <img src="../assets/mobile/icon-To-Left.svg" />
         </button>
-        <button id="next-3d-btn1" type="button" onClick="next();">
+        <button id="next-3d-btn" type="button" onClick="next();">
           <img src="../assets/mobile/icon-To-Right.svg" />
         </button>
       </div>

@@ -640,7 +640,6 @@ picture {
 }
 
 .nft-info-text1 {
-  width: 100%;
   color: var(--white);
   font-size: 1.125rem;
   font-style: normal;
@@ -648,6 +647,12 @@ picture {
   line-height: 120%; /* 1.35rem */
   text-transform: uppercase;
   word-break:break-all;
+}
+
+@media (max-width: 1024px) {
+  .nft-info-text1 {
+    width: auto;
+  }
 }
 
 .nft-info-text2 {
@@ -700,12 +705,15 @@ picture {
   }
 }
 .pinzle-desktop-img {
-  margin: 0px 30px;
+  display: inline-block;
+  width: auto;
   padding-top: 2rem;
   position: relative;
-  bottom:5vh;
-  max-width: 100%;
-  max-height: 100%;
+  flex-shrink: 0;
+  /* bottom: 5vh; */
+  /* min-width: 40%; */
+  /* max-width: 100%; */
+  /* max-height: 90%; */
   
 }
 
@@ -969,6 +977,11 @@ td {
 .fit-width {
   width: fit-content;
 }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .relative-max-full-height {
   position: relative;
@@ -985,4 +998,17 @@ td {
 
 .full-width {
   width: 100%;
+}
+
+.full-height {
+  height: 100%;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.full-view {
+  width: 100%;
+  height: 100%;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
 }

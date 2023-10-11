@@ -80,19 +80,26 @@ class NFTContainer extends HTMLElement {
     const itemNo = this.getAttribute('item-no');
 
     this.innerHTML = `
-      <div class="swiper mobile-swiper-v mobile-safari-full-height">
-        <div class="swiper-wrapper mobile-safari-full-height">
-          <div class="swiper-slide mobile-slide mobile-safari-full-height">
-          <div class="benefit-image"><img src="../assets/btn-benefit.png" /></div>
+      <div class="swiper mobile-swiper-v safari-full-height">
+        <div class="swiper-wrapper safari-full-height">
+          <div class="swiper-slide mobile-slide safari-full-height">
+          <div class="benefit-image">
+            <button
+              style="background: transparent; text-decoration: none;"
+              onClick="onBenefitBadgeClicked('${collection}', '${itemNo}')"
+            >
+              <img src="../assets/btn-benefit.png" />
+            </button>
+          </div>
             <atomrigs-nft-view
               oneTimeImage="${oneTimeImage}"
               collection="${collection}"
               item-no="${itemNo}"
             ></atomrigs-nft-view>
           </div>
-          <div class="swiper-slide mobile-slide mobile-safari-full-height">
-            <div class="--a-full-view --a-flex-center">
-              <div class="--a-full-view">
+          <div class="swiper-slide mobile-slide safari-full-height">
+            <div class="full-view flex-center">
+              <div class="full-view">
               
                 <!-- 중요: 일부러 atomrigs-nft-view를 배경으로 깔아서 오버레이 된것 같은 효과를 줌 -->
                 <atomrigs-nft-view
@@ -100,7 +107,7 @@ class NFTContainer extends HTMLElement {
                   oneTimeImage="${oneTimeImage}"
                 ></atomrigs-nft-view>
               
-                <div class="desc-container --a-flex-center">
+                <div class="desc-container flex-center">
                   <div class="nft-desc-area">
                     <div class="category"><span>${category}<span></div>
                     <span class="subtitle">${subtitle}</span>
@@ -217,7 +224,7 @@ class ButtonGroup extends AtomrigsElement {
         </button>
         <button
           type="button"
-          class="--a-full-width"
+          class="full-width"
           style="background-image: linear-gradient(117deg, #FF007D 0%, #490FBB 100%)"
           onClick="onPurchaseClicked('${collection}', '${itemNo}')"
         >
