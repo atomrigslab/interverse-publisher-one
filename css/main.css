@@ -780,8 +780,8 @@ picture {
 }
 
 /* benefit */
-.benefit-area {
-  height: 100%;
+.web .benefit-area {
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -861,6 +861,13 @@ td {
 }
 
 @media (max-width: 1024px) {
+  .benefit-area {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--nav-bar-height) + 4.95rem) 2.5rem 8.95rem;
+    gap: 5.25rem;
+  }
+
   .benefit-title-area h2 {
     color: var(--white);
     font-size: 2rem;
