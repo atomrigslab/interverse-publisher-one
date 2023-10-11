@@ -113,18 +113,13 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
       }
     `;
 
-    // TODO:
-    // const width = this.getAttribute('width');
-    // const height = this.getAttribute('height');
-    // const attributes = `width=960 height=600`;
-
     this.innerHTML = `
       <style>
         ${style}
       </style>
-      <div class="webgl-container">
-        <div id="${id}-unity-loading-spinner" style="position: fixed; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; color: white;">
-          Loading.....
+      <div class="webgl-container" style="position: relative;">
+        <div id="${id}-unity-loading-spinner" style="position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; text-align: center; color: white;">
+          <span>Loading.....</span>
         </div>
         <canvas id="${id}-unity-canvas"></canvas>
         <div id="${id}-unity-loading-bar">
@@ -140,8 +135,10 @@ class AtomrigsWebGLPlayer extends AtomrigsElement {
   close() {
     if (this.canvas) {
       const context = this.canvas.getContext('2d');
-      context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      context.reset();
+      if (context) {
+        context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        context.reset();
+      }
     }
 
     if (this.unityInstance) {
