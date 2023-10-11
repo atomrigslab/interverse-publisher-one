@@ -102,9 +102,9 @@
         "총 33종",
         "(SKT 제작지원 3종, 앤스타일 직접 제작 30종)",
         "50개 민팅",
-        "앤스타일 스페셜 상/하의 NFT 구매자 (선착순) 10명 (국내 대상자) 에게 앤스타일 메타버스 패션 한정판 T셔츠 (스타일 랜덤) 증정",
-        "앤스타일 스페셜 상/하의 NFT 구매자 (선착순) 10명 (국내 대상자) 에게 앤스타일 메타버스 패션 한정판 에코백 (스타일 랜덤) 증정",
-        "앤스타일 스페셜 상/하의 NFT 구매자 (선착순) 10명 (국내 대상자) 에게 앤스타일 마카롱 텀블러 핑크 (스타일 랜덤) 증정"
+        "앤스타일 스페셜 상/하의 NFT 구매자 <span class='benefit-text'>(선착순)</span> 10명 <span class='benefit-text'>(국내 대상자)</span> 에게 앤스타일 메타버스 패션 한정판 T셔츠 <span class='benefit-text'>(스타일 랜덤)</span> 증정",
+        "앤스타일 스페셜 상/하의 NFT 구매자 <span class='benefit-text'>(선착순)</span> 10명 <span class='benefit-text'>(국내 대상자)</span> 에게 앤스타일 메타버스 패션 한정판 에코백 <span class='benefit-text'>(스타일 랜덤)</span> 증정",
+        "앤스타일 스페셜 상/하의 NFT 구매자 <span class='benefit-text'>(선착순)</span> 10명 <span class='benefit-text'>(국내 대상자)</span> 에게 앤스타일 마카롱 텀블러 핑크 <span class='benefit-text'>(스타일 랜덤)</span> 증정"
       ]},
     "intro": {
       "title": ["Metaverse와"," Web3의 ","만남"],
@@ -214,9 +214,9 @@
         "Total 33 types",
         "(3 types supported by SKT, 30 types directly produced by Annstyle)",
         "50 minted",
-        "Annstyle Metaverse Fashion Limited Edition T-shirt (style random) will be given to the first 10 NFT purchasers (in Korean users) of the Anstyle Special top and bottom clothing.",
-        "Annstyle Metaverse Fashion Limited Edition eco-bag (style random) will be given to the first 10 NFT purchasers (in Korean users) of the Anstyle Special top and bottom clothing.",
-        "Annstyle Macaron Tumbler Pink (style random) will be given to the first 10 NFT purchasers (in Korean users) of the Anstyle Special top and bottom clothing."
+        "Annstyle Metaverse Fashion Limited Edition T-shirt <span class='benefit-text'>(style random)</span> will be given to the first 10 NFT purchasers <span class='benefit-text'>(in Korean users)</span> of the Anstyle Special top and bottom clothing.",
+        "Annstyle Metaverse Fashion Limited Edition eco-bag <span class='benefit-text'>(style random)</span> will be given to the first 10 NFT purchasers <span class='benefit-text'>(in Korean users)</span> of the Anstyle Special top and bottom clothing.",
+        "Annstyle Macaron Tumbler Pink <span class='benefit-text'>(style random)</span> will be given to the first 10 NFT purchasers <span class='benefit-text'>(in Korean users)</span> of the Anstyle Special top and bottom clothing."
       ]},
     "intro": {
       "title": ["Metaverse"," meets ","Web3"],
