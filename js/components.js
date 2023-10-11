@@ -199,11 +199,11 @@ class ButtonGroup extends AtomrigsElement {
     const collection = this.getAttribute('collection');
     const itemNo = this.getAttribute('item-no');
     const deviceType = this.getAttribute('device-type') ? this.getAttribute('device-type') : '';
-
+    const isPinzle = this.getAttribute('is-pinzle') ? this.getAttribute('is-pinzle') : '';
     const onSampleClicked = `onSampleClicked('${collection}', '${itemNo}', '${deviceType}')`;
 
     this.innerHTML = `
-      <div class="button-area">
+      <div class="button-area ${isPinzle}">
         <button type="button" onClick="onViewIn3DClicked('${collection}', '${itemNo}')">
           <img src="../assets/icon-3d_2.svg" />
           <span>${langObj['view']}</span>
