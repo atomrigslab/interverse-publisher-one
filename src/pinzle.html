@@ -112,6 +112,10 @@
       }
     }
 
+    function moveToNextSlide() {
+      fullPageSwiper.slideNext(200, () => {});
+    }
+
     function onLoaded() {
       init();
 
@@ -224,7 +228,14 @@
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
         <div class="bottom-down-arrow">
-          <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+          <button
+            id="down-arrow-at-bottom"
+            type="button"
+            style="background-color: transparent; text-decoration: none;"
+            onClick="moveToNextSlide()"
+          >
+            <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+          </button>
         </div>
       </div> <!-- end of desktop-panel -->
 

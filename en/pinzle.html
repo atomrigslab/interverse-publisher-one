@@ -13,20 +13,20 @@
   <title>Interverse</title>
 
   <link rel="icon" href="../assets/favicon-interverse-snowball.ico">
-  <link href="../css/main.css?dt=1696988209563" rel="stylesheet" crossorigin="anonymous">
-  <link href="../css/ji.css?dt=1696988209563" rel="stylesheet">
-  <link href="../css/atomrigs.css?dt=1696988209563" rel="stylesheet">
+  <link href="../css/main.css?dt=1696992065724" rel="stylesheet" crossorigin="anonymous">
+  <link href="../css/ji.css?dt=1696992065724" rel="stylesheet">
+  <link href="../css/atomrigs.css?dt=1696992065724" rel="stylesheet">
 
   <script src="../assets/jquery-3.7.1.slim.min.js"></script>
-  <script src="../js/common.js?dt=1696988209563"></script>
-  <script src="../js/components.js?dt=1696988209563"></script>
-  <script src="../js/modal.js?dt=1696988209563"></script>
-  <script src="../js/webgl-player.js?dt=1696988209563"></script>
+  <script src="../js/common.js?dt=1696992065724"></script>
+  <script src="../js/components.js?dt=1696992065724"></script>
+  <script src="../js/modal.js?dt=1696992065724"></script>
+  <script src="../js/webgl-player.js?dt=1696992065724"></script>
 
   <link rel="stylesheet" href="../assets/swiperjs-10.3.1/swiper-bundle.min.css" />
   <script src="../assets/swiperjs-10.3.1/swiper-bundle.min.js"></script>
 
-  <script src="../js/funcs.js?dt=1696988209563"></script>
+  <script src="../js/funcs.js?dt=1696992065724"></script>
   <script>
 
     function initPinzleSampleSwiper({
@@ -110,6 +110,10 @@
       } else {
         prev3DBtn.style.visibility = 'visible';
       }
+    }
+
+    function moveToNextSlide() {
+      fullPageSwiper.slideNext(200, () => {});
     }
 
     function onLoaded() {
@@ -224,7 +228,14 @@
           </div> <!-- end of swiper-wrapper -->
         </div> <!-- end of swiper -->
         <div class="bottom-down-arrow">
-          <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+          <button
+            id="down-arrow-at-bottom"
+            type="button"
+            style="background-color: transparent; text-decoration: none;"
+            onClick="moveToNextSlide()"
+          >
+            <img class="icon-arrow" src="../assets/icon-arrow.svg" alt="" />
+          </button>
         </div>
       </div> <!-- end of desktop-panel -->
 

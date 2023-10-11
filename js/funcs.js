@@ -1,12 +1,26 @@
-
+let fullPageSwiper;
 let verticalMobileSwipers;
+
+function moveToNextSlide() {
+  fullPageSwiper.slideNext(200, () => {});
+}
+
 function init() {
-  const swiper = new Swiper('.desktop-fullpage', {
+  fullPageSwiper = new Swiper('.desktop-fullpage', {
     // Optional parameters
     direction: 'vertical',
     mousewheel: true,
     loop: false,
   });
+
+  fullPageSwiper.on('slideChange', () => {
+    const downArrowElm = document.getElementById('down-arrow-at-bottom');
+    if (fullPageSwiper.activeIndex === fullPageSwiper.slides.length - 1) {
+      downArrowElm.style.visibility = 'hidden';
+    } else {
+      downArrowElm.style.visibility = 'visible';
+    }
+  })
 
   new Swiper('.mobile-swiper', {
     // Optional parameters
