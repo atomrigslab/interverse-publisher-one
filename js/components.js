@@ -140,19 +140,32 @@ class NFTView extends AtomrigsElement {
     const collection = this.getAttribute('collection');
     const itemNo = this.getAttribute('item-no');
 
+    const showPrevBtn = itemNo === '1' ? 'hidden' : 'visible';
+    const showNextBtn = (() => {
+      if (collection === 'kansong') {
+        return itemNo === '3' ? 'hidden' : 'visible';
+      } else if (collection === 'ifland') {
+        return itemNo === '5' ? 'hidden' : 'visible';
+      } else if (collection === 'pinzle') {
+        return itemNo === '6' ? 'hidden' : 'visible';
+      }
+    })();
+
+    console.log({itemNo, showPrevBtn, showNextBtn});
+
     const onViewIn3DClicked = collection ? `onClick="onViewIn3DClicked('${collection}', '${itemNo}')"` : '';
 
     this.innerHTML = `
       <div class="mobile-page-container">
         <div class="mobile-page-content">
-          <button type="button">
+          <button type="button" class="mobile-prev-nft-btn" style="visibility: ${showPrevBtn};">
             <img src="../assets/mobile/icon-To-Left.svg" />
           </button>
           <div style="flex-shrink: 1; width: 100%; display: flex; justify-content: center">
             <img src="${oneTimeImage}" />
           </div>
-          <button type="button">
-            <img src="../assets/mobile/icon-To-Right.svg" />
+          <button type="button" class="mobile-next-nft-btn">
+            <img src="../assets/mobile/icon-To-Right.svg" style="visibility: ${showNextBtn};" />
           </button>
         </div>
         <div class="mobile-button-group">
