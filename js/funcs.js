@@ -148,27 +148,27 @@ function onSampleClicked(collection, imgIndex, deviceType) {
   }
 }
 
-function onPurchaseClicked(collection, itemNo) {
+function onPurchaseClicked(collection, itemNo, deviceType) {
   const nftPurchaseLink = {
     kansong: {
-      "1": "https://www.google.com",
-      "2": "https://www.google.com",
-      "3": "https://www.google.com"
+      "1": "https://ifland.io/",
+      "2": "https://ifland.io/",
+      "3": "https://ifland.io/"
     },
     pinzle: {
-      "1": "https://www.google.com",
-      "2": "https://www.google.com",
-      "3": "https://www.google.com",
-      "4": "https://www.google.com",
-      "5": "https://www.google.com",
-      "6": "https://www.google.com"
+      "1": "https://ifland.io/",
+      "2": "https://ifland.io/",
+      "3": "https://ifland.io/",
+      "4": "https://ifland.io/",
+      "5": "https://ifland.io/",
+      "6": "https://ifland.io/"
     },
     ifland: {
-      "1": "https://www.google.com",
-      "2": "https://www.google.com",
-      "3": "https://www.google.com",
-      "4": "https://www.google.com",
-      "5": "https://www.google.com"
+      "1": "https://ifland.io/",
+      "2": "https://ifland.io/",
+      "3": "https://ifland.io/",
+      "4": "https://ifland.io/",
+      "5": "https://ifland.io/"
     }
   };
 
