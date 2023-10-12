@@ -17,7 +17,23 @@ function initGA() {
   gtag('config', 'G-ZG901889B8');
 }
 
+function cacheControl() {
+  // ref: https://stackoverflow.com/questions/12556593/determining-a-page-is-outdated-on-github-pages
+  window.applicationCache.addEventListener('updateready', function(e) {
+    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+      // Browser downloaded a new app cache.
+      // Swap it in and reload the page to get the new hotness.
+      window.applicationCache.swapCache();
+      window.location.reload();
+    } else {
+      // Manifest didn't changed. Nothing new to server.
+    }
+  }, false);
+}
+
 function init() {
+  cacheControl();
+
   initGA();
 
   window.addEventListener('resize', setVh);
