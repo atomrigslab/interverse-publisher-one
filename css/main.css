@@ -534,9 +534,14 @@ picture {
 .nft-image-area {
   position: relative;
   max-height: 680px;
-  height: 100%;
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1279px), screen and (max-height: 767px) {
+  .nft-image-area {
+    height: 100%;
+  }
 }
 
 .nft-desc-area {
