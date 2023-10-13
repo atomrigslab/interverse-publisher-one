@@ -732,14 +732,14 @@ picture {
 }
 
 .button-area button {
-  min-height: 2.25rem;
+  min-height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--gray-200);
   border-radius: 50px;
-  padding: 0 1rem;
-  gap: 0.25rem;
+  padding: 0 16px;
+  gap: 4px;
   background: rgba(34, 38, 53, 0.34);
   backdrop-filter: blur(8px);
 }
